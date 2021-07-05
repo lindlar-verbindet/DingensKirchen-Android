@@ -1,0 +1,2416 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2021-06-25T08:40:05Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/27012386",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Waldbruch",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43741",
+        "highway": "bus_stop",
+        "name": "Waldbruch"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3231157,
+          51.0025555
+        ]
+      },
+      "id": "node/27012386"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/285992342",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Hohbusch",
+        "VRS:ref": "43945",
+        "highway": "bus_stop",
+        "name": "Hohbusch",
+        "note": "#398",
+        "source": "survey",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3293764,
+          50.9822165
+        ]
+      },
+      "id": "node/285992342"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/302723890",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Hartegasse",
+        "VRS:ortsteil": "Hartegasse",
+        "VRS:ref": "43132",
+        "bench": "yes",
+        "highway": "bus_stop",
+        "name": "Hartegasse",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3863651,
+          51.0493122
+        ]
+      },
+      "id": "node/302723890"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/302815061",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Hohkeppel Kirche",
+        "VRS:ortsteil": "Hohkeppel",
+        "VRS:ref": "43952",
+        "bench": "no",
+        "highway": "bus_stop",
+        "name": "Hohkeppel, Kirche",
+        "note": "#398",
+        "ref": "de.05374020.hohkeppelkirche",
+        "shelter": "no",
+        "source": "survey",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3106414,
+          50.9796305
+        ]
+      },
+      "id": "node/302815061"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/337933857",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Eichholz",
+        "VRS:ortsteil": "Remshagen",
+        "VRS:ref": "43531",
+        "bench": "yes",
+        "highway": "bus_stop",
+        "name": "Eichholz",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4037187,
+          51.0184026
+        ]
+      },
+      "id": "node/337933857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/338641065",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Remshagen",
+        "VRS:ref": "43533",
+        "highway": "bus_stop",
+        "name": "Remshagen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4202997,
+          51.0223534
+        ]
+      },
+      "id": "node/338641065"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/338641068",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Remshagen",
+        "VRS:ref": "43533",
+        "highway": "bus_stop",
+        "name": "Remshagen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4209795,
+          51.0219074
+        ]
+      },
+      "id": "node/338641068"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/338641071",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Remshagen",
+        "VRS:ref": "43534",
+        "highway": "bus_stop",
+        "name": "Am Weiher"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.426108,
+          51.020486
+        ]
+      },
+      "id": "node/338641071"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/338641074",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Remshagen",
+        "VRS:ref": "43534",
+        "highway": "bus_stop",
+        "name": "Am Weiher"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4255362,
+          51.0208192
+        ]
+      },
+      "id": "node/338641074"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/363427579",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43852",
+        "highway": "bus_stop",
+        "name": "Georghausen",
+        "operator": "OVAG",
+        "ref_name": "Schmitzhöhe Georghausen, Lindlar",
+        "source": "survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2698889,
+          50.9971397
+        ]
+      },
+      "id": "node/363427579"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/363456087",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Hohkeppel",
+        "VRS:ref": "43951",
+        "direction": "NE",
+        "highway": "bus_stop",
+        "name": "Am Lindenbaum",
+        "source": "survey",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3054143,
+          50.9774919
+        ]
+      },
+      "id": "node/363456087"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/363754087",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Frielinghausen",
+        "VRS:ortsteil": "Hohkeppel",
+        "VRS:ref": "43941",
+        "bench": "no",
+        "bin": "yes",
+        "highway": "bus_stop",
+        "mapillary": "YSwMoeen8Mwku8zLVJ3ryw",
+        "name": "Hengasch",
+        "note": "#398, #440",
+        "ref": "de.05374020.frielinghausen",
+        "shelter": "no",
+        "source": "survey",
+        "source:name": "sign at road"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3180009,
+          50.9811264
+        ]
+      },
+      "id": "node/363754087"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/366727855",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Frielingsdorf Friedhof",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43243",
+        "bench": "yes",
+        "highway": "bus_stop",
+        "name": "Frielingsdorf Friedhof",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4274282,
+          51.0467719
+        ]
+      },
+      "id": "node/366727855"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/366728331",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Unterbrochhagen",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43141",
+        "bench": "yes",
+        "highway": "bus_stop",
+        "name": "Unterbrochhagen",
+        "operator": "OVAG",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4053722,
+          51.0457158
+        ]
+      },
+      "id": "node/366728331"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/405858947",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Eibachstraße",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43245",
+        "fixme": "position",
+        "highway": "bus_stop",
+        "name": "Eibachstraße",
+        "operator": "OVAG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4384695,
+          51.0513425
+        ]
+      },
+      "id": "node/405858947"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/409523221",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Remshagen",
+        "VRS:ref": "43532",
+        "highway": "bus_stop",
+        "name": "Horpe",
+        "note": "#316 #332",
+        "source": "survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4093953,
+          51.0235402
+        ]
+      },
+      "id": "node/409523221"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/417142887",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Bergisches Freilichtmuseum",
+        "VRS:ortsteil": "Steinscheid",
+        "VRS:ref": "43735",
+        "highway": "bus_stop",
+        "name": "Freilichtmuseum",
+        "note": "Am Wochenende über Buslinie 332 (Taxibus / Anrufbus)",
+        "operator": "OVAG",
+        "ref_name": "Steinscheid Bergisches Freilichtmuseum, Lindlar",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3556575,
+          51.0114253
+        ]
+      },
+      "id": "node/417142887"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/423027851",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Oberbrochhagen",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43142",
+        "highway": "bus_stop",
+        "name": "Oberbrochhagen",
+        "operator": "OVAG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4187957,
+          51.0454557
+        ]
+      },
+      "id": "node/423027851"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/534271851",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Oberfrielinghsn",
+        "VRS:ref": "43943",
+        "highway": "bus_stop",
+        "name": "Oberfrielinghausen",
+        "note": "Linie 398",
+        "ref": "de.05374020.oberfrielinghausen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.338951,
+          50.9884172
+        ]
+      },
+      "id": "node/534271851"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/691622092",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43232",
+        "highway": "bus_stop",
+        "name": "Kaiserau",
+        "ref:ibnr": "443256",
+        "source": "survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4318351,
+          51.0344808
+        ]
+      },
+      "id": "node/691622092"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/691622106",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43232",
+        "highway": "bus_stop",
+        "name": "Kaiserau",
+        "ref:ibnr": "443256",
+        "source": "survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4313753,
+          51.034683
+        ]
+      },
+      "id": "node/691622106"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/730737496",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43639",
+        "bench": "no",
+        "highway": "bus_stop",
+        "name": "Königsberger Straße",
+        "operator": "OVAG",
+        "ref_name": "Königsberger Str., Lindlar",
+        "shelter": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3691515,
+          51.0187021
+        ]
+      },
+      "id": "node/730737496"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/730737505",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43639",
+        "highway": "bus_stop",
+        "name": "Königsberger Straße",
+        "operator": "OVAG",
+        "ref_name": "Königsberger Str., Lindlar",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3693916,
+          51.018641
+        ]
+      },
+      "id": "node/730737505"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/730738749",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43640",
+        "fixme": "position",
+        "highway": "bus_stop",
+        "name": "Kölner Straße",
+        "operator": "OVAG",
+        "toilets:wheelchair": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3714364,
+          51.0174885
+        ]
+      },
+      "id": "node/730738749"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/730738782",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43640",
+        "bench": "no",
+        "highway": "bus_stop",
+        "name": "Kölner Straße",
+        "operator": "OVAG",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3712678,
+          51.0175588
+        ]
+      },
+      "id": "node/730738782"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/730746705",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43643",
+        "highway": "bus_stop",
+        "name": "Kirschbäumchen",
+        "shelter": "yes",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3866019,
+          51.0207064
+        ]
+      },
+      "id": "node/730746705"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/730747310",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43646",
+        "highway": "bus_stop",
+        "name": "Rathaus/Klinik",
+        "operator": "OVAG",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3831638,
+          51.0213561
+        ]
+      },
+      "id": "node/730747310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/730804043",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43651",
+        "highway": "bus_stop",
+        "name": "Kamper Straße",
+        "operator": "OVAG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3728437,
+          51.0228306
+        ]
+      },
+      "id": "node/730804043"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/730804048",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43651",
+        "highway": "bus_stop",
+        "name": "Kamper Straße",
+        "operator": "OVAG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3719149,
+          51.0229058
+        ]
+      },
+      "id": "node/730804048"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/840695799",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43832",
+        "highway": "bus_stop",
+        "name": "Schmitzhöhe Kirche",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2795202,
+          50.9877572
+        ]
+      },
+      "id": "node/840695799"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/840695805",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43832",
+        "highway": "bus_stop",
+        "name": "Schmitzhöhe Kirche",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2781005,
+          50.9871966
+        ]
+      },
+      "id": "node/840695805"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/954608216",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Klause",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43543",
+        "highway": "bus_stop",
+        "name": "Klause",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4063289,
+          51.0323459
+        ]
+      },
+      "id": "node/954608216"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/954608280",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Klause",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43543",
+        "highway": "bus_stop",
+        "name": "Klause",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4055493,
+          51.0322965
+        ]
+      },
+      "id": "node/954608280"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/957175380",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Linde",
+        "VRS:ref": "43431",
+        "highway": "bus_stop",
+        "name": "Quabach",
+        "operator": "OVAG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2988645,
+          51.0111201
+        ]
+      },
+      "id": "node/957175380"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1203139927",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Müllersommer Abzweig",
+        "VRS:ortsteil": "Linde",
+        "VRS:ref": "43433",
+        "highway": "bus_stop",
+        "name": "Müllersommer Abzw.",
+        "operator": "OVAG",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3148344,
+          51.0198527
+        ]
+      },
+      "id": "node/1203139927"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1203139940",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Linde",
+        "VRS:ref": "43432",
+        "highway": "bus_stop",
+        "name": "Unterommer",
+        "operator": "OVAG",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3032355,
+          51.0182872
+        ]
+      },
+      "id": "node/1203139940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1203139942",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43853",
+        "highway": "bus_stop",
+        "name": "Welzen",
+        "operator": "OVAG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2777439,
+          51.0011551
+        ]
+      },
+      "id": "node/1203139942"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1203139943",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Linde",
+        "VRS:ref": "43432",
+        "highway": "bus_stop",
+        "name": "Unterommer",
+        "operator": "OVAG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.30135,
+          51.018016
+        ]
+      },
+      "id": "node/1203139943"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1203139948",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Müllersommer Abzweig",
+        "VRS:ortsteil": "Linde",
+        "VRS:ref": "43433",
+        "highway": "bus_stop",
+        "name": "Müllersommer Abzw.",
+        "operator": "OVAG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3132723,
+          51.0197026
+        ]
+      },
+      "id": "node/1203139948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481472",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Remshagen",
+        "VRS:ref": "43537",
+        "highway": "bus_stop",
+        "name": ":metabolon",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4270349,
+          51.0179188
+        ]
+      },
+      "id": "node/1383481472"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481480",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Altenlinde",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43652",
+        "highway": "bus_stop",
+        "name": "Altenlinde",
+        "operator": "OVAG",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3641319,
+          51.0268099
+        ]
+      },
+      "id": "node/1383481480"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481486",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Altenrath",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43752",
+        "highway": "bus_stop",
+        "name": "Altenrath",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3904369,
+          51.0140733
+        ]
+      },
+      "id": "node/1383481486"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481500",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Berghausen Abzweig",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43234",
+        "highway": "bus_stop",
+        "name": "Berghausen Abzweig",
+        "ref_name": "Frielingsdorf Berghausen Abzw., Lindlar",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4492558,
+          51.0435702
+        ]
+      },
+      "id": "node/1383481500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481506",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Bolzenbach",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43751",
+        "highway": "bus_stop",
+        "name": "Bolzenbach",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3828692,
+          51.0127676
+        ]
+      },
+      "id": "node/1383481506"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481507",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Breun",
+        "VRS:ortsteil": "Hartegasse",
+        "VRS:ref": "43135",
+        "highway": "bus_stop",
+        "name": "Breun",
+        "operator": "OVAG",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4038384,
+          51.0646116
+        ]
+      },
+      "id": "node/1383481507"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481509",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Bruch",
+        "VRS:ortsteil": "Linde",
+        "VRS:ref": "43435",
+        "bench": "yes",
+        "highway": "bus_stop",
+        "name": "Linde Bruch",
+        "operator": "OVAG",
+        "ref_name": "Linde Bruch, Lindlar",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3333397,
+          51.0188656
+        ]
+      },
+      "id": "node/1383481509"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481513",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "CVJM-Heim",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43939",
+        "fixme": "position",
+        "highway": "bus_stop",
+        "name": "CVJM-Heim",
+        "ref_name": "Schmitzhöhe CVJM-Heim, Lindlar",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2910738,
+          50.9822699
+        ]
+      },
+      "id": "node/1383481513"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481552",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Fahn",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43836",
+        "highway": "bus_stop",
+        "name": "Fahn"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2993788,
+          50.9979241
+        ]
+      },
+      "id": "node/1383481552"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481554",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Fahn Gärtnerei",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43835",
+        "highway": "bus_stop",
+        "name": "Fahn Gärtnerei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2919303,
+          50.9974133
+        ]
+      },
+      "id": "node/1383481554"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481561",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Falkenhof",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43744",
+        "highway": "bus_stop",
+        "name": "Falkenhof"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3608108,
+          51.0177392
+        ]
+      },
+      "id": "node/1383481561"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481566",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Felsenthal",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43231",
+        "highway": "bus_stop",
+        "name": "Felsenthal",
+        "shelter": "no",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4295734,
+          51.0308774
+        ]
+      },
+      "id": "node/1383481566"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481570",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Fenke",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43545",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Fenke",
+        "public_transport": "stop_position",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4194709,
+          51.035426
+        ]
+      },
+      "id": "node/1383481570"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481626",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Heibach",
+        "VRS:ortsteil": "Hartegasse",
+        "VRS:ref": "43331",
+        "highway": "bus_stop",
+        "name": "Heibach",
+        "operator": "OVAG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3692452,
+          51.0381538
+        ]
+      },
+      "id": "node/1383481626"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481685",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Kalkofen",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43831",
+        "highway": "bus_stop",
+        "name": "Kalkofen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2683202,
+          50.9807986
+        ]
+      },
+      "id": "node/1383481685"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481694",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Karlsthal",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43235",
+        "highway": "bus_stop",
+        "name": "Karlsthal",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4589864,
+          51.0480358
+        ]
+      },
+      "id": "node/1383481694"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481700",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Kemmerich",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43743",
+        "highway": "bus_stop",
+        "name": "Kemmerich"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.338382,
+          51.0138435
+        ]
+      },
+      "id": "node/1383481700"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481704",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Keppler Mühle",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43935",
+        "highway": "bus_stop",
+        "name": "Keppler Mühle",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3085284,
+          50.9860655
+        ]
+      },
+      "id": "node/1383481704"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481709",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Klespe",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43731",
+        "highway": "bus_stop",
+        "name": "Klespe",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.345898,
+          51.002731
+        ]
+      },
+      "id": "node/1383481709"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481710",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Klespe Abzweig",
+        "VRS:ortsteil": "Klespe",
+        "VRS:ref": "43736",
+        "highway": "bus_stop",
+        "name": "Klespe Abzweig",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3464785,
+          50.999542
+        ]
+      },
+      "id": "node/1383481710"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481712",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Köttingen",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43933",
+        "highway": "bus_stop",
+        "name": "Köttingen",
+        "ref_name": "Schmitzhöhe Köttingen, Lindlar",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2919742,
+          50.9810706
+        ]
+      },
+      "id": "node/1383481712"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481718",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Lennefer Mühle",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43932",
+        "highway": "bus_stop",
+        "name": "Lennefer Mühle",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.28067,
+          50.976694
+        ]
+      },
+      "id": "node/1383481718"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481719",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Lindlar Grundschule",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43644",
+        "highway": "bus_stop",
+        "name": "Lindlar Grundschule",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3920017,
+          51.0189402
+        ]
+      },
+      "id": "node/1383481719"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481720",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Lindlar Schulzentrum",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43659",
+        "highway": "bus_stop",
+        "name": "Lindlar Schulzentrum",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3710404,
+          51.0159961
+        ]
+      },
+      "id": "node/1383481720"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481721",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Lingenbach",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43745",
+        "highway": "bus_stop",
+        "name": "Freilichtmuseum Nord",
+        "old_name": "Lingenbach"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3433654,
+          51.0146289
+        ]
+      },
+      "id": "node/1383481721"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481722",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Loxsteeg",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43934",
+        "highway": "bus_stop",
+        "name": "Loxsteeg",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3014279,
+          50.9838904
+        ]
+      },
+      "id": "node/1383481722"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481726",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Neuenfeld",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43544",
+        "highway": "bus_stop",
+        "name": "Neuenfeld",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4115932,
+          51.0352308
+        ]
+      },
+      "id": "node/1383481726"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481728",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Neuschmitzhöhe",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43834",
+        "highway": "bus_stop",
+        "name": "Neuschmitzhöhe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2838205,
+          50.9948696
+        ]
+      },
+      "id": "node/1383481728"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481729",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Niederhabbach",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43246",
+        "highway": "bus_stop",
+        "name": "Niederhabbach",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.422441,
+          51.0545208
+        ]
+      },
+      "id": "node/1383481729"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481731",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Oberbergscheid",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43837",
+        "highway": "bus_stop",
+        "name": "Oberbergscheid"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3081172,
+          50.9978441
+        ]
+      },
+      "id": "node/1383481731"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481732",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Oberfrielinghausen Abzweig",
+        "VRS:ortsteil": "Oberfrielinghsn",
+        "VRS:ref": "43944",
+        "highway": "bus_stop",
+        "name": "Oberfrielinghausen Abzweig",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.342091,
+          50.9876483
+        ]
+      },
+      "id": "node/1383481732"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481734",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Oberheiligenhoven",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43733",
+        "highway": "bus_stop",
+        "name": "Oberheiligenhoven",
+        "source": "Verkehrsverbund Rhein-Sieg",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3607352,
+          51.0141234
+        ]
+      },
+      "id": "node/1383481734"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481739",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Ohl",
+        "VRS:ortsteil": "Hartegasse",
+        "VRS:ref": "43131",
+        "highway": "bus_stop",
+        "name": "Ohl",
+        "operator": "OVAG",
+        "ref_name": "Hartegasse Ohl, Lindlar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3746604,
+          51.0419144
+        ]
+      },
+      "id": "node/1383481739"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481743",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Rehbacher Weg",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43937",
+        "fixme": "position",
+        "highway": "bus_stop",
+        "name": "Rehbacher Weg",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3321723,
+          50.994995
+        ]
+      },
+      "id": "node/1383481743"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481747",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Scheel",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43244",
+        "fixme": "Bitte genaue Position prüfen",
+        "highway": "bus_stop",
+        "name": "Scheel",
+        "operator": "OVAG",
+        "ref_name": "Frielingsdorf Scheel, Lindlar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4403656,
+          51.052878
+        ]
+      },
+      "id": "node/1383481747"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481749",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Schmidt & Clemens",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43233",
+        "highway": "bus_stop",
+        "name": "Schmidt & Clemens",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4400523,
+          51.0376618
+        ]
+      },
+      "id": "node/1383481749"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481750",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Schmitzhöhe Schule",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43833",
+        "highway": "bus_stop",
+        "name": "Schmitzhöhe Schule"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2809751,
+          50.9898786
+        ]
+      },
+      "id": "node/1383481750"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481752",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Schätzmühle",
+        "VRS:ortsteil": "Linde",
+        "VRS:ref": "43341",
+        "highway": "bus_stop",
+        "name": "Schätzmühle",
+        "operator": "OVAG",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3521911,
+          51.0243655
+        ]
+      },
+      "id": "node/1383481752"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481753",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Schönenborn",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43940",
+        "highway": "bus_stop",
+        "name": "Schönenborn",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2849996,
+          50.9877073
+        ]
+      },
+      "id": "node/1383481753"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481755",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Steinenbrücke",
+        "VRS:ortsteil": "Hartegasse",
+        "VRS:ref": "43133",
+        "bench": "yes",
+        "highway": "bus_stop",
+        "name": "Steinenbrücke",
+        "operator": "OVAG",
+        "shelter": "yes",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3917673,
+          51.0491995
+        ]
+      },
+      "id": "node/1383481755"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481756",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Steinscheid",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43732",
+        "highway": "bus_stop",
+        "name": "Steinscheid",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3530548,
+          51.0105993
+        ]
+      },
+      "id": "node/1383481756"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481759",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Talstraße",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43753",
+        "highway": "bus_stop",
+        "name": "Talstraße",
+        "ref_name": "Talstr., Lindlar",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.396424,
+          51.0143532
+        ]
+      },
+      "id": "node/1383481759"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481763",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Unterfeld",
+        "VRS:ortsteil": "Hartegasse",
+        "VRS:ref": "43134",
+        "fixme": "position",
+        "highway": "bus_stop",
+        "name": "Unterfeld",
+        "operator": "OVAG",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4040039,
+          51.0602627
+        ]
+      },
+      "id": "node/1383481763"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481764",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Unterfrielinghausen",
+        "VRS:ortsteil": "Unterfrielinghsn",
+        "VRS:ref": "43942",
+        "fixme": "position",
+        "highway": "bus_stop",
+        "name": "Unterfrielinghausen",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3372436,
+          50.9874624
+        ]
+      },
+      "id": "node/1383481764"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481766",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Unterheiligenhoven",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43734",
+        "highway": "bus_stop",
+        "name": "Unterheiligenhoven",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3503429,
+          51.0051541
+        ]
+      },
+      "id": "node/1383481766"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481773",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Vellingen",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43936",
+        "highway": "bus_stop",
+        "name": "Vellingen",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3200169,
+          50.9897178
+        ]
+      },
+      "id": "node/1383481773"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481774",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Vellingen Brücke",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43938",
+        "fixme": "position",
+        "highway": "bus_stop",
+        "name": "Vellingen Brücke",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3203437,
+          50.9879139
+        ]
+      },
+      "id": "node/1383481774"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481784",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Voßbrucher Straße",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43638",
+        "highway": "bus_stop",
+        "name": "Voßbrucher Straße",
+        "source": "Verkehrsverbund Rhein-Sieg",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3757159,
+          51.0153441
+        ]
+      },
+      "id": "node/1383481784"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481793",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Waldbruch Schule",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43742",
+        "highway": "bus_stop",
+        "name": "Waldbruch Schule"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3312492,
+          51.0046056
+        ]
+      },
+      "id": "node/1383481793"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481802",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Waldheim",
+        "VRS:ortsteil": "Hartegasse",
+        "VRS:ref": "43136",
+        "highway": "bus_stop",
+        "name": "Waldheim",
+        "operator": "OVAG",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3994727,
+          51.0728522
+        ]
+      },
+      "id": "node/1383481802"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481813",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Weyer",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43541",
+        "highway": "bus_stop",
+        "name": "Weyer",
+        "ref_name": "Weyer, Lindlar",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3943138,
+          51.0254605
+        ]
+      },
+      "id": "node/1383481813"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1383481822",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Wüstenhof",
+        "VRS:ortsteil": "Wüstenhof",
+        "VRS:ref": "43737",
+        "highway": "bus_stop",
+        "name": "Wüstenhof",
+        "ref_name": "Wüstenhof, Lindlar",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3511416,
+          50.9916111
+        ]
+      },
+      "id": "node/1383481822"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2526482867",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Kuhlbacher Straße",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43546",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kuhlbacher Straße",
+        "public_transport": "stop_position",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4239242,
+          51.0360286
+        ]
+      },
+      "id": "node/2526482867"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2710189892",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43854",
+        "bench": "yes",
+        "direction": "N",
+        "highway": "bus_stop",
+        "name": "Hommerich",
+        "operator": "OVAG",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2834172,
+          51.0087767
+        ]
+      },
+      "id": "node/2710189892"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2710189893",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43854",
+        "bench": "yes",
+        "direction": "S",
+        "highway": "bus_stop",
+        "name": "Hommerich",
+        "operator": "OVAG",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2831886,
+          51.0089345
+        ]
+      },
+      "id": "node/2710189893"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2917674551",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Ohl",
+        "VRS:ortsteil": "Hartegasse",
+        "VRS:ref": "43131",
+        "highway": "bus_stop",
+        "name": "Ohl",
+        "operator": "OVAG",
+        "ref_name": "Hartegasse Ohl, Lindlar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3750621,
+          51.0419914
+        ]
+      },
+      "id": "node/2917674551"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3504886310",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Waldbruch",
+        "VRS:ortsteil": "Schmitzhöhe",
+        "VRS:ref": "43741",
+        "highway": "bus_stop",
+        "name": "Waldbruch",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3232159,
+          51.0025061
+        ]
+      },
+      "id": "node/3504886310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3661132061",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Hohkeppel",
+        "VRS:ref": "43951",
+        "direction": "SW",
+        "highway": "bus_stop",
+        "name": "Am Lindenbaum",
+        "source": "survey",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3047238,
+          50.9769204
+        ]
+      },
+      "id": "node/3661132061"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4460391986",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Carola-Lob-Weg",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43754",
+        "highway": "bus_stop",
+        "name": "Carola-Lob-Weg",
+        "source": "Verkehrsverbund Rhein-Sieg",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3763429,
+          51.0142851
+        ]
+      },
+      "id": "node/4460391986"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5816096274",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Lindlar Busbf",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43641",
+        "highway": "bus_stop",
+        "name": "Lindlar Busbahnhof",
+        "operator": "OVAG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3795107,
+          51.0192993
+        ]
+      },
+      "id": "node/5816096274"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5816096275",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Lindlar Busbf",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43641",
+        "highway": "bus_stop",
+        "name": "Lindlar Busbahnhof",
+        "operator": "OVAG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3797762,
+          51.0192226
+        ]
+      },
+      "id": "node/5816096275"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5816404329",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Oberheiligenhoven",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43733",
+        "highway": "bus_stop",
+        "name": "Oberheiligenhoven",
+        "source": "Verkehrsverbund Rhein-Sieg",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3612693,
+          51.0145496
+        ]
+      },
+      "id": "node/5816404329"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5931406504",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Frielingsdorf Busbf",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43242",
+        "highway": "bus_stop",
+        "name": "Frielingsdorf Busbahnhof",
+        "operator": "OVAG",
+        "ref:ibnr": "441127"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4248427,
+          51.0430812
+        ]
+      },
+      "id": "node/5931406504"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5931406574",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43241",
+        "highway": "bus_stop",
+        "name": "Kuhlbach",
+        "source": "survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4283242,
+          51.03689
+        ]
+      },
+      "id": "node/5931406574"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5931406575",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43241",
+        "highway": "bus_stop",
+        "name": "Kuhlbach",
+        "shelter": "yes",
+        "source": "survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4284556,
+          51.0370603
+        ]
+      },
+      "id": "node/5931406575"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5932862675",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43643",
+        "highway": "bus_stop",
+        "name": "Kirschbäumchen",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.385374,
+          51.0206247
+        ]
+      },
+      "id": "node/5932862675"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5932867400",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Weyer",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43541",
+        "highway": "bus_stop",
+        "name": "Weyer",
+        "ref_name": "Weyer, Lindlar",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3959862,
+          51.025831
+        ]
+      },
+      "id": "node/5932867400"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5932867406",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Rübach",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43542",
+        "highway": "bus_stop",
+        "name": "Rübach"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3995709,
+          51.0298416
+        ]
+      },
+      "id": "node/5932867406"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5932867407",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Rübach",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43542",
+        "highway": "bus_stop",
+        "name": "Rübach"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3989379,
+          51.0295357
+        ]
+      },
+      "id": "node/5932867407"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5932867437",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Neuenfeld",
+        "VRS:ortsteil": "Mitte",
+        "VRS:ref": "43544",
+        "highway": "bus_stop",
+        "name": "Neuenfeld",
+        "source": "Verkehrsverbund Rhein-Sieg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4115551,
+          51.0349048
+        ]
+      },
+      "id": "node/5932867437"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6101541203",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Frielingsdorf Busbf",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43242",
+        "highway": "bus_stop",
+        "name": "Frielingsdorf Busbahnhof",
+        "operator": "OVAG",
+        "ref:ibnr": "441127"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4249131,
+          51.0432819
+        ]
+      },
+      "id": "node/6101541203"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6101541205",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Frielingsdorf Busbf",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43242",
+        "highway": "bus_stop",
+        "name": "Frielingsdorf Busbahnhof",
+        "operator": "OVAG",
+        "ref:ibnr": "441127"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.424901,
+          51.0432187
+        ]
+      },
+      "id": "node/6101541205"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6101541207",
+        "VRS:gemeinde": "LINDLAR",
+        "VRS:name": "Frielingsdorf Busbf",
+        "VRS:ortsteil": "Frielingsdorf",
+        "VRS:ref": "43242",
+        "highway": "bus_stop",
+        "name": "Frielingsdorf Busbahnhof",
+        "operator": "OVAG",
+        "ref:ibnr": "441127"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4248796,
+          51.0431571
+        ]
+      },
+      "id": "node/6101541207"
+    }
+  ]
+}

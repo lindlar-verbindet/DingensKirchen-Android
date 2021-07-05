@@ -23,11 +23,11 @@
         android:text="HEUTE"/>
     <ImageView
         android:id="@+id/weather_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         app:layout_constraintTop_toBottomOf="@id/weather_title"
         app:layout_constraintStart_toEndOf="@id/weather_day"
         app:layout_constraintEnd_toEndOf="@id/weather_title"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@drawable/sun_weather_icon_152003"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
