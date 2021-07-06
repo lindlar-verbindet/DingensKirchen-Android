@@ -3,11 +3,16 @@ package de.lindlarverbindet.dingenskirchen.activities
 import android.graphics.PointF
 import android.graphics.RectF
 import android.os.Bundle
+import android.text.Html
+import android.text.method.LinkMovementMethod
+import android.text.util.Linkify
 import android.util.Log
-import android.widget.Toast
+import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.HtmlCompat
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.gson.*
-import com.google.gson.stream.JsonReader
 import com.mapbox.geojson.Feature
 import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.geometry.LatLng
@@ -15,8 +20,7 @@ import com.mapbox.mapboxsdk.maps.MapView
 import com.mapbox.mapboxsdk.maps.MapboxMap
 import com.mapbox.mapboxsdk.maps.Style
 import de.lindlarverbindet.dingenskirchen.R
-import org.json.JSONArray
-import java.io.StringReader
+import de.lindlarverbindet.dingenskirchen.databinding.ActivityMapBinding
 
 
 class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener {
@@ -24,11 +28,26 @@ class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener {
     private lateinit var mapView: MapView
     private lateinit var mapboxMap: MapboxMap
 
+    private lateinit var bottomSheetBehavior: BottomSheetBehavior<View>
+    private lateinit var bottomSheetTitle: TextView
+    private lateinit var bottomSheetDescription: TextView
+
+    private lateinit var binding: ActivityMapBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         Mapbox.getInstance(applicationContext, getString(R.string.mapbox_access_token))
-        setContentView(R.layout.activity_map)
+
+        binding = ActivityMapBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        bottomSheetBehavior = BottomSheetBehavior.from(binding.mapContextBottomSheet.mapBottomSheet)
+        bottomSheetBehavior.state = BottomSheetBehavior.STATE_DRAGGING
+
+        bottomSheetTitle = binding.mapContextBottomSheet.bottomSheetTitle
+        bottomSheetDescription = binding.mapContextBottomSheet.bottomSheetDescription
+        linkPhoneNumber()
+
         mapView = findViewById(R.id.mapView)
         mapView.onCreate(savedInstanceState)
         Log.d("MAP", "onCreate called")
@@ -87,10 +106,29 @@ class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener {
         val stop = queryStopData(point).firstOrNull()
         val lines = queryLineData(point)
         if (stop != null) {
-            val busIds = getLineNumbers(lines)
-            Toast.makeText(this, "${stop.properties()?.get("name")}, line: ${escapeString(busIds.toString())}", Toast.LENGTH_LONG).show()
+            val busIds = getLineInfo(lines)
+            runOnUiThread {
+                bottomSheetTitle.text = stop.properties()?.get("name")?.asString
+                var busLines = ""
+                busIds.forEach {
+                    busLines += "${it} <br>"
+                }
+                bottomSheetDescription.text = HtmlCompat.fromHtml(busLines, HtmlCompat.FROM_HTML_MODE_LEGACY)
+                bottomSheetDescription.movementMethod = LinkMovementMethod.getInstance()
+            }
+        } else {
+            runOnUiThread {
+                bottomSheetTitle.text = getString(R.string.bottom_sheet_title)
+                bottomSheetDescription.text = getString(R.string.bottom_sheet_desc_placeholder)
+                linkPhoneNumber()
+            }
         }
         return false
+    }
+
+    private fun linkPhoneNumber() {
+        Linkify.addLinks(bottomSheetDescription, Linkify.PHONE_NUMBERS)
+        bottomSheetDescription.movementMethod = LinkMovementMethod.getInstance()
     }
 
     /**
@@ -98,7 +136,7 @@ class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener {
      *
      * @param point LatLng value of the selected point
      *
-     * @return List of all found features (stops) 
+     * @return List of all found features (stops)
      */
     private fun queryStopData(point:LatLng): List<Feature> {
         val screenPoint: PointF = mapboxMap.projection.toScreenLocation(point)
@@ -119,24 +157,32 @@ class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener {
     }
 
     /**
-     * Parses the Line Identifiers found in [{reltags -> ref}]
+     * Parses the Line Information found in [{reltags}] like Bus Number, from and to
      *
      * @param lines List of the mapbox features containing the relation data
      *
      * @return List of the Line Identifiers
      */
-    private fun getLineNumbers(lines:List<Feature>):List<String> {
+    private fun getLineInfo(lines:List<Feature>):List<String> {
         val resultList = arrayListOf<String>()
         for (line in lines) {
             val properties = line.properties()
             val jsonElementString = properties?.get("@relations")?.asString
             val jsonElement = Gson().fromJson(jsonElementString, JsonArray::class.java)
             val busId = jsonElement?.get(0)?.asJsonObject?.get("reltags")?.asJsonObject?.get("ref")
+            val from = jsonElement?.get(0)?.asJsonObject?.get("reltags")?.asJsonObject?.get("from")
+            val to = jsonElement?.get(0)?.asJsonObject?.get("reltags")?.asJsonObject?.get("to")
+            Log.d("RELTAGS", jsonElement?.get(0)?.asJsonObject?.get("reltags")?.toString() ?: "empty")
             if (busId != null) {
-                resultList.add(busId.toString())
+                val linkTarget = getDeparturePlan(busId.asString)
+                resultList.add("${linkTarget}: $from -> $to")
             }
         }
         return resultList.distinct().toList()
+    }
+
+    private fun getDeparturePlan(busId: String): String {
+        return "<a href=\"https://docs.google.com/viewer?url=https://www.vrs.de/his/minifahrplan/de:vrs:$busId\">$busId</a>"
     }
 
     /**
