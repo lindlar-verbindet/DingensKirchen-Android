@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/widget_rounded_corners"
-    android:backgroundTint="@color/teal_700">
+    android:backgroundTint="@color/primaryHighlight">
 
     <TextView
         android:id="@+id/village_single_action_title"
@@ -39,9 +39,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintWidth_percent="0.46"
             app:layout_constraintStart_toStartOf="parent"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/primaryBackground"
             android:text="Öffnen"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/village_double_second_action"
@@ -51,7 +51,12 @@
             app:layout_constraintWidth_percent="0.46"
             android:backgroundTint="@color/white"
             android:text="Öffnen"
-            android:textColor="@color/black"/>
+            android:textColor="@color/primaryTextColor"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            app:layout_constraintTop_toBottomOf="@id/village_double_first_action"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
