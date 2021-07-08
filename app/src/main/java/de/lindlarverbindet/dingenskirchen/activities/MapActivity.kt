@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.text.util.Linkify
 import android.util.Log
+import android.view.Gravity
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
@@ -20,6 +21,7 @@ import com.mapbox.android.core.permissions.PermissionsListener
 import com.mapbox.android.core.permissions.PermissionsManager
 import com.mapbox.geojson.Feature
 import com.mapbox.mapboxsdk.Mapbox
+import com.mapbox.mapboxsdk.attribution.Attribution
 import com.mapbox.mapboxsdk.geometry.LatLng
 import com.mapbox.mapboxsdk.location.LocationComponentActivationOptions
 import com.mapbox.mapboxsdk.location.modes.CameraMode
@@ -68,6 +70,8 @@ class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener, Permission
                 // enable compass
                 val uiSettings = mapboxMap.uiSettings
                 uiSettings.isCompassEnabled = true
+                uiSettings.logoGravity = Gravity.AXIS_PULL_BEFORE
+                uiSettings.attributionGravity = Gravity.AXIS_CLIP
 
                 enableLocationComponent(style)
             }
