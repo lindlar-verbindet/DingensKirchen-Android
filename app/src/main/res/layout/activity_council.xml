@@ -21,47 +21,47 @@
             android:shrinkColumns="*">
             <TableRow>
                 <ImageView
-                    android:id="@+id/event_headerimage"
+                    android:id="@+id/council_headerimage"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_marginTop="35dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:src="@drawable/ic_amusement_park"/>
+                    android:src="@drawable/ic_online_information"/>
             </TableRow>
             <TableRow>
                 <include
-                    android:id="@+id/village_first"
+                    android:id="@+id/council_action_trash"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    app:layout_constraintTop_toBottomOf="@id/event_headerimage"
-                    layout="@layout/event_image_layout"/>
+                    app:layout_constraintTop_toBottomOf="@id/council_headerimage"
+                    layout="@layout/council_trash"/>
             </TableRow>
             <TableRow>
                 <include
-                    android:id="@+id/village_second"
+                    android:id="@+id/council_action_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/council_action_trash"
+                    layout="@layout/council_action"/>
+            </TableRow>
+            <TableRow>
+                <include
+                    android:id="@+id/council_action_second"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     app:layout_constraintTop_toBottomOf="@id/village_first"
-                    layout="@layout/event_layout"/>
-            </TableRow>
-            <TableRow>
-                <include
-                    android:id="@+id/village_third"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    app:layout_constraintTop_toBottomOf="@id/village_second"
-                    layout="@layout/event_image_layout"/>
+                    layout="@layout/council_action" />
             </TableRow>
         </TableLayout>
     </ScrollView>

@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DingensKirchen">
+        <activity android:name=".activities.CouncilActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.lindlarverbindet.dingenskirchen.activities.MainActivity" />
+        </activity>
         <activity android:name=".activities.EventActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -32,8 +37,8 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

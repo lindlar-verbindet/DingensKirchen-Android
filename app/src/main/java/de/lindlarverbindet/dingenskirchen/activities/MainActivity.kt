@@ -8,21 +8,30 @@ import de.lindlarverbindet.dingenskirchen.R
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var eventWidget: View
+    private lateinit var councilWidget: View
     private lateinit var mobilWidget: View
     private lateinit var villageWidget: View
-    private lateinit var appointmentWidget: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        appointmentWidget = findViewById(R.id.main_events_widget)
+        eventWidget = findViewById(R.id.main_events_widget)
+        councilWidget = findViewById(R.id.main_council_widget)
         mobilWidget = findViewById(R.id.main_mobil_widget)
         villageWidget = findViewById(R.id.main_village_widget)
 
-        appointmentWidget.setOnClickListener {
+        eventWidget.setOnClickListener {
             runOnUiThread {
                 val intent = Intent(applicationContext, EventActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
+        councilWidget.setOnClickListener {
+            runOnUiThread {
+                val intent = Intent(applicationContext, CouncilActivity::class.java)
                 startActivity(intent)
             }
         }
