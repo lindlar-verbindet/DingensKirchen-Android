@@ -20,7 +20,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Dorfleben"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/village_exampe1"
@@ -33,7 +34,8 @@
         app:layout_constraintStart_toStartOf="@id/village_title"
         app:layout_constraintEnd_toEndOf="@id/village_title"
         android:text="Suche+Finde, DigitalBegleitung"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/village_exampe2"
@@ -45,6 +47,7 @@
         app:layout_constraintStart_toStartOf="@id/village_exampe1"
         app:layout_constraintEnd_toEndOf="@id/village_exampe1"
         android:text="Nachbarschaftshilfe"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

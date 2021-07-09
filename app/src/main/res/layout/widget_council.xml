@@ -20,7 +20,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Rathaus"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/council_example1"
@@ -33,7 +34,8 @@
         app:layout_constraintStart_toStartOf="@id/council_title"
         app:layout_constraintEnd_toEndOf="@id/council_title"
         android:text="OnlineServices"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
     <TextView
         android:id="@+id/council_example2"
         android:layout_width="match_parent"
@@ -44,6 +46,7 @@
         app:layout_constraintStart_toStartOf="@id/council_example1"
         app:layout_constraintEnd_toEndOf="@id/council_title"
         android:text="Müllkalender"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

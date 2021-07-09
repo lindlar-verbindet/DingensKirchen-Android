@@ -21,7 +21,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Mobil"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/mobil_example1"
@@ -34,7 +35,8 @@
         app:layout_constraintStart_toStartOf="@id/mobil_title"
         app:layout_constraintEnd_toEndOf="@id/mobil_title"
         android:text="ÖPNV, Bürgerbus, Limo"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/mobil_example2"
@@ -47,6 +49,7 @@
         app:layout_constraintStart_toStartOf="@id/mobil_example1"
         app:layout_constraintEnd_toEndOf="@id/mobil_example1"
         android:text="CarSharing Linde"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
