@@ -48,6 +48,8 @@ class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener, Permission
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        this.supportActionBar?.title = "Mobil"
+
         Mapbox.getInstance(applicationContext, getString(R.string.mapbox_access_token))
 
         binding = ActivityMapBinding.inflate(layoutInflater)
