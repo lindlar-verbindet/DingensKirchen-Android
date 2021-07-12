@@ -25,10 +25,16 @@ class CouncilActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_council)
 
+        this.supportActionBar?.title = "Rathaus"
+
         councilTrashService = findViewById(R.id.council_action_trash)
         tableLayout = findViewById(R.id.council_table)
 
-        this.supportActionBar?.title = "Rathaus"
+        councilTrashService.setOnClickListener {
+            val webpage = Uri.parse("https://abfallnavi.de/lindlar")
+            val intent = Intent(Intent.ACTION_VIEW, webpage)
+            startActivity(intent)
+        }
 
         val services = loadCouncilServices()
         configureTableRows(services)
