@@ -15,11 +15,13 @@ class CouncilActivity : AppCompatActivity() {
 
     private lateinit var councilActionFirst: View
     private lateinit var councilActionSecond: View
+    private lateinit var councilTrashService: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_council)
 
+        councilTrashService = findViewById(R.id.council_action_trash)
         councilActionFirst = findViewById(R.id.council_action_first)
         councilActionSecond = findViewById(R.id.council_action_second)
 
@@ -27,6 +29,12 @@ class CouncilActivity : AppCompatActivity() {
 
         val secondTitleView = councilActionSecond.findViewById<TextView>(R.id.council_action_title)
         secondTitleView.text = "Mängelmelder"
+
+        councilTrashService.setOnClickListener {
+            val webpage = Uri.parse("https://abfallnavi.de/lindlar")
+            val intent = Intent(Intent.ACTION_VIEW, webpage)
+            startActivity(intent)
+        }
 
         val firstActionButton = councilActionFirst.findViewById<Button>(R.id.council_action_button)
         firstActionButton.setOnClickListener {
