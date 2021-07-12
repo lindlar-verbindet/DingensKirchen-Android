@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<council-services>
+    <service name="Sperrmüll Abholung" desc="Beantragung einer Sperrmüll Abholung" link="https://www.bavweb.de/anmeldung/lindlar/" btn="Jetzt Beantragen"/>
+    <service name="Elektrogroßgeräteentsorgung" desc="Beantragung einer Elektrogroßgeräteentsorgung" link="https://www.bavweb.de/anmeldung/lindlar/" btn="Jetzt Beantragen"/>
+    <service name="Meldebescheinigung" desc="Beantragung einer Meldebescheinigung" link="https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Buergeramt/pool/pool_meldebesch_einf/index" btn="Jetzt Beantragen"/>
+    <service name="Erweiterte Meldebescheinigung" desc="Beantragung einer erweiterten Meldebescheinigung" link="https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Buergeramt/pool/pool_meldebesch_erw_V2/index" btn="Jetzt Beantragen"/>
+    <service name="Einfache Melderegisterauskunft" desc="Einfache Melderegisterauskunft nach §44 Bundesmeldegesetz" link="https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Buergeramt/pool/pool_melderegister/index" btn="Jetzt Beantragen"/>
+    <service name="Automatisierte Melderegisterauskunft" desc="Automatisierte Melderegisterauskunft nach §49 Bundesmeldegesetz" link="https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Buergeramt/pool/pool_melderegister_0600/index" btn="Jetzt Beantragen"/>
+    <service name="Führungszeugnisses" desc="Beantragung eines Führungszeugnisses" link="https://www.fuehrungszeugnis.bund.de/" btn="Jetzt Beantragen"/>
+    <service name="Elternportal Oberbergischer Kreis" desc="Elternportal Oberbergischer Kreis - Suchportal und zentrale Anmeldung für Kinderbetreuungsplätze" link="http://www.elternportal-obk.de/" btn="Jetzt Anmelden"/>
+    <service name="Gewerbeangelegenheiten" desc="Wirtschafts-Service-Portal.NRW" link="https://service.wirtschaft.nrw/online-antraege" btn="Zum Portal"/>
+    <service name="An- und Abmeldung Hund" desc="An- und Abmeldung von Hunden" link="https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Ordnung/pool/pool_hunde/index" btn="Jetzt Anmelden"/>
+    <service name="Hundesteuerbefreiung" desc="Beantragung einer Hundesteuerbefreiung oder -ermäßigung für einen bereits vorhandenen Hund" link="https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Ordnung/pool/pool_hunde/index" btn="Jetzt Beantragen"/>
+    <service name="Antrag auf Haltungserlaubnis" desc="Antrag auf Haltungserlaubnis eines gefährlichen Hundes oder eines Hundes bestimmter Rassen" link="https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Ordnung/pool/pool_hunde/index" btn="Jetzt Antrag stellen"/>
+    <service name="Mängelmelder" desc="Meldung von z.B. 'wildem' Müll, Schäden etc." link="https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Zentrale/pool/pool_maengelmelder/index" btn="Jetzt Melden"/>
+    <service name="Standesamt" desc="Beantragung von Personenstandsurkunden" link="https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Standesamt/pool/pool_urkunden/index" btn="Jetzt Beantragen"/>
+</council-services>

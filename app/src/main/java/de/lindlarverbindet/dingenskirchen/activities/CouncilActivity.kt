@@ -1,54 +1,100 @@
 package de.lindlarverbindet.dingenskirchen.activities
 
 import android.content.Intent
-import android.content.res.ColorStateList
-import android.graphics.Color
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.TableLayout
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import de.lindlarverbindet.dingenskirchen.R
+import de.lindlarverbindet.dingenskirchen.models.CouncilService
+import org.xmlpull.v1.XmlPullParser
+
 
 class CouncilActivity : AppCompatActivity() {
 
-    private lateinit var councilActionFirst: View
-    private lateinit var councilActionSecond: View
     private lateinit var councilTrashService: View
+    private lateinit var tableLayout: TableLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_council)
 
         councilTrashService = findViewById(R.id.council_action_trash)
-        councilActionFirst = findViewById(R.id.council_action_first)
-        councilActionSecond = findViewById(R.id.council_action_second)
+        tableLayout = findViewById(R.id.council_table)
 
-        councilActionFirst.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.primaryBackground))
+        this.supportActionBar?.title = "Rathaus"
 
-        val secondTitleView = councilActionSecond.findViewById<TextView>(R.id.council_action_title)
-        secondTitleView.text = "Mängelmelder"
+        val services = loadCouncilServices()
+        configureTableRows(services)
+    }
 
-        councilTrashService.setOnClickListener {
-            val webpage = Uri.parse("https://abfallnavi.de/lindlar")
-            val intent = Intent(Intent.ACTION_VIEW, webpage)
-            startActivity(intent)
+    private fun loadCouncilServices(): List<CouncilService> {
+        val items = ArrayList<CouncilService>()
+        val xpp: XmlPullParser = resources.getXml(R.xml.council_services)
+
+        var serviceName = ""
+        var serviceDesc = ""
+        var serviceLink = ""
+        var buttonText  = ""
+        // parsing services
+        while (xpp.eventType != XmlPullParser.END_DOCUMENT) {
+            when (xpp.eventType) {
+                XmlPullParser.START_TAG -> {
+                    if (xpp.name == "service") {
+                        serviceName = xpp.getAttributeValue(null, "name")
+                        serviceDesc = xpp.getAttributeValue(null, "desc")
+                        serviceLink = xpp.getAttributeValue(null, "link")
+                        buttonText  = xpp.getAttributeValue(null, "btn")
+                    }
+                }
+                XmlPullParser.END_TAG -> {
+                    if (xpp.name == "service") {
+                        items.add(CouncilService(serviceName, serviceDesc, serviceLink, buttonText))
+                    }
+                }
+            }
+            xpp.next()
         }
+        return items.toList()
+    }
 
-        val firstActionButton = councilActionFirst.findViewById<Button>(R.id.council_action_button)
-        firstActionButton.setOnClickListener {
-            val webpage = Uri.parse("https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Buergeramt/pool/pool_meldebesch_einf/index")
-            val intent = Intent(Intent.ACTION_VIEW, webpage)
-            startActivity(intent)
-        }
-
-        val secondActionButton = councilActionSecond.findViewById<Button>(R.id.council_action_button)
-        secondActionButton.text = "Jetzt online melden"
-        secondActionButton.setOnClickListener {
-            val webpage = Uri.parse("https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Zentrale/pool/pool_maengelmelder/index")
-            val intent = Intent(Intent.ACTION_VIEW, webpage)
-            startActivity(intent)
+    private fun configureTableRows(data: List<CouncilService>) {
+        var backgroundGreen = false
+        for (element in data) {
+            Log.d("ELEMENT", element.name + " " + element.desc + " " + element.link)
+            val row = View.inflate(this, R.layout.council_action, null) as ConstraintLayout
+            if (backgroundGreen) {
+                row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryHighlight)
+            } else {
+                row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryBackground)
+            }
+            backgroundGreen = !backgroundGreen
+            // load subviews
+            val titleView = row.findViewById<TextView>(R.id.council_action_title)
+            val descView = row.findViewById<TextView>(R.id.council_action_desc)
+            val button = row.findViewById<Button>(R.id.council_action_button)
+            // configure subviews
+            titleView.text = element.name
+            descView.text = element.desc
+            button.text = element.buttonText
+            button.setOnClickListener {
+                val webpage = Uri.parse(element.link)
+                val intent = Intent(Intent.ACTION_VIEW, webpage)
+                startActivity(intent)
+            }
+            // Set Margin for dynamic row
+            val rowParams = TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT,
+                                                     TableLayout.LayoutParams.WRAP_CONTENT)
+            rowParams.setMargins(20, 20, 20, 0)
+            row.layoutParams = rowParams
+            // add row to table
+            tableLayout.addView(row)
         }
     }
 }
