@@ -29,7 +29,7 @@ class WordpressHelper {
                 val date = dateParser.parse(post.get("date") as String)
                 val link = post.get("link") as String
 
-                val wpPost = WPPost(title, content, date, link)
+                val wpPost = WPPost(title, content, date ?: Date(), link)
                 result.add(wpPost)
             }
             return result
