@@ -12,6 +12,8 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import de.lindlarverbindet.dingenskirchen.R
+import de.lindlarverbindet.dingenskirchen.activities.villageservices.DigitalActivity
+import de.lindlarverbindet.dingenskirchen.activities.villageservices.LimoActivity
 import de.lindlarverbindet.dingenskirchen.models.CouncilService
 import de.lindlarverbindet.dingenskirchen.models.VillageService
 import org.xmlpull.v1.XmlPullParser
@@ -128,6 +130,12 @@ class VillageActivity : AppCompatActivity() {
         }
         button2.text = element.actionBtn
         button2.setOnClickListener {
+            val intent = when(element.title) {
+                "Digitalbegleitung"     -> Intent(applicationContext, DigitalActivity::class.java)
+                "Lindlar Mobil"         -> Intent(applicationContext, LimoActivity::class.java)
+                else                    -> Intent(applicationContext, DigitalActivity::class.java)
+            }
+            startActivity(intent)
             // TODO: Add when action is available
 //            val webpage = Uri.parse(element.action)
 //            val intent = Intent(Intent.ACTION_VIEW, webpage)

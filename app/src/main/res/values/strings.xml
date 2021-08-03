@@ -18,4 +18,27 @@
     <string name="user_location_permission_explanation">Dingenskirchen braucht Ihre Standort Daten um die aktuelle Position auf der Karte anzuzeigen.</string>
     <string name="user_location_permission_not_granted">Standort Daten wurden nicht freigegeben</string>
     <string name="abfall_navi_logo_desc">Abfall Navi Logo</string>
+    <string name="form_given_name">Ihr Vorname</string>
+    <string name="form_name">Ihr Nachname</string>
+    <string name="form_telephone">Ihre Telefon oder Mobilnummer</string>
+    <string name="form_mail">Ihre E-Mail-Adresse</string>
+    <string name="form_agreement">Hiermit erkläre ich micht einverstanden, dass meine in das Formular eingegebenen Daten elektronisch gespeichert und zum Zweck der Kontaktaufnahme verarbeitet und genutzt werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit wiederrufen kann.</string>
+    <string name="form_send">Absenden</string>
+
+    <string name="help_topic_prompt">Zu welchem Themengebiet haben Sie Fragen/wünschen Sie Unterstützung</string>
+    <string name="form_address">Ihre Anschrift</string>
+    <string name="form_topic_other">Nicht dabei? Wobei können wir helfen?</string>
+    <string name="form_detail_topic">Erzählen Sie uns ein bisschen mehr zum Thema. So können wirden richtigen Experten für Sie finden.</string>
+    <string name="form_home_order">Ist ein Vorort-Termin erwünscht?</string>
+    <string-array name="form_help_topics">
+        <item>Bedienung Smartphone</item>
+        <item>Bedienung Computer</item>
+        <item>Updates/Apps/Programme installieren</item>
+        <item>Videokonferenzen</item>
+        <item>Windows</item>
+        <item>macOS</item>
+        <item>Android - Smartphone</item>
+        <item>iOS - iPhone</item>
+        <item>Anderes Thema</item>
+    </string-array>
 </resources>

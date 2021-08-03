@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DingensKirchen">
+        <activity android:name=".activities.villageservices.DigitalActivity"></activity>
+        <activity android:name=".activities.villageservices.LimoActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.lindlarverbindet.dingenskirchen.activities.VillageActivity" />
+        </activity>
         <activity android:name=".activities.CouncilActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
