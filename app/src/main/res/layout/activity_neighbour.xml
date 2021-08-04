@@ -32,7 +32,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="text"
-                android:autofillHints="given name"/>
+                android:autofillHints=".AUTOFILL_HINT_PERSON_NAME_GIVEN"/>
             <TextView
                 android:id="@+id/neighbour_name_label"
                 android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="text"
-                android:autofillHints="name"/>
+                android:autofillHints=".AUTOFILL_HINT_PERSON_NAME_FAMILY"/>
             <TextView
                 android:id="@+id/neighbour_address_label"
                 android:layout_width="match_parent"
@@ -68,7 +68,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="text"
-                android:autofillHints="address"/>
+                android:autofillHints=".AUTOFILL_HINT_POSTAL_ADDRESS"/>
             <TextView
                 android:id="@+id/neighbour_tel_label"
                 android:layout_width="match_parent"
@@ -86,7 +86,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="phone"
-                android:autofillHints="phone"/>
+                android:autofillHints=".AUTOFILL_HINT_PHONE_NUMBER"/>
             <TextView
                 android:id="@+id/neighbour_mail_label"
                 android:layout_width="match_parent"
@@ -104,7 +104,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="textEmailAddress"
-                android:autofillHints="email address"
+                android:autofillHints=".AUTOFILL_HINT_EMAIL_ADDRESS"
                 android:labelFor="@id/neighbour_mail_label"/>
             <TextView
                 android:id="@+id/neighbour_topic_label"

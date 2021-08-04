@@ -32,7 +32,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="text"
-                android:importantForAutofill="no"/>
+                android:autofillHints=".AUTOFILL_HINT_PERSON_NAME_GIVEN"/>
             <TextView
                 android:id="@+id/pocket_money_name_label"
                 android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="text"
-                android:importantForAutofill="no" />
+                android:autofillHints=".AUTOFILL_HINT_PERSON_NAME_FAMILY"/>
             <TextView
                 android:id="@+id/pocket_money_address_label"
                 android:layout_width="match_parent"
@@ -68,7 +68,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="text"
-                android:importantForAutofill="no" />
+                android:autofillHints=".AUTOFILL_HINT_POSTAL_ADDRESS"/>
             <TextView
                 android:id="@+id/pocket_money_tel_label"
                 android:layout_width="match_parent"
@@ -86,7 +86,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="phone"
-                android:importantForAutofill="no" />
+                android:autofillHints=".AUTOFILL_HINT_PHONE_NUMBER"/>
             <TextView
                 android:id="@+id/pocket_money_mail_label"
                 android:layout_width="match_parent"
@@ -104,7 +104,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="textEmailAddress"
-                android:importantForAutofill="no"
+                android:autofillHints=".AUTOFILL_HINT_EMAIL_ADDRESS"
                 android:labelFor="@id/pocket_money_mail_label"/>
             <TextView
                 android:id="@+id/pocket_money_birthdate_label"
@@ -114,7 +114,7 @@
                 app:layout_constraintTop_toBottomOf="@id/pocket_money_mail_field"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:text="@string/form_mail"/>
+                android:text="@string/form_birth_date"/>
             <EditText
                 android:id="@+id/pocket_money_birthdate_field"
                 android:layout_width="match_parent"
@@ -122,8 +122,8 @@
                 app:layout_constraintTop_toBottomOf="@id/pocket_money_birthdate_label"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:inputType="textEmailAddress"
-                android:importantForAutofill="no"
+                android:inputType="date"
+                android:autofillHints=".AUTOFILL_HINT_BIRTH_DATE_FULL"
                 android:labelFor="@id/pocket_money_mail_label"/>
             <TextView
                 android:id="@+id/pocket_money_topic_label"
