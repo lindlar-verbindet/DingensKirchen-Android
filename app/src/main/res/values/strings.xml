@@ -24,13 +24,17 @@
     <string name="form_mail">Ihre E-Mail-Adresse</string>
     <string name="form_agreement">Hiermit erkläre ich micht einverstanden, dass meine in das Formular eingegebenen Daten elektronisch gespeichert und zum Zweck der Kontaktaufnahme verarbeitet und genutzt werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit wiederrufen kann.</string>
     <string name="form_send">Absenden</string>
-
-    <string name="help_topic_prompt">Zu welchem Themengebiet haben Sie Fragen/wünschen Sie Unterstützung</string>
     <string name="form_address">Ihre Anschrift</string>
     <string name="form_topic_other">Nicht dabei? Wobei können wir helfen?</string>
     <string name="form_detail_topic">Erzählen Sie uns ein bisschen mehr zum Thema. So können wirden richtigen Experten für Sie finden.</string>
     <string name="form_home_order">Ist ein Vorort-Termin erwünscht?</string>
-    <string-array name="form_help_topics">
+    <string name="form_optional_stuff">Optionale Angaben zu Ihrer Anfrage</string>
+    <string name="form_date">In welchem Zeitraum sollte die Aufgabe erledigt werden?</string>
+    <string name="form_date_from">Von</string>
+    <string name="form_date_to">Bis</string>
+
+    <string name="help_topic_prompt_digital">Zu welchem Themengebiet haben Sie Fragen/wünschen Sie Unterstützung</string>
+    <string-array name="form_help_topics_digital">
         <item>Bedienung Smartphone</item>
         <item>Bedienung Computer</item>
         <item>Updates/Apps/Programme installieren</item>
@@ -40,5 +44,29 @@
         <item>Android - Smartphone</item>
         <item>iOS - iPhone</item>
         <item>Anderes Thema</item>
+    </string-array>
+
+    <string name="form_topic_prompt_neighbour">Zu welcher Tätigkeit wünschen Sie zukünftig Unterstützung?</string>
+    <string-array name="form_help_topics_neighbour">
+        <item>Einkaufen</item>
+        <item>Erledigungsgänge</item>
+        <item>Haustiere</item>
+        <item>Auf- oder Abbauen von Möbeln</item>
+        <item>Ausfüllen von Formularen</item>
+        <item>Rasenmähen, Schneeräumen oder Kehrarbeiten</item>
+        <item>Leichte Gartenarbeiten</item>
+        <item>... bei einer anderen Tätigkeit</item>
+    </string-array>
+
+
+    <string-array name="form_help_topics_pocket_money">
+        <item>Einkaufen</item>
+        <item>Erledigungsgänge</item>
+        <item>Haustierebetreuung</item>
+        <item>Auf- oder Abbauen von Möbeln</item>
+        <item>Rasenmähen, Schneeräumen oder Kehrarbeiten</item>
+        <item>Leichte Gartenarbeiten</item>
+        <item>Hilfe mit dem Handy/Computer</item>
+        <item>... bei einer anderen Tätigkeit</item>
     </string-array>
 </resources>

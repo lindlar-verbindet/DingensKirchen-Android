@@ -14,6 +14,8 @@ import androidx.core.content.ContextCompat
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.activities.villageservices.DigitalActivity
 import de.lindlarverbindet.dingenskirchen.activities.villageservices.LimoActivity
+import de.lindlarverbindet.dingenskirchen.activities.villageservices.NeighbourActivity
+import de.lindlarverbindet.dingenskirchen.activities.villageservices.PocketMoneyActivity
 import de.lindlarverbindet.dingenskirchen.models.CouncilService
 import de.lindlarverbindet.dingenskirchen.models.VillageService
 import org.xmlpull.v1.XmlPullParser
@@ -133,7 +135,8 @@ class VillageActivity : AppCompatActivity() {
             val intent = when(element.title) {
                 "Digitalbegleitung"     -> Intent(applicationContext, DigitalActivity::class.java)
                 "Lindlar Mobil"         -> Intent(applicationContext, LimoActivity::class.java)
-                else                    -> Intent(applicationContext, DigitalActivity::class.java)
+                "Nachbarschaftshilfe"   -> Intent(applicationContext, NeighbourActivity::class.java)
+                else                    -> Intent(applicationContext, PocketMoneyActivity::class.java)
             }
             startActivity(intent)
             // TODO: Add when action is available

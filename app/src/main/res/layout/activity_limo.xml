@@ -41,7 +41,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="text"
-                android:importantForAutofill="no" />
+                android:autofillHints="given name"/>
             <TextView
                 android:id="@+id/limo_name_label"
                 android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="text"
-                android:importantForAutofill="no" />
+                android:autofillHints="name"/>
             <TextView
                 android:id="@+id/limo_tel_label"
                 android:layout_width="match_parent"
@@ -76,8 +76,8 @@
                 app:layout_constraintTop_toBottomOf="@id/limo_tel_label"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:inputType="text"
-                android:importantForAutofill="no" />
+                android:inputType="phone"
+                android:autofillHints="phone"/>
             <TextView
                 android:id="@+id/limo_mail_label"
                 android:layout_width="match_parent"
@@ -94,8 +94,8 @@
                 app:layout_constraintTop_toBottomOf="@id/limo_mail_label"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:inputType="text"
-                android:importantForAutofill="no" />
+                android:inputType="textEmailAddress"
+                android:autofillHints="email address" />
             <CheckBox
                 android:id="@+id/limo_agreement_checkbox"
                 android:layout_width="match_parent"
@@ -104,7 +104,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/form_agreement"/>
-
             <Button
                 android:id="@+id/limo_button"
                 android:layout_width="match_parent"
