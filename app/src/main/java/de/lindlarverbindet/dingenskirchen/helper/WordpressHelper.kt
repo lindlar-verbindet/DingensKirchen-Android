@@ -1,5 +1,6 @@
 package de.lindlarverbindet.dingenskirchen.helper
 
+import de.lindlarverbindet.dingenskirchen.models.WPEvent
 import de.lindlarverbindet.dingenskirchen.models.WPPost
 import org.json.JSONArray
 import org.json.JSONException
@@ -37,7 +38,42 @@ class WordpressHelper {
             e.printStackTrace()
             return listOf()
         }
+    }
 
+    fun getRecentEvents(): List<WPEvent> {
+        val urlString = "https://www.lindlar-verbindet.de/wp-json/mecexternal/v1/calendar/412"
+
+        val dateParser = SimpleDateFormat("yyyy-MM-dd", Locale.GERMAN)
+        val response = apiHelper.sendGetRequest(urlString)
+        try {
+            val json = JSONObject(response)
+            val result: ArrayList<WPEvent> = arrayListOf()
+
+            val content = json.get("content_json") as JSONObject
+            for (key in content.keys()) {
+                val date = dateParser.parse(key)
+                val appointmentArray = content.get(key) as JSONArray
+
+                val entry = appointmentArray[0] as JSONObject // just pull the first dont know why this is an array
+                val data = entry.get("data") as JSONObject
+
+                val title = data.get("title") as String
+                val content = data.get("content") as String
+                val start_time = (data.get("time") as JSONObject).get("start_raw") as String
+                val end_time = (data.get("time") as JSONObject).get("end_raw") as String
+                val link = data.get("permalink") as String
+
+                if (date != null) {
+                    val appointment = WPEvent(title, content, date, start_time, end_time, link)
+                    result.add(appointment)
+                }
+            }
+
+            return result
+        } catch (e: JSONException) {
+            e.printStackTrace()
+            return listOf()
+        }
     }
 
 }

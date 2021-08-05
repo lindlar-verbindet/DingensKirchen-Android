@@ -48,6 +48,7 @@
 
     <string name="form_topic_prompt_neighbour">Zu welcher Tätigkeit wünschen Sie zukünftig Unterstützung?</string>
     <string name="form_birth_date">Ihr Geburtsdatum</string>
+    <string name="warning_no_connection">Keine Verbindung zum Server</string>
     <string-array name="form_help_topics_neighbour">
         <item>Einkaufen</item>
         <item>Erledigungsgänge</item>
