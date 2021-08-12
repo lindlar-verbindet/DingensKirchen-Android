@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<village-services>
+    <service type="1" title="Digitalbegleitung" desc="Persönliche Hilfe bei Problemen in der Nutzung von Handy, Tablet und PC." tel="+492266/4407204" telbtn="Anrufen" action="" actionbtn="Öffnen"/>
+    <service type="1" title="Taschengeldbörse" desc="Schüler*innen helfen gegen ein Taschengeld bei leichten Arbeiten rund um Haus und Garten." tel="+492266/4407204" telbtn="Anrufen" action="" actionbtn="Öffnen"/>
+    <service type="1" title="Nachbarschaftshilfe" desc="Ehrenamtler*innen unterstützen bei Garten- oder Hausarbeiten, helfen beim Ausfüllen von Formularen oder Erledigungsgängen." tel="+492266/4407204" telbtn="Anrufen" action="" actionbtn="Öffnen"/>
+    <service type="2" title="Suche/Finde" desc="Sharing von Werkzeugen oder Geräten, Abgabe von nicht mehr gebrauchten Dingen - für mehr Nachhaltigkeit und ein gutes Miteinander." tel="" telbtn="" action="" actionbtn="Öffnen"/>
+    <service type="1" title="Lindlar Mobil" desc="Fahrservice auf Anfrage. LiMo unterstützt bei Erledigungsfahrten, bringt Sie zu Terminen und Veranstaltungen innerhalb der Gemeinde Lindlar." tel="+492266/4407204" telbtn="Anrufen" action="" actionbtn="Öffnen"/>
+</village-services>

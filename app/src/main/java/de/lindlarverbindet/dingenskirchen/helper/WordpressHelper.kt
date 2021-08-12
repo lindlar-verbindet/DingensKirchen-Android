@@ -1,0 +1,84 @@
+package de.lindlarverbindet.dingenskirchen.helper
+
+import de.lindlarverbindet.dingenskirchen.models.WPEvent
+import de.lindlarverbindet.dingenskirchen.models.WPPost
+import org.json.JSONArray
+import org.json.JSONException
+import org.json.JSONObject
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
+
+class WordpressHelper {
+
+    private val apiHelper = APIHelper()
+
+    private val appNewsID = "13"
+
+    fun getRecentPosts(): List<WPPost> {
+        val urlString = "https://www.lindlar-verbindet.de/wp-json/wp/v2/posts?categories=$appNewsID"
+
+        val dateParser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.GERMAN)
+        val response = apiHelper.sendGetRequest(urlString)
+        try {
+            val posts = JSONArray(response)
+            val result: ArrayList<WPPost> = arrayListOf()
+            for (i in 0 until posts.length()) {
+                val post = posts.getJSONObject(i)
+                val title = (post.get("title") as JSONObject).get("rendered") as String
+                val content = (post.get("content") as JSONObject).get("rendered") as String
+                val date = dateParser.parse(post.get("date") as String)
+                val link = post.get("link") as String
+
+                val wpPost = WPPost(title, content, date ?: Date(), link)
+                result.add(wpPost)
+            }
+            return result
+        } catch (e:JSONException) {
+            e.printStackTrace()
+            return listOf()
+        }
+    }
+
+    fun getRecentEvents(): List<WPEvent> {
+        val urlString = "https://www.lindlar-verbindet.de/wp-json/mecexternal/v1/calendar/412"
+
+        val dateParser = SimpleDateFormat("yyyy-MM-dd", Locale.GERMAN)
+        val response = apiHelper.sendGetRequest(urlString)
+        try {
+            val json = JSONObject(response)
+            val result: ArrayList<WPEvent> = arrayListOf()
+
+            val content = json.get("content_json") as JSONObject
+            for (key in content.keys()) {
+                val date = dateParser.parse(key)
+                val appointmentArray = content.get(key) as JSONArray
+
+                val entry = appointmentArray[0] as JSONObject // just pull the first dont know why this is an array
+                val data = entry.get("data") as JSONObject
+
+                val title = data.get("title") as String
+                val content = data.get("content") as String
+                val startTime = (data.get("time") as JSONObject).get("start_raw") as String
+                val endTime = (data.get("time") as JSONObject).get("end_raw") as String
+                val locations = (data.get("locations") as JSONObject)
+                var location = ""
+                for (key in locations.keys()) {
+                     location = (locations.get(key) as JSONObject).get("address") as String
+                }
+                val link = data.get("permalink") as String
+
+                if (date != null) {
+                    val appointment = WPEvent(title, content, date, startTime, endTime, location, link)
+                    result.add(appointment)
+                }
+            }
+
+            return result
+        } catch (e: JSONException) {
+            e.printStackTrace()
+            return listOf()
+        }
+    }
+
+}
