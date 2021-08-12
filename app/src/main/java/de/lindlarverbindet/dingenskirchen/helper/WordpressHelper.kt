@@ -59,12 +59,17 @@ class WordpressHelper {
 
                 val title = data.get("title") as String
                 val content = data.get("content") as String
-                val start_time = (data.get("time") as JSONObject).get("start_raw") as String
-                val end_time = (data.get("time") as JSONObject).get("end_raw") as String
+                val startTime = (data.get("time") as JSONObject).get("start_raw") as String
+                val endTime = (data.get("time") as JSONObject).get("end_raw") as String
+                val locations = (data.get("locations") as JSONObject)
+                var location = ""
+                for (key in locations.keys()) {
+                     location = (locations.get(key) as JSONObject).get("address") as String
+                }
                 val link = data.get("permalink") as String
 
                 if (date != null) {
-                    val appointment = WPEvent(title, content, date, start_time, end_time, link)
+                    val appointment = WPEvent(title, content, date, startTime, endTime, location, link)
                     result.add(appointment)
                 }
             }

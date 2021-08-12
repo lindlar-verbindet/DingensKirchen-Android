@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         getLatestNews()
-        getLatestAppointments()
+        getLatestAppointment()
     }
 
     private fun getLatestNews() {
@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun getLatestAppointments() {
+    private fun getLatestAppointment() {
         GlobalScope.launch {
             val recentEvents = wpHelper.getRecentEvents()
             Log.d("APP", recentEvents.joinToString { "${it.title} | ${it.desc} | ${it.link}"} )
@@ -123,11 +123,6 @@ class MainActivity : AppCompatActivity() {
             dateView.text = ""
             descView.text = ""
             return
-        }
-        eventWidget.setOnClickListener {
-            val webpage = Uri.parse(event.link)
-            val intent = Intent(Intent.ACTION_VIEW, webpage)
-            startActivity(intent)
         }
 
         val dateFormatter = SimpleDateFormat("dd.MM.yyyy", Locale.GERMAN)
