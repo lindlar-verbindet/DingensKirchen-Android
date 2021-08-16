@@ -4,10 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.AdapterView
-import android.widget.EditText
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.*
+import androidx.core.content.ContextCompat
 import de.lindlarverbindet.dingenskirchen.R
 
 class NeighbourActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
@@ -17,6 +15,8 @@ class NeighbourActivity : AppCompatActivity(), AdapterView.OnItemSelectedListene
     private lateinit var topicSelectView: Spinner
     private lateinit var moreInfoLabel: TextView
     private lateinit var moreInfoView: EditText
+    private lateinit var termsCheckBox: CheckBox
+    private lateinit var sendButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,10 +25,26 @@ class NeighbourActivity : AppCompatActivity(), AdapterView.OnItemSelectedListene
         topicSelectView = findViewById(R.id.neighbour_topic_spinner)
         moreInfoLabel = findViewById(R.id.neighbour_other_topic_label)
         moreInfoView = findViewById(R.id.neighbour_other_topic_field)
+        termsCheckBox = findViewById(R.id.neighbour_agreement_checkbox)
+        sendButton = findViewById(R.id.neighbour_button)
+
         moreInfoLabel.visibility = View.GONE
         moreInfoView.visibility = View.GONE
 
+        sendButton.isEnabled = false
+
         topicSelectView.onItemSelectedListener = this
+    }
+
+    fun onCheckboxClicked(view: View) {
+        if (termsCheckBox == view) {
+            sendButton.isEnabled = termsCheckBox.isChecked
+            if (termsCheckBox.isChecked) {
+                sendButton.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryHighlight)
+            } else {
+                sendButton.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryBackground)
+            }
+        }
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {

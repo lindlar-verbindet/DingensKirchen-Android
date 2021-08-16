@@ -103,6 +103,8 @@
                 app:layout_constraintTop_toBottomOf="@id/limo_mail_field"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryHighlight"
+                android:onClick="onCheckboxClicked"
                 android:text="@string/form_agreement"/>
             <Button
                 android:id="@+id/limo_button"
@@ -114,7 +116,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/form_send"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/primaryHighlight"/>
+                android:backgroundTint="@color/primaryBackground"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

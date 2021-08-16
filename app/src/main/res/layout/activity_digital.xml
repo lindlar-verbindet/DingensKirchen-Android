@@ -182,6 +182,7 @@
                 app:layout_constraintTop_toBottomOf="@id/digital_detail_topic_field"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryHighlight"
                 android:text="@string/form_home_order"/>
 
             <CheckBox
@@ -192,6 +193,8 @@
                 app:layout_constraintTop_toBottomOf="@id/digital_home_order"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:onClick="onCheckboxClicked"
+                android:buttonTint="@color/primaryHighlight"
                 android:text="@string/form_agreement"/>
             <Button
                 android:id="@+id/digital_button"
@@ -203,7 +206,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/form_send"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/primaryHighlight"/>
+                android:backgroundTint="@color/primaryBackground"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
