@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.*
 import androidx.core.content.ContextCompat
 import de.lindlarverbindet.dingenskirchen.R
-import java.text.FieldPosition
 
 class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
