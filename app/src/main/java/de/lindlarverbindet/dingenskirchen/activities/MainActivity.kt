@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
         val newsDescView: TextView  = newsWidget.findViewById(R.id.news_preview)
 
         if (post == null) {
-            titleView.text = getString(R.string.warning_no_connection)
+            titleView.text = getString(R.string.warning_no_events)
             newsDateView.text = ""
             newsDescView.text = ""
             return
@@ -119,7 +119,7 @@ class MainActivity : AppCompatActivity() {
         val descView: TextView = eventWidget.findViewById(R.id.events_event_desc)
 
         if (event == null) {
-            titleView.text = getString(R.string.warning_no_connection)
+            titleView.text = getString(R.string.warning_no_events)
             dateView.text = ""
             descView.text = ""
             return
