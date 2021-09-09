@@ -37,6 +37,13 @@ class MainActivity : AppCompatActivity() {
         mobilWidget = findViewById(R.id.main_mobil_widget)
         villageWidget = findViewById(R.id.main_village_widget)
 
+        newsWidget.setOnClickListener {
+            runOnUiThread {
+                val intent = Intent(applicationContext, NewsActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
         eventWidget.setOnClickListener {
             runOnUiThread {
                 val intent = Intent(applicationContext, EventActivity::class.java)
@@ -99,11 +106,11 @@ class MainActivity : AppCompatActivity() {
             newsDescView.text = ""
             return
         }
-        newsWidget.setOnClickListener {
-            val webpage = Uri.parse(post.link)
-            val intent = Intent(Intent.ACTION_VIEW, webpage)
-            startActivity(intent)
-        }
+//        newsWidget.setOnClickListener {
+//            val webpage = Uri.parse(post.link)
+//            val intent = Intent(Intent.ACTION_VIEW, webpage)
+//            startActivity(intent)
+//        }
 
         val dateFormatter = SimpleDateFormat("dd.MM hh:mm", Locale.GERMAN)
         val previewText: String = HtmlCompat.fromHtml(post.content, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()

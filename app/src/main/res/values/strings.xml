@@ -34,6 +34,10 @@
     <string name="form_date_to">Bis</string>
 
     <string name="help_topic_prompt_digital">Zu welchem Themengebiet haben Sie Fragen/wünschen Sie Unterstützung</string>
+    <string name="form_topic_prompt_neighbour">Zu welcher Tätigkeit wünschen Sie zukünftig Unterstützung?</string>
+
+    <string name="form_birth_date">Ihr Geburtsdatum</string>
+    <string name="warning_no_events">Es gibt aktuell keine Termine</string>
     <string-array name="form_help_topics_digital">
         <item>Bedienung Smartphone</item>
         <item>Bedienung Computer</item>
@@ -45,10 +49,6 @@
         <item>iOS - iPhone</item>
         <item>Anderes Thema</item>
     </string-array>
-
-    <string name="form_topic_prompt_neighbour">Zu welcher Tätigkeit wünschen Sie zukünftig Unterstützung?</string>
-    <string name="form_birth_date">Ihr Geburtsdatum</string>
-    <string name="warning_no_events">Es gibt aktuell keine Termine</string>
     <string-array name="form_help_topics_neighbour">
         <item>Einkaufen</item>
         <item>Erledigungsgänge</item>
