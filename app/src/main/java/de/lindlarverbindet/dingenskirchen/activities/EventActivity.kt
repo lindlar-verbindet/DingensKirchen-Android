@@ -75,8 +75,11 @@ class EventActivity : AppCompatActivity() {
             row.layoutParams = rowParams
 
             row.setOnClickListener {
-                val webpage = Uri.parse(element.link)
-                val intent = Intent(Intent.ACTION_VIEW, webpage)
+//                val webpage = Uri.parse(element.link)
+//                val intent = Intent(Intent.ACTION_VIEW, webpage)
+                val intent = Intent(applicationContext, WebActivity::class.java)
+                intent.putExtra("url", element.link)
+                intent.putExtra("parent", "EventActivity")
                 startActivity(intent)
             }
             // add row to table

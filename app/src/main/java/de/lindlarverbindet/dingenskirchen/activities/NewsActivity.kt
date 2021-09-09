@@ -73,7 +73,10 @@ class NewsActivity : AppCompatActivity() {
 
             row.setOnClickListener {
                 val webpage = Uri.parse(element.link)
-                val intent = Intent(Intent.ACTION_VIEW, webpage)
+//                val intent = Intent(Intent.ACTION_VIEW, webpage)
+                val intent = Intent(this, WebActivity::class.java)
+                intent.putExtra("url", element.link)
+                intent.putExtra("parent", "NewsActivity")
                 startActivity(intent)
             }
             // add row to table

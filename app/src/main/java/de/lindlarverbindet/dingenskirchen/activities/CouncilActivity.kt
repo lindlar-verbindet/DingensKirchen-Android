@@ -31,8 +31,9 @@ class CouncilActivity : AppCompatActivity() {
         tableLayout = findViewById(R.id.council_table)
 
         councilTrashService.setOnClickListener {
-            val webpage = Uri.parse("https://abfallnavi.de/lindlar")
-            val intent = Intent(Intent.ACTION_VIEW, webpage)
+            val intent = Intent(applicationContext, WebActivity::class.java)
+            intent.putExtra("url", "https://abfallnavi.de/lindlar/")
+            intent.putExtra("parent", "CouncilActivity")
             startActivity(intent)
         }
 
@@ -90,8 +91,9 @@ class CouncilActivity : AppCompatActivity() {
             descView.text = element.desc
             button.text = element.buttonText
             button.setOnClickListener {
-                val webpage = Uri.parse(element.link)
-                val intent = Intent(Intent.ACTION_VIEW, webpage)
+                val intent = Intent(applicationContext, WebActivity::class.java)
+                intent.putExtra("url", element.link)
+                intent.putExtra("parent", "CouncilActivity")
                 startActivity(intent)
             }
             // Set Margin for dynamic row
