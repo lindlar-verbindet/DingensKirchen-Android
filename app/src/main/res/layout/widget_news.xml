@@ -58,7 +58,6 @@
         app:layout_constraintStart_toStartOf="@id/news_title"
         app:layout_constraintEnd_toEndOf="@id/news_title"
         android:text="Lorem ipsum dolor sit amet, consetetur \n sadipscing elitr, sed doam nonumy eirmod tempor"
-        android:textStyle="bold"
         android:textColor="@color/white"/>
 
     <View
