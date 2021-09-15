@@ -66,6 +66,7 @@ class WebActivity : AppCompatActivity() {
     private fun siteLoaded() {
         backButton.isEnabled = webView.canGoBack()
         forwardButton.isEnabled = webView.canGoForward()
+        this.supportActionBar?.title = webView.title
     }
 
     private fun goBack() {
