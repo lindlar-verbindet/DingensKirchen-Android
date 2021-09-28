@@ -1,7 +1,7 @@
 package de.lindlarverbindet.dingenskirchen.helper
 
 import de.lindlarverbindet.dingenskirchen.models.WPEvent
-import de.lindlarverbindet.dingenskirchen.models.WPPost
+import de.lindlarverbindet.dingenskirchen.models.News
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -16,14 +16,14 @@ class WordpressHelper {
 
     private val appNewsID = "13"
 
-    fun getRecentPosts(): List<WPPost> {
+    fun getRecentPosts(): List<News> {
         val urlString = "https://www.lindlar-verbindet.de/wp-json/wp/v2/posts?categories=$appNewsID"
 
         val dateParser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.GERMAN)
         val response = apiHelper.sendGetRequest(urlString)
         try {
             val posts = JSONArray(response)
-            val result: ArrayList<WPPost> = arrayListOf()
+            val result: ArrayList<News> = arrayListOf()
             for (i in 0 until posts.length()) {
                 val post = posts.getJSONObject(i)
                 val title = (post.get("title") as JSONObject).get("rendered") as String
@@ -31,7 +31,7 @@ class WordpressHelper {
                 val date = dateParser.parse(post.get("date") as String)
                 val link = post.get("link") as String
 
-                val wpPost = WPPost(title, content, date ?: Date(), link)
+                val wpPost = News(title, content, date ?: Date(), link)
                 result.add(wpPost)
             }
             return result

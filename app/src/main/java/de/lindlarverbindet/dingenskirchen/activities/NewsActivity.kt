@@ -13,11 +13,9 @@ import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.helper.WordpressHelper
-import de.lindlarverbindet.dingenskirchen.models.WPEvent
-import de.lindlarverbindet.dingenskirchen.models.WPPost
+import de.lindlarverbindet.dingenskirchen.models.News
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import java.net.URI
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -43,7 +41,7 @@ class NewsActivity : AppCompatActivity() {
         }
     }
 
-    private fun configureTableRows(data: List<WPPost>) {
+    private fun configureTableRows(data: List<News>) {
         var backgroundGreen = false
         for (element in data) {
             Log.d("ELEMENT", element.title + " " + element.content + " " + element.link)

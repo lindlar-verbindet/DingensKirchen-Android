@@ -1,7 +1,6 @@
 package de.lindlarverbindet.dingenskirchen.activities
 
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,9 +8,10 @@ import android.view.View
 import android.widget.TextView
 import androidx.core.text.HtmlCompat
 import de.lindlarverbindet.dingenskirchen.R
+import de.lindlarverbindet.dingenskirchen.helper.RSSHelper
 import de.lindlarverbindet.dingenskirchen.helper.WordpressHelper
 import de.lindlarverbindet.dingenskirchen.models.WPEvent
-import de.lindlarverbindet.dingenskirchen.models.WPPost
+import de.lindlarverbindet.dingenskirchen.models.News
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
@@ -74,6 +74,9 @@ class MainActivity : AppCompatActivity() {
 
         getLatestNews()
         getLatestAppointment()
+        GlobalScope.launch {
+            Log.d("RSS", RSSHelper().getRecentPosts().toString())
+        }
     }
 
     private fun getLatestNews() {
@@ -95,7 +98,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun populateNewsWidget(post: WPPost?) {
+    private fun populateNewsWidget(post: News?) {
         val titleView:TextView      = newsWidget.findViewById(R.id.news_heading)
         val newsDateView: TextView  = newsWidget.findViewById(R.id.news_date)
         val newsDescView: TextView  = newsWidget.findViewById(R.id.news_preview)
