@@ -16,7 +16,7 @@ class WordpressHelper {
 
     private val appNewsID = "13"
 
-    fun getRecentPosts(): List<News> {
+    fun getRecentPosts(): ArrayList<News> {
         val urlString = "https://www.lindlar-verbindet.de/wp-json/wp/v2/posts?categories=$appNewsID"
 
         val dateParser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.GERMAN)
@@ -37,7 +37,7 @@ class WordpressHelper {
             return result
         } catch (e:JSONException) {
             e.printStackTrace()
-            return listOf()
+            return arrayListOf()
         }
     }
 

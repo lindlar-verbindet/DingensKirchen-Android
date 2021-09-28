@@ -12,6 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 import de.lindlarverbindet.dingenskirchen.R
+import de.lindlarverbindet.dingenskirchen.helper.RSSHelper
 import de.lindlarverbindet.dingenskirchen.helper.WordpressHelper
 import de.lindlarverbindet.dingenskirchen.models.News
 import kotlinx.coroutines.GlobalScope
@@ -34,6 +35,9 @@ class NewsActivity : AppCompatActivity() {
     private fun getLatestNews() {
         GlobalScope.launch {
             val recentNews = wpHelper.getRecentPosts()
+            recentNews.addAll(RSSHelper().getRecentPosts())
+
+            recentNews.sortByDescending { it.date }
             Log.d("APP", recentNews.joinToString { "${it.title} | ${it.content} | ${it.link}"} )
             runOnUiThread {
                 configureTableRows(recentNews)

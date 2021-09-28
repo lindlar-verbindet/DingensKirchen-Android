@@ -16,6 +16,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
@@ -74,14 +75,15 @@ class MainActivity : AppCompatActivity() {
 
         getLatestNews()
         getLatestAppointment()
-        GlobalScope.launch {
-            Log.d("RSS", RSSHelper().getRecentPosts().toString())
-        }
     }
 
     private fun getLatestNews() {
         GlobalScope.launch {
-            val recentPosts = wpHelper.getRecentPosts()
+            val recentPosts: ArrayList<News> = wpHelper.getRecentPosts()
+            recentPosts.addAll(RSSHelper().getRecentPosts())
+
+            recentPosts.sortByDescending { it.date }
+
             runOnUiThread {
                 populateNewsWidget(recentPosts.firstOrNull())
             }
