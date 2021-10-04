@@ -1,11 +1,13 @@
 package de.lindlarverbindet.dingenskirchen.activities
 
+import android.R.attr
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.text.HtmlCompat
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.helper.RSSHelper
@@ -17,9 +19,18 @@ import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
+import android.R.attr.data
+import de.lindlarverbindet.dingenskirchen.helper.TipHelper
+import de.lindlarverbindet.dingenskirchen.models.Tip
+import android.R.attr.data
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import de.lindlarverbindet.dingenskirchen.fragments.TipDialogFragment
+
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var tipWidget      : View
     private lateinit var newsWidget     : View
     private lateinit var eventWidget    : View
     private lateinit var councilWidget  : View
@@ -27,16 +38,40 @@ class MainActivity : AppCompatActivity() {
     private lateinit var villageWidget  : View
 
     private val wpHelper = WordpressHelper()
+    private var tips: List<Tip>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        tipWidget = findViewById(R.id.main_tip_widget)
         newsWidget = findViewById(R.id.main_news_widget)
         eventWidget = findViewById(R.id.main_events_widget)
         councilWidget = findViewById(R.id.main_council_widget)
         mobilWidget = findViewById(R.id.main_mobil_widget)
         villageWidget = findViewById(R.id.main_village_widget)
+
+        tipWidget.setOnClickListener {
+            runOnUiThread {
+                if (tips != null) {
+                    val currentDay = getNumberOfDay()
+                    val index = currentDay % tips!!.count()
+                    val todaysTip = tips!![index]
+
+                    val tipFragment = TipDialogFragment()
+                    val bundle = Bundle()
+                    bundle.putString("TITLE", todaysTip.title)
+                    bundle.putString("CONTENT", todaysTip.content)
+                    tipFragment.arguments = bundle
+                    tipFragment.show(this.supportFragmentManager, TipDialogFragment.TAG)
+                } else {
+                    Toast.makeText(
+                        this,
+                        R.string.main_activity_no_tip,
+                        Toast.LENGTH_LONG).show()
+                }
+            }
+        }
 
         newsWidget.setOnClickListener {
             runOnUiThread {
@@ -75,6 +110,14 @@ class MainActivity : AppCompatActivity() {
 
         getLatestNews()
         getLatestAppointment()
+        getTips()
+    }
+
+    private fun getTips() {
+        GlobalScope.launch {
+            tips = TipHelper().getTips()
+            Log.d("TIPS:", tips.toString())
+        }
     }
 
     private fun getLatestNews() {
@@ -111,11 +154,6 @@ class MainActivity : AppCompatActivity() {
             newsDescView.text = ""
             return
         }
-//        newsWidget.setOnClickListener {
-//            val webpage = Uri.parse(post.link)
-//            val intent = Intent(Intent.ACTION_VIEW, webpage)
-//            startActivity(intent)
-//        }
 
         val dateFormatter = SimpleDateFormat("dd.MM hh:mm", Locale.GERMAN)
         val previewText: String = HtmlCompat.fromHtml(post.content, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
@@ -151,5 +189,10 @@ class MainActivity : AppCompatActivity() {
         } else {
             text
         }
+    }
+
+    private fun getNumberOfDay(): Int {
+        val calendar = Calendar.getInstance()
+        return calendar.get(Calendar.DAY_OF_YEAR)
     }
 }
