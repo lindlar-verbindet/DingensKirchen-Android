@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:paddingBottom="10dp"
     android:background="@drawable/widget_rounded_corners"
-    android:backgroundTint="@color/primaryBackground">
+    android:backgroundTint="@color/secondaryHighlight">
 
     <TextView
         android:id="@+id/council_title"
@@ -18,10 +18,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Rathaus"
+        android:text="RATHAUS"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/council_example1"
@@ -35,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="@id/council_title"
         android:text="OnlineServices"
         android:textStyle="bold"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
     <TextView
         android:id="@+id/council_example2"
         android:layout_width="match_parent"
@@ -47,6 +47,6 @@
         app:layout_constraintEnd_toEndOf="@id/council_title"
         android:text="Müllkalender"
         android:textStyle="bold"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

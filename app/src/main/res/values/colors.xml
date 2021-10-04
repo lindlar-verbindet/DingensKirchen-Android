@@ -9,6 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     // Dingenskirchen primary Colors
     <color name="primaryHighlight">#9AC13B</color>
+    <color name="secondaryHighlight">#30b6db</color>
+    <color name="tertiaryHighlight">#d72b22</color>
     <color name="primaryBackground">#D4D4D4</color>
     <color name="primaryTextColor">#C4C4C4</color>
     <color name="secondaryTextColor">#000000</color>

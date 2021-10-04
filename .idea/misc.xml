@@ -6,8 +6,12 @@
         <entry key="app/src/main/res/drawable/background_circle.xml" value="0.3779487179487179" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19166666666666668" />
         <entry key="app/src/main/res/layout/fragment_tip_dialog.xml" value="0.36770833333333336" />
+        <entry key="app/src/main/res/layout/widget_council.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/layout/widget_events.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/layout/widget_mobil.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/widget_news.xml" value="0.3342391304347826" />
         <entry key="app/src/main/res/layout/widget_tip.xml" value="0.36770833333333336" />
+        <entry key="app/src/main/res/layout/widget_village.xml" value="0.23802083333333332" />
       </map>
     </option>
   </component>

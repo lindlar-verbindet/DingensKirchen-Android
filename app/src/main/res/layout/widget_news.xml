@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/widget_rounded_corners"
-    android:backgroundTint="@color/primaryBackground">
+    android:backgroundTint="@color/secondaryHighlight">
 
     <TextView
         android:id="@+id/news_title"
@@ -17,10 +17,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Lindlarer News"
+        android:text="LINDLARER NEWS"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/news_date"
@@ -33,7 +33,7 @@
         android:layout_marginEnd="10dp"
         android:text="01.01.2021"
         android:textSize="12sp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/news_heading"
@@ -46,7 +46,7 @@
         android:layout_marginEnd="10dp"
         android:text="Letzte Nachricht"
         android:textSize="20sp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/news_preview"
@@ -58,7 +58,7 @@
         app:layout_constraintStart_toStartOf="@id/news_title"
         app:layout_constraintEnd_toEndOf="@id/news_title"
         android:text="Lorem ipsum dolor sit amet, consetetur \n sadipscing elitr, sed doam nonumy eirmod tempor"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 
     <View
         android:layout_width="match_parent"
