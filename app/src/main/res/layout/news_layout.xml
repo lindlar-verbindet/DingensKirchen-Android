@@ -23,8 +23,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Beispieltermin"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-light"
             android:textColor="@color/black"/>
         <TextView
             android:id="@+id/news_date"
@@ -37,6 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
             android:textColor="@color/black"/>
     </LinearLayout>
 

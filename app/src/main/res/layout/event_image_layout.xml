@@ -33,21 +33,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="01.01.2021 15:00"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
         <TextView
             android:id="@+id/event_image_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Beispieltermin"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"/>
         <TextView
             android:id="@+id/event_image_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-            android:textColor="@color/white"/>
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"/>
     </LinearLayout>
 
     <LinearLayout
@@ -64,15 +66,16 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@mipmap/ic_launcher_round"
-            app:tint="@color/white"/>
+            app:tint="@color/black"/>
         <TextView
             android:id="@+id/event_image_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="Straße 123m 12345 Ort"
-            android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"/>
     </LinearLayout>
 
     <LinearLayout
@@ -89,15 +92,16 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@mipmap/ic_launcher_round"
-            app:tint="@color/white"/>
+            app:tint="@color/black"/>
         <TextView
             android:id="@+id/event_image_website"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="Straße 123m 12345 Ort"
-            android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"/>
     </LinearLayout>
 
     <View

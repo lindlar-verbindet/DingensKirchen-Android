@@ -29,14 +29,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Beispieltermin"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-light"
             android:textColor="@color/black"/>
         <TextView
             android:id="@+id/event_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
             android:textColor="@color/black"/>
     </LinearLayout>
 
@@ -61,7 +63,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="Straße 123m 12345 Ort"
-            android:textStyle="bold"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
             android:textColor="@color/black"/>
     </LinearLayout>
 
@@ -86,7 +89,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="Straße 123m 12345 Ort"
-            android:textStyle="bold"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
             android:textColor="@color/black"/>
     </LinearLayout>
 

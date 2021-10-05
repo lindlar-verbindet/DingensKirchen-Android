@@ -7,6 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".activities.EventActivity">
 
+    <ImageView
+        android:id="@+id/event_header_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_clock"
+        app:tint="@color/primaryBackground"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="130dp"
+        android:background="@color/primaryBackground"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,17 +37,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:stretchColumns="*"
             android:shrinkColumns="*">
-            <TableRow>
-                <ImageView
-                    android:id="@+id/event_header_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_marginTop="35dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:src="@drawable/ic_amusement_park"/>
-            </TableRow>
         </TableLayout>
     </ScrollView>
 

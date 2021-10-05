@@ -28,7 +28,8 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:text="Placeholder"
-                android:textSize="20sp"
+                android:textSize="28sp"
+                android:fontFamily="sans-serif-light"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -38,6 +39,8 @@
                 app:layout_constraintTop_toBottomOf="@id/village_single_action_title"
                 android:layout_margin="10dp"
                 android:text="Lorem ipsum dolor"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-light"
                 android:textColor="@color/black"/>
 
             <Button

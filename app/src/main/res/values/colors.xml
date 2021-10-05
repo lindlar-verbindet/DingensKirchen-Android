@@ -14,4 +14,5 @@
     <color name="primaryBackground">#D4D4D4</color>
     <color name="primaryTextColor">#C4C4C4</color>
     <color name="secondaryTextColor">#000000</color>
+    <color name="listBackground">#53758d</color>
 </resources>
