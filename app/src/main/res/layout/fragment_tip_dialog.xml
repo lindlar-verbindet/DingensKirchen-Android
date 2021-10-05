@@ -19,7 +19,8 @@
             android:layout_height="wrap_content"
             android:text="short title here"
             android:textStyle="bold"
-            android:textSize="18dp"/>
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tip_dialog_content"
@@ -27,15 +28,15 @@
             android:layout_marginBottom="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:text="text long text"/>
+            android:text="text long text"
+            android:textColor="@color/black"/>
 
         <Button
             android:id="@+id/tip_done_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="OK"
-            android:textColor="@color/cardview_light_background"
+            android:textColor="@color/black"
             android:backgroundTint="@color/primaryHighlight"
             android:background="@drawable/widget_rounded_corners"/>
 
@@ -47,6 +48,6 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/background_circle"
         android:padding="3dp"
-        android:src="@drawable/mapbox_info_icon_default"/>
+        android:src="@drawable/ic_bulb"/>
 
 </RelativeLayout>

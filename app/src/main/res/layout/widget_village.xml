@@ -6,7 +6,15 @@
     android:layout_height="wrap_content"
     android:paddingBottom="10dp"
     android:background="@drawable/widget_rounded_corners"
-    android:backgroundTint="@color/primaryHighlight">
+    android:backgroundTint="@color/secondaryHighlight">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_people"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
         android:id="@+id/village_title"
@@ -19,35 +27,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="DORFLEBEN"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif-light"
         android:textColor="@color/black"/>
 
     <TextView
-        android:id="@+id/village_example1"
+        android:id="@+id/village_example"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintTop_toBottomOf="@id/village_title"
         app:layout_constraintStart_toStartOf="@id/village_title"
         app:layout_constraintEnd_toEndOf="@id/village_title"
-        android:text="Suche+Finde, DigitalBegleitung"
-        android:textStyle="bold"
+        android:text="Für mehr Teilhabe - ehrenamtliche Dienste mobil nutzen. Nachbarschaftshilfe, LindlarMobil und vieles mehr."
+        android:textSize="16dp"
+        android:fontFamily="sans-serif-light"
         android:textColor="@color/black"/>
 
-    <TextView
-        android:id="@+id/village_example2"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintTop_toBottomOf="@id/village_example1"
-        app:layout_constraintStart_toStartOf="@id/village_example1"
-        app:layout_constraintEnd_toEndOf="@id/village_example1"
-        android:text="Nachbarschaftshilfe"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@id/village_example"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

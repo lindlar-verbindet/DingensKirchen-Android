@@ -28,6 +28,9 @@ class NewsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)
+
+        this.supportActionBar?.title = "Lindlarer News"
+
         tableLayout = findViewById(R.id.news_table)
         getLatestNews()
     }

@@ -39,6 +39,8 @@
             android:id="@+id/main_tip_widget"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
             app:layout_constraintTop_toBottomOf="@id/main_logo_large"
             app:layout_constraintStart_toStartOf="@id/main_logo_large"
             app:layout_constraintEnd_toEndOf="@id/main_logo_large"
@@ -69,27 +71,27 @@
             layout="@layout/widget_village"/>
 
         <include
-            android:id="@+id/main_council_widget"
+            android:id="@+id/main_mobil_widget"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
             app:layout_constraintWidth_percent="0.46"
             app:layout_constraintTop_toBottomOf="@id/main_village_widget"
-            app:layout_constraintStart_toStartOf="@id/main_events_widget"
-            layout="@layout/widget_council"/>
+            app:layout_constraintEnd_toStartOf="@id/main_council_widget"
+            app:layout_constraintStart_toStartOf="@id/main_village_widget"
+            layout="@layout/widget_mobil"/>
 
         <include
-            android:id="@+id/main_mobil_widget"
+            android:id="@+id/main_council_widget"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_height="0dp"
             android:layout_marginStart="10dp"
             app:layout_constraintWidth_percent="0.46"
-            app:layout_constraintTop_toBottomOf="@id/main_village_widget"
-            app:layout_constraintStart_toEndOf="@id/main_council_widget"
+            app:layout_constraintTop_toTopOf="@id/main_mobil_widget"
             app:layout_constraintEnd_toEndOf="@id/main_events_widget"
-            layout="@layout/widget_mobil"/>
+            app:layout_constraintBottom_toBottomOf="@id/main_mobil_widget"
+            layout="@layout/widget_council"/>
 
         <include
             android:id="@+id/main_events_widget"

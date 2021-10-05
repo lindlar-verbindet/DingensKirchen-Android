@@ -6,7 +6,15 @@
     android:layout_height="wrap_content"
     android:paddingBottom="10dp"
     android:background="@drawable/widget_rounded_corners"
-    android:backgroundTint="@color/secondaryHighlight">
+    android:backgroundTint="@color/primaryHighlight">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_marker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
     <TextView
@@ -20,36 +28,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="MOBIL"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif-light"
         android:textColor="@color/black"/>
 
     <TextView
-        android:id="@+id/mobil_example1"
+        android:id="@+id/mobil_example"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintTop_toBottomOf="@id/mobil_title"
         app:layout_constraintStart_toStartOf="@id/mobil_title"
         app:layout_constraintEnd_toEndOf="@id/mobil_title"
-        android:text="ÖPNV, Bürgerbus, Limo"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/mobil_example2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintTop_toBottomOf="@id/mobil_example1"
-        app:layout_constraintStart_toStartOf="@id/mobil_example1"
-        app:layout_constraintEnd_toEndOf="@id/mobil_example1"
-        android:text="CarSharing Linde"
-        android:textStyle="bold"
+        android:text="Unterwegs in Lindlar mit dem ÖPNV, LindlarMobil, dem Bürgerbus oder per CarSharing."
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-light"
         android:textColor="@color/black"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
