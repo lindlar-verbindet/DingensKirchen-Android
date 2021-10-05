@@ -10,55 +10,77 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DingensKirchen">
-        <activity android:name=".activities.WebActivity">
+        <activity
+            android:name=".activities.WebActivity"
+            android:exported="false">
 
         </activity>
-        <activity android:name=".activities.NewsActivity">
+        <activity
+            android:name=".activities.NewsActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="de.lindlarverbindet.dingenskirchen.activities.MainActivity"/>
         </activity>
-        <activity android:name=".activities.villageservices.PocketMoneyActivity">
+        <activity
+            android:name=".activities.villageservices.PocketMoneyActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="de.lindlarverbindet.dingenskirchen.activities.VillageActivity" />
         </activity>
-        <activity android:name=".activities.villageservices.NeighbourActivity">
+        <activity
+            android:name=".activities.villageservices.NeighbourActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="de.lindlarverbindet.dingenskirchen.activities.VillageActivity" />
         </activity>
-        <activity android:name=".activities.villageservices.DigitalActivity">
+        <activity
+            android:name=".activities.villageservices.DigitalActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="de.lindlarverbindet.dingenskirchen.activities.VillageActivity" />
         </activity>
-        <activity android:name=".activities.villageservices.LimoActivity">
+        <activity
+            android:name=".activities.villageservices.LimoActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="de.lindlarverbindet.dingenskirchen.activities.VillageActivity" />
         </activity>
-        <activity android:name=".activities.CouncilActivity">
+        <activity
+            android:name=".activities.CouncilActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="de.lindlarverbindet.dingenskirchen.activities.MainActivity" />
         </activity>
-        <activity android:name=".activities.EventActivity">
+        <activity
+            android:name=".activities.EventActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="de.lindlarverbindet.dingenskirchen.activities.MainActivity" />
         </activity>
-        <activity android:name=".activities.VillageActivity">
+        <activity
+            android:name=".activities.VillageActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="de.lindlarverbindet.dingenskirchen.activities.MainActivity" />
         </activity>
-        <activity android:name=".activities.MapActivity">
+        <activity
+            android:name=".activities.MapActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="de.lindlarverbindet.dingenskirchen.activities.MainActivity" />
         </activity>
-        <activity android:name=".activities.MainActivity">
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -66,8 +88,8 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
