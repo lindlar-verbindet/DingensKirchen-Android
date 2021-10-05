@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/widget_rounded_corners"
-    android:backgroundTint="@color/primaryBackground">
+    android:backgroundTint="@color/secondaryHighlight">
 
     <LinearLayout
         android:id="@+id/news_area"
@@ -25,19 +25,19 @@
             android:text="Beispieltermin"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
         <TextView
             android:id="@+id/news_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="01.01.2021 15:00"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
         <TextView
             android:id="@+id/news_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
     </LinearLayout>
 
     <View

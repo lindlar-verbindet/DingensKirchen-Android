@@ -46,7 +46,7 @@ class NewsActivity : AppCompatActivity() {
     }
 
     private fun configureTableRows(data: List<News>) {
-        var backgroundGreen = false
+        var backgroundGreen = true
         for (element in data) {
             Log.d("ELEMENT", element.title + " " + element.content + " " + element.link)
 
@@ -55,7 +55,7 @@ class NewsActivity : AppCompatActivity() {
             if (backgroundGreen) {
                 row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryHighlight)
             } else {
-                row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryBackground)
+                row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.secondaryHighlight)
             }
             backgroundGreen = !backgroundGreen
             // load subviews

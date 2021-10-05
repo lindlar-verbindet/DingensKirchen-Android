@@ -28,7 +28,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="Placeholder"
                 android:textSize="20sp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/village_double_action_desc"
                 android:layout_width="match_parent"
@@ -36,7 +36,7 @@
                 app:layout_constraintTop_toBottomOf="@id/village_double_action_title"
                 android:layout_margin="10dp"
                 android:text="Lorem ipsum dolor"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -54,7 +54,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     android:backgroundTint="@color/primaryBackground"
                     android:text="Öffnen"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/village_double_second_action"
@@ -64,7 +64,7 @@
                     app:layout_constraintWidth_percent="0.46"
                     android:backgroundTint="@color/white"
                     android:text="Öffnen"
-                    android:textColor="@color/primaryTextColor"/>
+                    android:textColor="@color/black"/>
 
                 <View
                     android:layout_width="match_parent"

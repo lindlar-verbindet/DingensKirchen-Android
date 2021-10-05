@@ -79,7 +79,7 @@ class CouncilActivity : AppCompatActivity() {
             if (backgroundGreen) {
                 row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryHighlight)
             } else {
-                row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryBackground)
+                row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.secondaryHighlight)
             }
             backgroundGreen = !backgroundGreen
             // load subviews

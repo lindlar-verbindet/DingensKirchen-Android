@@ -73,7 +73,7 @@ class VillageActivity : AppCompatActivity() {
     }
 
     private fun configureTableRows(data: List<VillageService>) {
-        var backgroundGreen = false
+        var backgroundGreen = true
         for (element in data) {
             val row = when(element.type) {
                 1 -> configureDoubleAction(View.inflate(this, R.layout.village_double_action, null) as ConstraintLayout, element)
@@ -82,7 +82,7 @@ class VillageActivity : AppCompatActivity() {
             if (backgroundGreen) {
                 row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryHighlight)
             } else {
-                row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryBackground)
+                row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.secondaryHighlight)
             }
             backgroundGreen = !backgroundGreen
             // Set Margin for dynamic row

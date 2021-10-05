@@ -43,7 +43,7 @@ class EventActivity : AppCompatActivity() {
     }
 
     private fun configureTableRows(data: List<WPEvent>) {
-        var backgroundGreen = false
+        var backgroundGreen = true
         for (element in data) {
             Log.d("ELEMENT", element.title + " " + element.desc + " " + element.link)
 
@@ -52,7 +52,7 @@ class EventActivity : AppCompatActivity() {
             if (backgroundGreen) {
                 row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryHighlight)
             } else {
-                row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryBackground)
+                row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.secondaryHighlight)
             }
             backgroundGreen = !backgroundGreen
             // load subviews
