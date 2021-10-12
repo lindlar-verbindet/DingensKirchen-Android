@@ -12,6 +12,7 @@
         android:layout_height="120dp"
         android:layout_marginEnd="20dp"
         android:src="@drawable/ic_megaphone"
+        android:alpha="0.2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 

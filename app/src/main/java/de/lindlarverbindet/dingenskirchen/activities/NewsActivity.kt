@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.helper.RSSHelper
 import de.lindlarverbindet.dingenskirchen.helper.WordpressHelper
@@ -19,20 +20,33 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 class NewsActivity : AppCompatActivity() {
 
     private val wpHelper = WordpressHelper()
+
     private lateinit var tableLayout: TableLayout
+    private lateinit var refreshView: SwipeRefreshLayout
+
+    private lateinit var recentNews: ArrayList<News>
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        recentNews = intent.getSerializableExtra("NEWS") as ArrayList<News>
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)
 
         this.supportActionBar?.title = "Lindlarer News"
 
         tableLayout = findViewById(R.id.news_table)
-        getLatestNews()
+        refreshView = findViewById(R.id.news_refresh)
+        refreshView.setOnRefreshListener {
+            getLatestNews()
+        }
+
+        configureTableRows(recentNews)
     }
 
     private fun getLatestNews() {
@@ -44,6 +58,7 @@ class NewsActivity : AppCompatActivity() {
             Log.d("APP", recentNews.joinToString { "${it.title} | ${it.content} | ${it.link}"} )
             runOnUiThread {
                 configureTableRows(recentNews)
+                refreshView.isRefreshing = false
             }
         }
     }
@@ -77,8 +92,6 @@ class NewsActivity : AppCompatActivity() {
             row.layoutParams = rowParams
 
             row.setOnClickListener {
-                val webpage = Uri.parse(element.link)
-//                val intent = Intent(Intent.ACTION_VIEW, webpage)
                 val intent = Intent(this, WebActivity::class.java)
                 intent.putExtra("url", element.link)
                 intent.putExtra("parent", "NewsActivity")

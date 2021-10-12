@@ -37,6 +37,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mobilWidget    : View
     private lateinit var villageWidget  : View
 
+    private var recentPosts =  arrayListOf<News>()
+    private var recentEvents = arrayListOf<WPEvent>()
+
     private val wpHelper = WordpressHelper()
     private var tips: List<Tip>? = null
 
@@ -44,6 +47,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
+
+        getLatestNews()
+        getLatestAppointment()
+        getTips()
 
         tipWidget = findViewById(R.id.main_tip_widget)
         newsWidget = findViewById(R.id.main_news_widget)
@@ -77,6 +84,7 @@ class MainActivity : AppCompatActivity() {
         newsWidget.setOnClickListener {
             runOnUiThread {
                 val intent = Intent(applicationContext, NewsActivity::class.java)
+                intent.putExtra("NEWS", recentPosts)
                 startActivity(intent)
             }
         }
@@ -84,6 +92,7 @@ class MainActivity : AppCompatActivity() {
         eventWidget.setOnClickListener {
             runOnUiThread {
                 val intent = Intent(applicationContext, EventActivity::class.java)
+                intent.putExtra("EVENTS", recentEvents)
                 startActivity(intent)
             }
         }
@@ -108,10 +117,6 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-
-        getLatestNews()
-        getLatestAppointment()
-        getTips()
     }
 
     private fun getTips() {
@@ -123,7 +128,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getLatestNews() {
         GlobalScope.launch {
-            val recentPosts: ArrayList<News> = wpHelper.getRecentPosts()
+            recentPosts = wpHelper.getRecentPosts()
             recentPosts.addAll(RSSHelper().getRecentPosts())
 
             recentPosts.sortByDescending { it.date }

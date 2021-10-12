@@ -1,7 +1,6 @@
 package de.lindlarverbindet.dingenskirchen.activities
 
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +10,7 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.helper.WordpressHelper
 import de.lindlarverbindet.dingenskirchen.models.WPEvent
@@ -20,32 +20,50 @@ import java.net.URI
 import java.text.SimpleDateFormat
 import java.util.*
 
-class EventActivity : AppCompatActivity() {
+class EventActivity : AppCompatActivity(){
 
     private val wpHelper = WordpressHelper()
+
     private lateinit var tableLayout: TableLayout
+    private lateinit var refreshView: SwipeRefreshLayout
+
+    private var recentEvents = listOf<WPEvent>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event)
 
+        recentEvents = intent.getSerializableExtra("EVENTS") as List<WPEvent>
+
+
         this.supportActionBar?.title = "Veranstaltungen + Termine"
 
         tableLayout = findViewById(R.id.event_table)
-        getLatestAppointments()
+        refreshView = findViewById(R.id.event_refresh)
+
+        refreshView.setOnRefreshListener {
+            getLatestAppointments()
+        }
+
+        configureTableRows(recentEvents)
     }
 
     private fun getLatestAppointments() {
         GlobalScope.launch {
-            val recentEvents = wpHelper.getRecentEvents()
+            recentEvents = wpHelper.getRecentEvents()
             Log.d("APP", recentEvents.joinToString { "${it.title} | ${it.desc} | ${it.link}"} )
             runOnUiThread {
                 configureTableRows(recentEvents)
+                refreshView.isRefreshing = false
             }
         }
     }
 
     private fun configureTableRows(data: List<WPEvent>) {
+        if (recentEvents.isEmpty()) {
+            // TODO: Show info View -> no Events available
+            return
+        }
         var backgroundGreen = true
         for (element in data) {
             Log.d("ELEMENT", element.title + " " + element.desc + " " + element.link)

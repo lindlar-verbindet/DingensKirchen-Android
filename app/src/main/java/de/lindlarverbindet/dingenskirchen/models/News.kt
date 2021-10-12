@@ -1,10 +1,6 @@
 package de.lindlarverbindet.dingenskirchen.models
 
+import java.io.Serializable
 import java.util.*
 
-class News(title: String, content: String, date: Date, link: String) {
-    var title: String   = title
-    var content: String = content
-    var date: Date      = date
-    var link:String     = link
-}
+data class News(var title: String, var content: String,  var date: Date, var link: String): Serializable
