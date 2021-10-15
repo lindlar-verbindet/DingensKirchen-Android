@@ -19,20 +19,25 @@
             android:id="@+id/web_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_revert"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_marginEnd="20dp"
+            android:padding="10dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/web_forward"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:tint="@color/primaryHighlight"/>
+            app:tint="@color/primaryHighlight"
+            android:background="@null"/>
         <ImageButton
             android:id="@+id/web_forward"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_revert"
+            android:src="@drawable/ic_arrow_forward"
+            android:padding="10dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:tint="@color/primaryHighlight" />
+            app:tint="@color/primaryHighlight"
+            android:background="@null"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

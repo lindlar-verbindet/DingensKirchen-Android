@@ -1,5 +1,6 @@
 package de.lindlarverbindet.dingenskirchen.activities
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
@@ -20,6 +21,7 @@ class WebActivity : AppCompatActivity() {
     private lateinit var backButton: ImageButton
     private lateinit var forwardButton: ImageButton
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web)
@@ -30,6 +32,8 @@ class WebActivity : AppCompatActivity() {
         webView = findViewById(R.id.web_view)
         backButton = findViewById(R.id.web_back)
         forwardButton = findViewById(R.id.web_forward)
+
+        webView.settings.javaScriptEnabled = true
 
         webView.webChromeClient = object : WebChromeClient() {
             override fun onProgressChanged(view: WebView?, newProgress: Int) {
@@ -101,11 +105,11 @@ class WebActivity : AppCompatActivity() {
         }
     }
 
-    override fun getParentActivityIntent(): Intent? {
+    override fun getParentActivityIntent(): Intent {
         return getParentActivityIntentImplement()
     }
 
-    override fun getSupportParentActivityIntent(): Intent? {
+    override fun getSupportParentActivityIntent(): Intent {
         return getParentActivityIntentImplement()
     }
 }

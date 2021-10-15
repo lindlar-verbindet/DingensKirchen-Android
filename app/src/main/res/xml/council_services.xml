@@ -7,7 +7,7 @@
     <service name="Einfache Melderegisterauskunft" desc="Einfache Melderegisterauskunft nach §44 Bundesmeldegesetz" link="https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Buergeramt/pool/pool_melderegister/index" btn="Jetzt Beantragen"/>
     <service name="Automatisierte Melderegisterauskunft" desc="Automatisierte Melderegisterauskunft nach §49 Bundesmeldegesetz" link="https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Buergeramt/pool/pool_melderegister_0600/index" btn="Jetzt Beantragen"/>
     <service name="Führungszeugnisses" desc="Beantragung eines Führungszeugnisses" link="https://www.fuehrungszeugnis.bund.de/" btn="Jetzt Beantragen"/>
-    <service name="Elternportal Oberbergischer Kreis" desc="Elternportal Oberbergischer Kreis - Suchportal und zentrale Anmeldung für Kinderbetreuungsplätze" link="http://www.elternportal-obk.de/" btn="Jetzt Anmelden"/>
+    <service name="Elternportal Oberbergischer Kreis" desc="Elternportal Oberbergischer Kreis - Suchportal und zentrale Anmeldung für Kinderbetreuungsplätze" link="https://www.elternportal-obk.de/" btn="Jetzt Anmelden"/>
     <service name="Gewerbeangelegenheiten" desc="Wirtschafts-Service-Portal.NRW" link="https://service.wirtschaft.nrw/online-antraege" btn="Zum Portal"/>
     <service name="An- und Abmeldung Hund" desc="An- und Abmeldung von Hunden" link="https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Ordnung/pool/pool_hunde/index" btn="Jetzt Anmelden"/>
     <service name="Hundesteuerbefreiung" desc="Beantragung einer Hundesteuerbefreiung oder -ermäßigung für einen bereits vorhandenen Hund" link="https://egov-lindlar.ssl.civitec.de/intelliform/forms/Lindlar/Ordnung/pool/pool_hunde/index" btn="Jetzt Beantragen"/>
