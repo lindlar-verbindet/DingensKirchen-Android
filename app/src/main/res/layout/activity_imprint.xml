@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ImprintActivity">
+
+    <ImageView
+        android:id="@+id/imprint_header_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_info"
+        app:tint="@color/primaryBackground"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="130dp"
+        android:background="@color/primaryBackground"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="150dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/imprint_imprint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintTop_toBottomOf="@id/imprint_header_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="IMPRESSUM"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <TextView
+                android:id="@+id/imprint_dataprotection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintTop_toBottomOf="@id/imprint_imprint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="DATENSCHUTZ"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <TextView
+                android:id="@+id/imprint_open"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintTop_toBottomOf="@id/imprint_dataprotection"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Diese App ist Quelloffen"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-light"/>
+
+            <View
+                android:id="@+id/imprint_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/imprint_open"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/imprint_owner_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintTop_toBottomOf="@id/imprint_divider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Herausgeber der App"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-light"/>
+
+            <TextView
+                android:id="@+id/imprint_owner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintTop_toBottomOf="@id/imprint_owner_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Lindlar verbindet e.V."
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <TextView
+                android:id="@+id/imprint_concept_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintTop_toBottomOf="@id/imprint_owner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Konzept + Entwicklung"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-light"/>
+
+            <TextView
+                android:id="@+id/imprint_concept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintTop_toBottomOf="@id/imprint_concept_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="pixelskull.de"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-light"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

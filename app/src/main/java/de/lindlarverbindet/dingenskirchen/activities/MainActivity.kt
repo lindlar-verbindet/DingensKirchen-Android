@@ -1,6 +1,5 @@
 package de.lindlarverbindet.dingenskirchen.activities
 
-import android.R.attr
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,13 +17,9 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.ArrayList
-import android.R.attr.data
 import de.lindlarverbindet.dingenskirchen.helper.TipHelper
 import de.lindlarverbindet.dingenskirchen.models.Tip
-import android.R.attr.data
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
+import android.widget.ImageView
 import de.lindlarverbindet.dingenskirchen.fragments.TipDialogFragment
 
 
@@ -36,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var councilWidget  : View
     private lateinit var mobilWidget    : View
     private lateinit var villageWidget  : View
+    private lateinit var imprintImageView: ImageView
 
     private var recentPosts =  arrayListOf<News>()
     private var recentEvents = arrayListOf<WPEvent>()
@@ -58,6 +54,12 @@ class MainActivity : AppCompatActivity() {
         councilWidget = findViewById(R.id.main_council_widget)
         mobilWidget = findViewById(R.id.main_mobil_widget)
         villageWidget = findViewById(R.id.main_village_widget)
+        imprintImageView = findViewById(R.id.main_imprint)
+
+        imprintImageView.setOnClickListener {
+            val intent = Intent(applicationContext, ImprintActivity::class.java)
+            startActivity(intent)
+        }
 
         tipWidget.setOnClickListener {
             runOnUiThread {
