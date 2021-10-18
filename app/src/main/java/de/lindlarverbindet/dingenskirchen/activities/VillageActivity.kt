@@ -106,10 +106,10 @@ class VillageActivity : AppCompatActivity() {
         descView.text = element.desc
         button.text = element.actionBtn
         button.setOnClickListener {
-            // TODO: Add when action is available
-//            val webpage = Uri.parse(element.action)
-//            val intent = Intent(Intent.ACTION_VIEW, webpage)
-//            startActivity(intent)
+            val intent = Intent(applicationContext, WebActivity::class.java)
+            intent.putExtra("url", element.action)
+            intent.putExtra("parent", "VillageActivity")
+            startActivity(intent)
         }
         return row
     }
