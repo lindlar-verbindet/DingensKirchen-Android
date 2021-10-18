@@ -1,5 +1,6 @@
 package de.lindlarverbindet.dingenskirchen.helper
 
+import android.util.Log
 import de.lindlarverbindet.dingenskirchen.models.WPEvent
 import de.lindlarverbindet.dingenskirchen.models.News
 import org.json.JSONArray
@@ -31,7 +32,8 @@ class WordpressHelper {
                 val date = dateParser.parse(post.get("date") as String)
                 val link = post.get("link") as String
 
-                val wpPost = News(title, content, date ?: Date(), link)
+                val imageURL = ImageURLGetter.getImageURL(content)
+                val wpPost = News(title, content, date ?: Date(), link, imageURL)
                 result.add(wpPost)
             }
             return result

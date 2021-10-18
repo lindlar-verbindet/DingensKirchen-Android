@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import android.widget.TableLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -18,9 +19,15 @@ import de.lindlarverbindet.dingenskirchen.helper.WordpressHelper
 import de.lindlarverbindet.dingenskirchen.models.News
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.net.URI
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
+import android.graphics.BitmapFactory
+
+import android.graphics.Bitmap
+import java.net.URL
+
 
 class NewsActivity : AppCompatActivity() {
 
@@ -77,11 +84,25 @@ class NewsActivity : AppCompatActivity() {
             }
             backgroundGreen = !backgroundGreen
             // load subviews
+            val layout = row.findViewById<View>(R.id.news_layout)
+            val imageView = row.findViewById<ImageView>(R.id.news_image)
             val dateView = row.findViewById<TextView>(R.id.news_date)
             val titleView = row.findViewById<TextView>(R.id.news_title)
             val descView = row.findViewById<TextView>(R.id.news_desc)
             // configure subviews
-            dateView.text = "${dateFormatter.format(element.date)}"
+            if (element.imageURL != null) {
+                GlobalScope.launch {
+                    val url = URL(element.imageURL)
+                    val bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream())
+
+                    runOnUiThread {
+                        layout.clipToOutline = true
+                        imageView.setImageBitmap(bmp)
+                        imageView.visibility = View.VISIBLE
+                    }
+                }
+            }
+            dateView.text = dateFormatter.format(element.date)
             titleView.text = element.title
             descView.text = HtmlCompat.fromHtml(element.content, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
             // Set Margin for dynamic row

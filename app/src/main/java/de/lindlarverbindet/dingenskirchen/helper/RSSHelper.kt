@@ -37,7 +37,7 @@ class RSSHelper {
         xpp.setInput(input, null)
 
         val result: ArrayList<News> = arrayListOf()
-        var news = News("", "", Date(), "")
+        var news = News("", "", Date(), "", null)
         var text = ""
 
         var eventType = xpp.eventType
@@ -45,7 +45,7 @@ class RSSHelper {
             when(xpp.eventType) {
                 XmlPullParser.START_TAG -> {
                     if (xpp.name == "item") {
-                        news = News("", "", Date(), "")
+                        news = News("", "", Date(), "", null)
                     }
                 }
                 XmlPullParser.TEXT -> {
@@ -54,7 +54,10 @@ class RSSHelper {
                 XmlPullParser.END_TAG -> {
                     when (xpp.name) {
                         "title" -> news.title = text
-                        "encoded" -> news.content = text
+                        "encoded" -> {
+                            news.content = text
+                            news.imageURL = ImageURLGetter.getImageURL(text)
+                        }
                         "pubDate" -> news.date = dateParser.parse(text) ?: Date()
                         "link" -> news.link = text
                         "item" -> result.add(news)
