@@ -12,10 +12,14 @@
         android:theme="@style/Theme.DingensKirchen">
         <activity
             android:name=".activities.ImprintActivity"
-            android:exported="false" />
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.lindlarverbindet.dingenskirchen.activities.MainActivity" />
+        </activity>
         <activity
             android:name=".activities.WebActivity"
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".activities.NewsActivity"
             android:exported="false">

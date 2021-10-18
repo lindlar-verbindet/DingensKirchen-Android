@@ -33,8 +33,6 @@ class WebActivity : AppCompatActivity() {
         backButton = findViewById(R.id.web_back)
         forwardButton = findViewById(R.id.web_forward)
 
-        webView.settings.javaScriptEnabled = true
-
         webView.webChromeClient = object : WebChromeClient() {
             override fun onProgressChanged(view: WebView?, newProgress: Int) {
                 super.onProgressChanged(view, newProgress)
@@ -52,6 +50,10 @@ class WebActivity : AppCompatActivity() {
                 return true
             }
         }
+
+        webView.settings.javaScriptEnabled = true
+        webView.settings.domStorageEnabled = true
+        webView.settings.setSupportZoom(true)
 
         urlString = intent.getStringExtra("url") ?: ""
         if (urlString != "") {
