@@ -109,7 +109,7 @@ class NewsActivity : AppCompatActivity() {
             val rowParams = TableLayout.LayoutParams(
                 TableLayout.LayoutParams.MATCH_PARENT,
                 TableLayout.LayoutParams.WRAP_CONTENT)
-            rowParams.setMargins(20, 20, 20, 0)
+            rowParams.setMargins(20, 20, 20, 60)
             row.layoutParams = rowParams
 
             row.setOnClickListener {

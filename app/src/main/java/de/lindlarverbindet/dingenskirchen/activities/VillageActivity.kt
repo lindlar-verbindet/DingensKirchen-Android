@@ -89,7 +89,7 @@ class VillageActivity : AppCompatActivity() {
             val rowParams = TableLayout.LayoutParams(
                 TableLayout.LayoutParams.MATCH_PARENT,
                 TableLayout.LayoutParams.WRAP_CONTENT)
-            rowParams.setMargins(20, 20, 20, 0)
+            rowParams.setMargins(20, 20, 20, 60)
             row.layoutParams = rowParams
             // add row to table
             tableLayout.addView(row)
@@ -125,7 +125,6 @@ class VillageActivity : AppCompatActivity() {
         descView.text = element.desc
         button1.text = element.telBtn
         button1.setOnClickListener {
-            // TODO: Add calling when permission resolved
             val phone = Uri.parse("tel:" + element.tel)
             val intent = Intent(Intent.ACTION_DIAL, phone)
             startActivity(intent)
@@ -139,10 +138,6 @@ class VillageActivity : AppCompatActivity() {
                 else                    -> Intent(applicationContext, PocketMoneyActivity::class.java)
             }
             startActivity(intent)
-            // TODO: Add when action is available
-//            val webpage = Uri.parse(element.action)
-//            val intent = Intent(Intent.ACTION_VIEW, webpage)
-//            startActivity(intent)
         }
         return row
     }

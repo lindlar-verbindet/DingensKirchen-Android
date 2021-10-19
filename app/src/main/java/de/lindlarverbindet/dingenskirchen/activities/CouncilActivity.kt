@@ -99,7 +99,7 @@ class CouncilActivity : AppCompatActivity() {
             // Set Margin for dynamic row
             val rowParams = TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT,
                                                      TableLayout.LayoutParams.WRAP_CONTENT)
-            rowParams.setMargins(20, 20, 20, 0)
+            rowParams.setMargins(20, 20, 20, 60)
             row.layoutParams = rowParams
             // add row to table
             tableLayout.addView(row)
