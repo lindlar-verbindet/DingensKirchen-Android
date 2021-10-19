@@ -3,6 +3,8 @@ package de.lindlarverbindet.dingenskirchen.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.widget.TextView
@@ -38,6 +40,34 @@ class MainActivity : AppCompatActivity() {
 
     private val wpHelper = WordpressHelper()
     private var tips: List<Tip>? = null
+
+    private var handler: Handler = Handler(Looper.getMainLooper())
+    private val animateTipWidget = object: Runnable {
+        override fun run() {
+            runOnUiThread {
+                tipWidget.animate().apply {
+                    duration = 333
+                    rotationXBy(-10f)
+//                    rotationYBy(-10f)
+//                    translationXBy(-10f)
+                    scaleXBy(0.1f)
+                    scaleYBy(0.1f)
+//                    translationZBy(-10f)
+                }.withEndAction {
+                    tipWidget.animate().apply {
+                        duration = 333
+                        rotationXBy(10f)
+//                        rotationYBy(+10f)
+//                        translationXBy(10f)
+                        scaleXBy(-0.1f)
+                        scaleYBy(-0.1f)
+//                        translationZBy(10f)
+                    }
+                }
+                handler.postDelayed(this, 10000)
+            }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -119,6 +149,16 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+    }
+
+    override fun onResume() {
+        handler.post(animateTipWidget)
+        super.onResume()
+    }
+
+    override fun onPause() {
+        handler.removeCallbacks(animateTipWidget)
+        super.onPause()
     }
 
     private fun getTips() {
