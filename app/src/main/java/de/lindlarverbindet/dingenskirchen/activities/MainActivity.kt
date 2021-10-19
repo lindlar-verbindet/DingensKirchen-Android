@@ -208,7 +208,7 @@ class MainActivity : AppCompatActivity() {
 
         titleView.text      = post.title
         newsDateView.text   = dateFormatter.format(post.date)
-        newsDescView.text   = cutoffIfNeeded(previewText, 117)
+        newsDescView.text   = cutoffIfNeeded(previewText, 100)
     }
 
     private fun populateEventWidget(event: WPEvent?) {
