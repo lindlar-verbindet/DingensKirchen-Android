@@ -2,14 +2,25 @@ package de.lindlarverbindet.dingenskirchen.activities.villageservices
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.EditText
 import androidx.core.content.ContextCompat
 import de.lindlarverbindet.dingenskirchen.R
+import de.lindlarverbindet.dingenskirchen.helper.APIHelper
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import org.json.JSONException
+import org.json.JSONObject
 
 class LimoActivity : AppCompatActivity() {
 
+    private lateinit var givenNameTextView: EditText
+    private lateinit var nameTextView: EditText
+    private lateinit var phoneTextView: EditText
+    private lateinit var mailTextView: EditText
     private lateinit var termsCheckBox: CheckBox
     private lateinit var sendButton: Button
 
@@ -17,10 +28,17 @@ class LimoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_limo)
 
+        givenNameTextView = findViewById(R.id.limo_given_name_field)
+        nameTextView = findViewById(R.id.limo_name_field)
+        phoneTextView = findViewById(R.id.limo_tel_field)
+        mailTextView = findViewById(R.id.limo_mail_field)
         termsCheckBox = findViewById(R.id.limo_agreement_checkbox)
         sendButton = findViewById(R.id.limo_button)
 
         sendButton.isEnabled = false
+        sendButton.setOnClickListener {
+            sendForm()
+        }
     }
 
     fun onCheckboxClicked(view: View) {
@@ -31,6 +49,25 @@ class LimoActivity : AppCompatActivity() {
             } else {
                 sendButton.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryBackground)
             }
+        }
+    }
+
+    private fun sendForm() {
+        val json = JSONObject()
+        try {
+            json.put("form", "limo")
+            json.put("name", givenNameTextView.text ?: "")
+            json.put("nachname", nameTextView.text ?: "")
+            json.put("fon", phoneTextView.text ?: "")
+            json.put("mail", mailTextView.text ?: "")
+            json.put("datenschutz", termsCheckBox.isChecked)
+        } catch (e: JSONException) {
+            e.printStackTrace()
+        }
+        // send it
+        GlobalScope.launch {
+            val response = APIHelper().sendPostRequest(getString(R.string.api_url), json)
+            Log.d("RESPONSE", response)
         }
     }
 }

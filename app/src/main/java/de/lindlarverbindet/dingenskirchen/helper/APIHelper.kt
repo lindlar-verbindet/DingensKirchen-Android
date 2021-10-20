@@ -1,6 +1,8 @@
 package de.lindlarverbindet.dingenskirchen.helper
 
+import org.json.JSONObject
 import java.io.BufferedReader
+import java.io.DataOutputStream
 import java.io.InputStreamReader
 import java.lang.Exception
 import java.net.HttpURLConnection
@@ -19,6 +21,63 @@ class APIHelper {
                     try {
                         BufferedReader(
                             InputStreamReader(inputStream, "utf-8")
+                        ).use {
+                            var responseLine: String? = ""
+                            while (responseLine != null) {
+                                responseLine = it.readLine()
+                                response.append(responseLine?.trim())
+                            }
+                        }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
+                }
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            return ""
+        }
+        return response.toString()
+    }
+
+    fun sendPostRequest(urlString: String, json: JSONObject): String {
+        val response: StringBuilder = StringBuilder()
+        val url = URL(urlString)
+        try {
+            with(url.openConnection() as HttpURLConnection) {
+                requestMethod = "POST"
+                doOutput = true
+                setRequestProperty("Content-Type", "application/json; utf-8")
+                // sending the request
+                try {
+                    val outStream = DataOutputStream(outputStream)
+                    outStream.write(json.toString().toByteArray())
+                    outStream.flush()
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+                // get response for url
+                if (responseCode == HttpURLConnection.HTTP_OK ||
+                    responseCode == HttpURLConnection.HTTP_CREATED) {
+                    try {
+                        BufferedReader(
+                            InputStreamReader(inputStream, "utf-8")
+                        ).use {
+                            var responseLine: String? = ""
+                            while (responseLine != null) {
+                                responseLine = it.readLine()
+                                response.append(responseLine?.trim())
+                            }
+                        }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
+                }
+                else if (responseCode == HttpURLConnection.HTTP_BAD_REQUEST ||
+                    responseCode == HttpURLConnection.HTTP_FORBIDDEN) {
+                    try {
+                        BufferedReader(
+                            InputStreamReader(errorStream, "utf-8")
                         ).use {
                             var responseLine: String? = ""
                             while (responseLine != null) {
