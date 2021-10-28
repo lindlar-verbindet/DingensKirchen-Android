@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="DORFLEBEN"
+        android:text="@string/village_widget_headline"
         android:textSize="28sp"
         android:fontFamily="sans-serif-light"
         android:textColor="@color/black"/>
@@ -42,8 +42,8 @@
         app:layout_constraintTop_toBottomOf="@id/village_title"
         app:layout_constraintStart_toStartOf="@id/village_title"
         app:layout_constraintEnd_toEndOf="@id/village_title"
-        android:text="Für mehr Teilhabe - ehrenamtliche Dienste mobil nutzen. Nachbarschaftshilfe, LindlarMobil und vieles mehr."
-        android:textSize="16dp"
+        android:text="@string/village_widget_desc"
+        android:textSize="16sp"
         android:fontFamily="sans-serif-light"
         android:textColor="@color/black"/>
 

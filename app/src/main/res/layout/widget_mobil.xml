@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="MOBIL"
+        android:text="@string/mobil_widget_headline"
         android:textSize="28sp"
         android:fontFamily="sans-serif-light"
         android:textColor="@color/black"/>
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@id/mobil_title"
         app:layout_constraintStart_toStartOf="@id/mobil_title"
         app:layout_constraintEnd_toEndOf="@id/mobil_title"
-        android:text="Unterwegs in Lindlar mit dem ÖPNV, LindlarMobil, dem Bürgerbus oder per CarSharing."
+        android:text="@string/mobil_widget_desc"
         android:textSize="16sp"
         android:fontFamily="sans-serif-light"
         android:textColor="@color/black"/>

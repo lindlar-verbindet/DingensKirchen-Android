@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         imprintImageView = findViewById(R.id.main_imprint)
 
         imprintImageView.setOnClickListener {
-            val intent = Intent(applicationContext, ImprintActivity::class.java)
+            val intent = Intent(applicationContext, InfoActivity::class.java)
             startActivity(intent)
         }
 

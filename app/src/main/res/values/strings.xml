@@ -16,8 +16,9 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="bottom_sheet_title">Lindlar Mobil</string>
-    <string name="bottom_sheet_desc_placeholder"><b>ES FÄHRT KEIN BUS?</b> \n Jetzt LindlarMobil buchen unter \n +49 2266 440 72 04 \n Der lindlarer Fahrservice mit Herz.</string>
+    <string name="bottom_sheet_action">Wähle eine Haltestelle auf der Karte für Informationen zu den Busfahrzeiten</string>
+    <string name="bottom_sheet_title">ES FÄHRT KEIN BUS?</string>
+    <string name="bottom_sheet_desc_placeholder">Jetzt LindlarMobil buchen unter \n<a href="tel:+49 2266 440 72 04">02266 440 72 04</a> \nDer lindlarer Fahrservice mit Herz.</string>
 
     <string name="user_location_permission_explanation">Die LiVe-App benötigt Ihre Standort Daten um die aktuelle Position auf der Karte anzuzeigen.</string>
     <string name="user_location_permission_not_granted">Standortdaten wurden nicht freigegeben</string>
@@ -42,6 +43,30 @@
 
     <string name="form_birth_date">Ihr Geburtsdatum</string>
     <string name="warning_no_events">Es gibt aktuell keine Termine</string>
+
+    <string name="news_widget_headline">LINDLARER NEWS</string>
+    <string name="news_widget_placeholder">Derzeit gibt es hier keine Einträge.</string>
+
+    <string name="village_widget_headline">ANGEBOTE</string>
+    <string name="village_widget_desc">Ehrenamtliche Dienste mobil nutzen – Nachbarschaftshilfe, LindlarMobil, Taschengeldbörse und mehr.</string>
+
+    <string name="mobil_widget_headline">MOBIL</string>
+    <string name="mobil_widget_desc">Mit dem Öffentlichen Personennahverkehr unterwegs in Lindlar</string>
+
+    <string name="council_widget_headline">RATHAUS</string>
+    <string name="council_widget_desc">Das digitale Rathaus - Onlineservices und Informationen mobil einsehen und nutzen.</string>
+
+    <string name="event_widget_headline">TERMINE</string>
+    <string name="events_widget_placeholder">Aktuell gibt es hier keinen Termin zu sehen.</string>
+
+    <string name="info_imprint">IMPRESSUM</string>
+    <string name="info_datenpolicy">DATENSCHUTZ</string>
+    <string name="info_opensource">Diese App ist quelloffen und kann frei weiterentwickelt werden</string>
+    <string name="info_owner_headline">Herausgeber der App</string>
+    <string name="info_owner">Lindlar verbindet e.V.</string>
+    <string name="info_concept_headline">Konzept + Entwicklung</string>
+    <string name="info_concept">pixelskull.de</string>
+
     <string-array name="form_help_topics_digital">
         <item>Bedienung Smartphone</item>
         <item>Bedienung Computer</item>

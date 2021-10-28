@@ -9,23 +9,36 @@
     android:focusable="true"
     android:clickable="true"
     app:layout_behavior="@string/bottom_sheet_behavior"
-    android:background="@drawable/bottom_sheet_background">
+    android:background="@drawable/bottom_sheet_background"
+    android:backgroundTint="@color/primaryHighlight"
+    android:alpha="0.85">
         <TextView
-            android:id="@+id/bottom_sheet_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:text="@string/bottom_sheet_action"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/bottom_sheet_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/bottom_sheet_title"
-            android:textStyle="bold"
-            android:textSize="30sp"/>
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/bottom_sheet_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="30dp"
@@ -33,5 +46,7 @@
             android:textColorLink="@color/teal_700"
             android:text="@string/bottom_sheet_desc_placeholder"
             android:textStyle="normal"
-            android:textSize="14sp" />
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"/>
 </LinearLayout>

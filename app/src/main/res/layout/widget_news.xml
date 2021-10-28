@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="LINDLARER NEWS"
+        android:text="@string/news_widget_headline"
         android:textSize="28sp"
         android:fontFamily="sans-serif-light"
         android:textColor="@color/black"/>
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="@id/news_title"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:text="Aktuell stehen keine Nachrichten zur Verfügung"
+        android:text="@string/news_widget_placeholder"
         android:textSize="16sp"
         android:fontFamily="sans-serif-light"
         android:textStyle="bold"

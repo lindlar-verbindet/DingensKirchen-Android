@@ -8,7 +8,7 @@ import android.content.Intent
 import android.net.Uri
 
 
-class ImprintActivity : AppCompatActivity() {
+class InfoActivity : AppCompatActivity() {
 
     private lateinit var imprintTextView: TextView
     private lateinit var dataTextView: TextView
@@ -18,7 +18,7 @@ class ImprintActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_imprint)
+        setContentView(R.layout.activity_info)
 
         this.supportActionBar?.title = "Informationen"
 
