@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/ic_bench"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         android:visibility="gone"/>
 
     <LinearLayout

@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
 
         tipWidget.setOnClickListener {
             runOnUiThread {
-                if (tips != null) {
+                if (tips?.count() != 0) {
                     val currentDay = getNumberOfDay()
                     val index = currentDay % tips!!.count()
                     val todaysTip = tips!![index]
