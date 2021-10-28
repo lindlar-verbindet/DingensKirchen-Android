@@ -44,7 +44,7 @@ class WordpressHelper {
     }
 
     fun getRecentEvents(): ArrayList<WPEvent> {
-        val urlString = "https://www.lindlar-verbindet.de/wp-json/mecexternal/v1/calendar/412"
+        val urlString = "https://lindlar-verbindet.de/wp-json/mecexternal/v1/calendar/2525"
 
         val dateParser = SimpleDateFormat("yyyy-MM-dd", Locale.GERMAN)
         val response = apiHelper.sendGetRequest(urlString)
