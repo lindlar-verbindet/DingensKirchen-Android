@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LindlarAPP</string>
+    <string name="app_name">MeinLindlar</string>
     <string name="mapbox_access_token" translatable="false">pk.eyJ1IjoicGl4ZWxza3VsbCIsImEiOiJja3B4dGVjOG0wNjcxMnJvNmkxMjgwNW5uIn0.X4Y1kWyTsmm6Y2yE2a2TUQ</string>
     <string name="mapbox_custommap_uri" translatable="false">mapbox://styles/pixelskull/ckqc2n0m10gbv17mztnwa9eou</string>
     <string name="mapbox_bus_stop_layer" translatable="false">bus-map-data-250621-b0qi91</string>
