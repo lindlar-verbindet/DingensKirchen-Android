@@ -17,19 +17,46 @@
             android:paddingEnd="10dp">
             <ImageView
                 android:id="@+id/digital_header_image"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
                 android:layout_margin="10dp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:src="@drawable/ic_digital"/>
+            <ImageView
+                android:id="@+id/digital_image"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@id/digital_header_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/digital_image"/>
+            <TextView
+                android:id="@+id/digital_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/digital_image"
+                android:text="@string/digital_desc"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-light" />
+            <View
+                android:id="@+id/digital_spacer"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/digital_desc"
+                android:layout_height="3dp"
+                android:paddingBottom="20dp"
+                android:background="@color/primaryHighlight"/>
             <TextView
                 android:id="@+id/digital_given_name_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                app:layout_constraintTop_toBottomOf="@id/digital_header_image"
+                app:layout_constraintTop_toBottomOf="@id/digital_spacer"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/form_given_name"/>
