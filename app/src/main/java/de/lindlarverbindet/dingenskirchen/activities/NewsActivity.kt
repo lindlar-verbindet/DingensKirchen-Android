@@ -64,6 +64,7 @@ class NewsActivity : AppCompatActivity() {
             recentNews.sortByDescending { it.date }
             Log.d("APP", recentNews.joinToString { "${it.title} | ${it.content} | ${it.link}"} )
             runOnUiThread {
+                tableLayout.removeAllViews()
                 configureTableRows(recentNews)
                 refreshView.isRefreshing = false
             }

@@ -19,6 +19,7 @@ import kotlinx.coroutines.launch
 import java.net.URI
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 class EventActivity : AppCompatActivity(){
 
@@ -27,14 +28,14 @@ class EventActivity : AppCompatActivity(){
     private lateinit var tableLayout: TableLayout
     private lateinit var refreshView: SwipeRefreshLayout
 
-    private var recentEvents = listOf<WPEvent>()
+    private lateinit var recentEvents: ArrayList<WPEvent>
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        recentEvents = intent.getSerializableExtra("EVENTS") as ArrayList<WPEvent>
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event)
-
-        recentEvents = intent.getSerializableExtra("EVENTS") as List<WPEvent>
-
 
         this.supportActionBar?.title = "Veranstaltungen + Termine"
 
@@ -53,6 +54,7 @@ class EventActivity : AppCompatActivity(){
             recentEvents = wpHelper.getRecentEvents()
             Log.d("APP", recentEvents.joinToString { "${it.title} | ${it.desc} | ${it.link}"} )
             runOnUiThread {
+                tableLayout.removeAllViews()
                 configureTableRows(recentEvents)
                 refreshView.isRefreshing = false
             }

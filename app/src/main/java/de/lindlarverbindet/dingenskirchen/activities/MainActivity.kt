@@ -23,6 +23,7 @@ import de.lindlarverbindet.dingenskirchen.helper.TipHelper
 import de.lindlarverbindet.dingenskirchen.models.Tip
 import android.widget.ImageView
 import de.lindlarverbindet.dingenskirchen.fragments.TipDialogFragment
+import kotlin.collections.ArrayList
 
 
 class MainActivity : AppCompatActivity() {
@@ -177,7 +178,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getLatestAppointment() {
         GlobalScope.launch {
-            val recentEvents = wpHelper.getRecentEvents()
+            recentEvents = wpHelper.getRecentEvents() as ArrayList<WPEvent>
             Log.d("APP", recentEvents.joinToString { "${it.title} | ${it.desc} | ${it.link}"} )
             runOnUiThread {
                 populateEventWidget(recentEvents.firstOrNull())

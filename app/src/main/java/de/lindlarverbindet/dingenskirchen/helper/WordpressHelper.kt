@@ -43,7 +43,7 @@ class WordpressHelper {
         }
     }
 
-    fun getRecentEvents(): List<WPEvent> {
+    fun getRecentEvents(): ArrayList<WPEvent> {
         val urlString = "https://www.lindlar-verbindet.de/wp-json/mecexternal/v1/calendar/412"
 
         val dateParser = SimpleDateFormat("yyyy-MM-dd", Locale.GERMAN)
@@ -77,16 +77,15 @@ class WordpressHelper {
                         result.add(appointment)
                     }
                 }
-
                 return result
             } catch (e: ClassCastException) {
                 e.printStackTrace()
-                return listOf()
+                return arrayListOf()
             }
 
         } catch (e: JSONException) {
             e.printStackTrace()
-            return listOf()
+            return arrayListOf()
         }
     }
 
