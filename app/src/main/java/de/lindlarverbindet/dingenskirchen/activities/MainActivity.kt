@@ -167,9 +167,9 @@ class MainActivity : AppCompatActivity() {
         GlobalScope.launch {
             recentPosts = wpHelper.getRecentPosts()
             recentPosts.addAll(RSSHelper().getRecentPosts())
-
+//            val currentDate = Date()
             recentPosts.sortByDescending { it.date }
-
+//            recentPosts = recentPosts.filter { it.date > currentDate } as ArrayList<News>
             runOnUiThread {
                 populateNewsWidget(recentPosts.firstOrNull())
             }
@@ -181,6 +181,7 @@ class MainActivity : AppCompatActivity() {
             recentEvents = wpHelper.getRecentEvents() as ArrayList<WPEvent>
             Log.d("APP", recentEvents.joinToString { "${it.title} | ${it.desc} | ${it.link}"} )
             runOnUiThread {
+                recentEvents.sortBy { it.date }
                 populateEventWidget(recentEvents.firstOrNull())
             }
         }
