@@ -10,7 +10,7 @@ class TipHelper {
     private val apiHelper = APIHelper()
 
     fun getTips(): List<Tip> {
-        val url = "https://wildflowers.bplaced.net/tippdtages.json" // TODO: Use the right url
+        val url = "https://designclever.de/tippdtages.json"
 
         val response = apiHelper.sendGetRequest(url)
         try {

@@ -48,20 +48,14 @@ class MainActivity : AppCompatActivity() {
                 tipWidget.animate().apply {
                     duration = 333
                     rotationXBy(-10f)
-//                    rotationYBy(-10f)
-//                    translationXBy(-10f)
                     scaleXBy(0.1f)
                     scaleYBy(0.1f)
-//                    translationZBy(-10f)
                 }.withEndAction {
                     tipWidget.animate().apply {
                         duration = 333
                         rotationXBy(10f)
-//                        rotationYBy(+10f)
-//                        translationXBy(10f)
                         scaleXBy(-0.1f)
                         scaleYBy(-0.1f)
-//                        translationZBy(10f)
                     }
                 }
                 handler.postDelayed(this, 10000)

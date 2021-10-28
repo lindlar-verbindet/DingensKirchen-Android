@@ -7,7 +7,7 @@
 
     <string name="api_url">https://vermittlungstool.dev.bergnet.de/input/app</string>
 
-    <string name="main_activity_no_tip">Leider konnte der Tip des Tages nicht geladen werden...</string>
+    <string name="main_activity_no_tip">Leider konnte der Tipp des Tages nicht geladen werden...</string>
 
     <string name="title_activity_map">MapActivity</string>
     <!-- Strings used for fragments for navigation -->
@@ -17,20 +17,20 @@
     <string name="previous">Previous</string>
 
     <string name="bottom_sheet_title">Lindlar Mobil</string>
-    <string name="bottom_sheet_desc_placeholder"><b>Nicht die richtige Mitfahrgelegenheit gefunden?</b> \n Versuchen Sie es doch mit unserem LiMo-Service: \n +49 2266 440 72 04</string>
+    <string name="bottom_sheet_desc_placeholder"><b>ES FÄHRT KEIN BUS?</b> \n Jetzt LindlarMobil buchen unter \n +49 2266 440 72 04 \n Der lindlarer Fahrservice mit Herz.</string>
 
-    <string name="user_location_permission_explanation">Dingenskirchen braucht Ihre Standort Daten um die aktuelle Position auf der Karte anzuzeigen.</string>
-    <string name="user_location_permission_not_granted">Standort Daten wurden nicht freigegeben</string>
+    <string name="user_location_permission_explanation">Die LiVe-App benötigt Ihre Standort Daten um die aktuelle Position auf der Karte anzuzeigen.</string>
+    <string name="user_location_permission_not_granted">Standortdaten wurden nicht freigegeben</string>
     <string name="abfall_navi_logo_desc">Abfall Navi Logo</string>
     <string name="form_given_name">Ihr Vorname</string>
     <string name="form_name">Ihr Nachname</string>
     <string name="form_telephone">Ihre Telefon oder Mobilnummer</string>
     <string name="form_mail">Ihre E-Mail-Adresse</string>
-    <string name="form_agreement">Hiermit erkläre ich micht einverstanden, dass meine in das Formular eingegebenen Daten elektronisch gespeichert und zum Zweck der Kontaktaufnahme verarbeitet und genutzt werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit wiederrufen kann.</string>
+    <string name="form_agreement">Hiermit erkläre ich mich einverstanden, dass meine in das Formular eingegebenen Daten elektronisch gespeichert und zum Zweck der Kontaktaufnahme verarbeitet und genutzt werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit wiederrufen kann.</string>
     <string name="form_send">Absenden</string>
     <string name="form_address">Ihre Anschrift</string>
     <string name="form_topic_other">Nicht dabei? Wobei können wir helfen?</string>
-    <string name="form_detail_topic">Erzählen Sie uns ein bisschen mehr zum Thema. So können wirden richtigen Experten für Sie finden.</string>
+    <string name="form_detail_topic">Erzählen Sie uns ein bisschen mehr zum Thema. So können wir den richtigen Experten für Sie finden.</string>
     <string name="form_home_order">Ist ein Vorort-Termin erwünscht?</string>
     <string name="form_optional_stuff">Optionale Angaben zu Ihrer Anfrage</string>
     <string name="form_date">In welchem Zeitraum sollte die Aufgabe erledigt werden?</string>
