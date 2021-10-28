@@ -25,7 +25,7 @@ class CouncilActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_council)
 
-        this.supportActionBar?.title = "Rathaus"
+        this.supportActionBar?.title = getString(R.string.council_navigation_title)
 
         councilTrashService = findViewById(R.id.council_action_trash)
         tableLayout = findViewById(R.id.council_table)

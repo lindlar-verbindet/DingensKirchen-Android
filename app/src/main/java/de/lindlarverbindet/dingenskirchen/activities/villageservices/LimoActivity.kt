@@ -28,6 +28,8 @@ class LimoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_limo)
 
+        this.supportActionBar?.title = getString(R.string.limo_navigation_title)
+
         givenNameTextView = findViewById(R.id.limo_given_name_field)
         nameTextView = findViewById(R.id.limo_name_field)
         phoneTextView = findViewById(R.id.limo_tel_field)
@@ -66,7 +68,7 @@ class LimoActivity : AppCompatActivity() {
         }
         // send it
         GlobalScope.launch {
-            val response = APIHelper().sendPostRequest(getString(R.string.api_url), json)
+            val response = APIHelper().sendPostRequest(getString(R.string.tool_api_url), json)
             Log.d("RESPONSE", response)
         }
     }

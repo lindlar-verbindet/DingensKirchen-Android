@@ -36,6 +36,8 @@ class PocketMoneyActivity : AppCompatActivity(), AdapterView.OnItemSelectedListe
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pocket_money)
 
+        this.supportActionBar?.title = getString(R.string.pocket_money_navigation_title)
+
         givenNameTextView = findViewById(R.id.pocket_money_given_name_field)
         nameTextView = findViewById(R.id.pocket_money_name_field)
         addressTextView = findViewById(R.id.pocket_money_address_field)
@@ -118,7 +120,7 @@ class PocketMoneyActivity : AppCompatActivity(), AdapterView.OnItemSelectedListe
         }
         // send it
         GlobalScope.launch {
-            val response = APIHelper().sendPostRequest(getString(R.string.api_url), json)
+            val response = APIHelper().sendPostRequest(getString(R.string.tool_api_url), json)
             Log.d("RESPONSE", response)
         }
     }

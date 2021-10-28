@@ -28,7 +28,7 @@ class VillageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_village)
 
-        this.supportActionBar?.title = "Dorfleben"
+        this.supportActionBar?.title = getString(R.string.village_navigation_title)
 
         tableLayout = findViewById(R.id.village_table)
 

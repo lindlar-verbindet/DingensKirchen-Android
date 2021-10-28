@@ -1,5 +1,6 @@
 package de.lindlarverbindet.dingenskirchen.activities
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -45,7 +46,7 @@ class NewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)
 
-        this.supportActionBar?.title = "Lindlarer News"
+        this.supportActionBar?.title = getString(R.string.news_navigation_title)
 
         tableLayout = findViewById(R.id.news_table)
         refreshView = findViewById(R.id.news_refresh)

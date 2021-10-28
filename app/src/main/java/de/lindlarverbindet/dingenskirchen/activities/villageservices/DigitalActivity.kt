@@ -33,6 +33,8 @@ class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_digital)
 
+        this.supportActionBar?.title = getString(R.string.digital_navigation_title)
+
         givenNameTextView = findViewById(R.id.digital_given_name_field)
         nameTextView = findViewById(R.id.digital_name_field)
         addressTextView  = findViewById(R.id.digital_address_field)
@@ -111,7 +113,7 @@ class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
         }
         // send it
         GlobalScope.launch {
-            val response = APIHelper().sendPostRequest(getString(R.string.api_url), json)
+            val response = APIHelper().sendPostRequest(getString(R.string.tool_api_url), json)
             Log.d("RESPONSE", response)
         }
     }

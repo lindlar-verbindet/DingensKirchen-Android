@@ -21,7 +21,6 @@ import com.mapbox.android.core.permissions.PermissionsListener
 import com.mapbox.android.core.permissions.PermissionsManager
 import com.mapbox.geojson.Feature
 import com.mapbox.mapboxsdk.Mapbox
-import com.mapbox.mapboxsdk.attribution.Attribution
 import com.mapbox.mapboxsdk.geometry.LatLng
 import com.mapbox.mapboxsdk.location.LocationComponentActivationOptions
 import com.mapbox.mapboxsdk.location.modes.CameraMode
@@ -48,7 +47,7 @@ class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener, Permission
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        this.supportActionBar?.title = "Mobil"
+        this.supportActionBar?.title = getString(R.string.mobil_navigation_title)
 
         Mapbox.getInstance(applicationContext, getString(R.string.mapbox_access_token))
 

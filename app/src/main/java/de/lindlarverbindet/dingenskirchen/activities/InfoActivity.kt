@@ -20,7 +20,7 @@ class InfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
 
-        this.supportActionBar?.title = "Informationen"
+        this.supportActionBar?.title = getString(R.string.info_navigation_title)
 
         imprintTextView = findViewById(R.id.imprint_imprint)
         dataTextView = findViewById(R.id.imprint_dataprotection)

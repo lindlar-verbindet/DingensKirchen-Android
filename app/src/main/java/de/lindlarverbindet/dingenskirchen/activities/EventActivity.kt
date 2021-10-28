@@ -1,5 +1,6 @@
 package de.lindlarverbindet.dingenskirchen.activities
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -37,7 +38,7 @@ class EventActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event)
 
-        this.supportActionBar?.title = "Veranstaltungen + Termine"
+        this.supportActionBar?.title = getString(R.string.event_navigation_title)
 
         tableLayout = findViewById(R.id.event_table)
         refreshView = findViewById(R.id.event_refresh)
