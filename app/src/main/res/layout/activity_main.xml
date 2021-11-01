@@ -112,10 +112,20 @@
             app:layout_constraintTop_toBottomOf="@id/main_council_widget"
             layout="@layout/widget_events"/>
 
+        <include
+            android:id="@+id/main_survey_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toBottomOf="@id/main_events_widget"
+            layout="@layout/widget_survey"/>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            app:layout_constraintTop_toBottomOf="@id/main_events_widget"/>
+            app:layout_constraintTop_toBottomOf="@id/main_survey_widget"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

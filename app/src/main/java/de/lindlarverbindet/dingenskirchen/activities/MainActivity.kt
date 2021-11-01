@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var councilWidget  : View
     private lateinit var mobilWidget    : View
     private lateinit var villageWidget  : View
+    private lateinit var surveyWidget   : View
     private lateinit var imprintImageView: ImageView
 
     private var recentPosts =  arrayListOf<News>()
@@ -80,6 +81,8 @@ class MainActivity : AppCompatActivity() {
         councilWidget = findViewById(R.id.main_council_widget)
         mobilWidget = findViewById(R.id.main_mobil_widget)
         villageWidget = findViewById(R.id.main_village_widget)
+        surveyWidget = findViewById(R.id.main_survey_widget)
+
         imprintImageView = findViewById(R.id.main_imprint)
 
         imprintImageView.setOnClickListener {
@@ -142,6 +145,15 @@ class MainActivity : AppCompatActivity() {
         villageWidget.setOnClickListener {
             runOnUiThread {
                 val intent = Intent(applicationContext, VillageActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
+        surveyWidget.setOnClickListener {
+            runOnUiThread {
+                val intent = Intent(applicationContext, WebActivity::class.java)
+                intent.putExtra("url", "https://www.lindlar-verbindet.de/umfrage")
+                intent.putExtra("parent", "MainActivity")
                 startActivity(intent)
             }
         }
