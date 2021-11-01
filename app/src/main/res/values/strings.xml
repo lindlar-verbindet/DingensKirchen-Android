@@ -68,6 +68,7 @@
 
     <string name="info_imprint">IMPRESSUM</string>
     <string name="info_datenpolicy">DATENSCHUTZ</string>
+    <string name="info_feedback">FEEDBACK</string>
     <string name="info_opensource">Diese App ist quelloffen und kann frei weiterentwickelt werden</string>
     <string name="info_owner_headline">Herausgeber der App</string>
     <string name="info_owner">Lindlar verbindet e.V.</string>

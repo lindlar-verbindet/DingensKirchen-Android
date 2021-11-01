@@ -12,6 +12,7 @@ class InfoActivity : AppCompatActivity() {
 
     private lateinit var imprintTextView: TextView
     private lateinit var dataTextView: TextView
+    private lateinit var feedbackTextView: TextView
     private lateinit var openTextView: TextView
     private lateinit var ownerTextView: TextView
     private lateinit var conceptTextView: TextView
@@ -24,6 +25,7 @@ class InfoActivity : AppCompatActivity() {
 
         imprintTextView = findViewById(R.id.imprint_imprint)
         dataTextView = findViewById(R.id.imprint_dataprotection)
+        feedbackTextView = findViewById(R.id.imprint_feedback)
         openTextView = findViewById(R.id.imprint_open)
         ownerTextView = findViewById(R.id.imprint_owner)
         conceptTextView = findViewById(R.id.imprint_concept)
@@ -35,6 +37,11 @@ class InfoActivity : AppCompatActivity() {
 
         dataTextView.setOnClickListener {
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.lindlar-verbindet.de/datenschutz/"))
+            startActivity(browserIntent)
+        }
+
+        feedbackTextView.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.lindlar-verbindet.de/feedback-anregungen-ideen"))
             startActivity(browserIntent)
         }
 
