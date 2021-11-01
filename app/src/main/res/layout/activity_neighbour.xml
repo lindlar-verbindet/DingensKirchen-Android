@@ -223,6 +223,7 @@
                 app:layout_constraintTop_toBottomOf="@id/neighbour_date_from_label"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:hint="01.01.2021"
                 android:inputType="date"
                 android:importantForAutofill="no"/>
             <TextView
@@ -241,6 +242,7 @@
                 app:layout_constraintTop_toBottomOf="@id/neighbour_date_to_label"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:hint="02.01.2021"
                 android:inputType="date"
                 android:importantForAutofill="no"/>
             <CheckBox

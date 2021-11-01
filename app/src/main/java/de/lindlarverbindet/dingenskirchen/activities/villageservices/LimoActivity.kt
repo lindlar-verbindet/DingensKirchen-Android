@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.helper.APIHelper
@@ -68,8 +69,24 @@ class LimoActivity : AppCompatActivity() {
         }
         // send it
         GlobalScope.launch {
-            val response = APIHelper().sendPostRequest(getString(R.string.tool_api_url), json)
-            Log.d("RESPONSE", response)
+            APIHelper().sendPostRequest(getString(R.string.tool_api_url), json) {success, _ ->
+                runOnUiThread {
+                    val title = if (success) R.string.form_alert_success_title
+                    else R.string.form_alert_failure_title
+                    val text = if (success) R.string.form_alert_success_text
+                    else R.string.form_alert_failure_text
+
+                    val alertDialogBuilder = AlertDialog.Builder(this@LimoActivity)
+                    alertDialogBuilder.setTitle(title)
+                    alertDialogBuilder.setMessage(text)
+                    alertDialogBuilder.setPositiveButton(R.string.form_alert_button) { _, _ ->
+                        if (success) {
+                            this@LimoActivity.finish()
+                        }
+                    }
+                    alertDialogBuilder.show()
+                }
+            }
         }
     }
 }

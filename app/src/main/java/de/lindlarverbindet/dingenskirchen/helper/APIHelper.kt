@@ -40,7 +40,7 @@ class APIHelper {
         return response.toString()
     }
 
-    fun sendPostRequest(urlString: String, json: JSONObject): String {
+    fun sendPostRequest(urlString: String, json: JSONObject, callback: (success:Boolean, response:String) -> Unit) {
         val response: StringBuilder = StringBuilder()
         val url = URL(urlString)
         try {
@@ -69,12 +69,12 @@ class APIHelper {
                                 response.append(responseLine?.trim())
                             }
                         }
+                        callback(true, response.toString())
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }
                 }
-                else if (responseCode == HttpURLConnection.HTTP_BAD_REQUEST ||
-                    responseCode == HttpURLConnection.HTTP_FORBIDDEN) {
+                else {
                     try {
                         BufferedReader(
                             InputStreamReader(errorStream, "utf-8")
@@ -85,6 +85,7 @@ class APIHelper {
                                 response.append(responseLine?.trim())
                             }
                         }
+                        callback(false, response.toString())
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }
@@ -92,8 +93,6 @@ class APIHelper {
             }
         } catch (e: Exception) {
             e.printStackTrace()
-            return ""
         }
-        return response.toString()
     }
 }

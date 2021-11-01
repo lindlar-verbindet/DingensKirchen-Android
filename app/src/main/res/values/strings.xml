@@ -36,12 +36,19 @@
     <string name="form_optional_stuff">Optionale Angaben zu Ihrer Anfrage</string>
     <string name="form_date">In welchem Zeitraum sollte die Aufgabe erledigt werden?</string>
     <string name="form_date_from">Von</string>
-    <string name="form_date_to">Bis</string>
-
+    <string name="form_date_to">Bis</string>å
     <string name="help_topic_prompt_digital">Zu welchem Themengebiet haben Sie Fragen/wünschen Sie Unterstützung</string>
     <string name="form_topic_prompt_neighbour">Zu welcher Tätigkeit wünschen Sie zukünftig Unterstützung?</string>
-
     <string name="form_birth_date">Ihr Geburtsdatum</string>
+
+    <string name="form_alert_success_title">Geschafft!</string>
+    <string name="form_alert_success_text">Ihre Angaben wurden an Lindlar verbindet e.V. übermittelt.</string>
+
+    <string name="form_alert_failure_title">Fehler</string>
+    <string name="form_alert_failure_text">Bitte überprüfen Sie Ihre Angaben und versuchen es noch einmal.</string>
+
+    <string name="form_alert_button">OK</string>
+
     <string name="warning_no_events">Es gibt aktuell keine Termine</string>
 
     <string name="news_widget_headline">LINDLARER NEWS</string>
@@ -51,7 +58,7 @@
     <string name="village_widget_desc">Ehrenamtliche Dienste mobil nutzen – Nachbarschaftshilfe, LindlarMobil, Taschengeldbörse und mehr.</string>
 
     <string name="mobil_widget_headline">MOBIL</string>
-    <string name="mobil_widget_desc">Mit dem Öffentlichen Personennahverkehr unterwegs in Lindlar</string>
+    <string name="mobil_widget_desc">Mit dem Öffentlichen Personennahverkehr unterwegs in Lindlar.</string>
 
     <string name="council_widget_headline">RATHAUS</string>
     <string name="council_widget_desc">Das digitale Rathaus - Onlineservices und Informationen mobil einsehen und nutzen.</string>

@@ -14,8 +14,8 @@
 
         <ImageView
             android:id="@+id/main_imprint"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:src="@drawable/ic_info_full"
@@ -37,7 +37,6 @@
             android:id="@+id/main_logo_large"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:src="@drawable/ic_logo_meinlindlar"

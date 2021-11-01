@@ -151,6 +151,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="date"
+                android:hint="01.01.2021"
                 android:autofillHints=".AUTOFILL_HINT_BIRTH_DATE_FULL"
                 android:labelFor="@id/pocket_money_mail_label"/>
             <TextView
@@ -245,6 +246,7 @@
                 app:layout_constraintTop_toBottomOf="@id/pocket_money_date_from_label"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:hint="01.01.2021"
                 android:inputType="date"
                 android:importantForAutofill="no"/>
             <TextView
@@ -263,6 +265,7 @@
                 app:layout_constraintTop_toBottomOf="@id/pocket_money_date_to_label"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:hint="02.01.2021"
                 android:inputType="date"
                 android:importantForAutofill="no"/>
             <CheckBox
