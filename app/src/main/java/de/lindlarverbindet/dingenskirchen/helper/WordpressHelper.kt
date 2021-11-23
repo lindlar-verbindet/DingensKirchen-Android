@@ -1,6 +1,5 @@
 package de.lindlarverbindet.dingenskirchen.helper
 
-import android.util.Log
 import de.lindlarverbindet.dingenskirchen.models.WPEvent
 import de.lindlarverbindet.dingenskirchen.models.News
 import org.json.JSONArray
@@ -62,13 +61,27 @@ class WordpressHelper {
                     val data = entry.get("data") as JSONObject
 
                     val title = data.get("title") as String
-                    val content = data.get("content") as String
+                    val content = when (data.has("content")) {
+                        true -> data.get("content") as String
+                        false -> ""
+                    }
                     val startTime = (data.get("time") as JSONObject).get("start_raw") as String
-                    val endTime = (data.get("time") as JSONObject).get("end_raw") as String
-                    val locations = (data.get("locations") as JSONObject)
+                    val endTime = when ((data.get("time") as JSONObject).has("end_raw")) {
+                        true -> (data.get("time") as JSONObject).get("end_raw") as String
+                        false -> ""
+                    }
                     var location = ""
-                    for (key in locations.keys()) {
-                        location = (locations.get(key) as JSONObject).get("address") as String
+                    if (data.has("locations")) {
+                        val locations = (data.get("locations") as JSONObject)
+
+                        for (key in locations.keys()) {
+                            location += (locations.get(key) as JSONObject).get("name") as String
+                            val address =
+                                (locations.get(key) as JSONObject).get("address") as String
+                            if (address.isNotEmpty()) {
+                                location = address
+                            }
+                        }
                     }
                     val link = data.get("permalink") as String
 

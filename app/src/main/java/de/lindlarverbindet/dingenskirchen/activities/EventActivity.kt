@@ -1,11 +1,11 @@
 package de.lindlarverbindet.dingenskirchen.activities
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.LinearLayout
 import android.widget.TableLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -62,16 +62,23 @@ class EventActivity : AppCompatActivity(){
         }
     }
 
+    private fun formatDate(date: Date, start: String, end: String): String {
+        val dateFormatter = SimpleDateFormat("dd.MM.yyyy", Locale.GERMAN)
+        val result = when (end != "") {
+            true -> "${dateFormatter.format(date)} Von: $start Bis: $end"
+            false -> "${dateFormatter.format(date)} Ab: $start"
+        }
+        return result
+    }
+
     private fun configureTableRows(data: List<WPEvent>) {
         if (recentEvents.isEmpty()) {
-            // TODO: Show info View -> no Events available
+            // maybe Show info View -> no Events available
             return
         }
         var backgroundGreen = true
         for (element in data) {
             Log.d("ELEMENT", element.title + " " + element.desc + " " + element.link)
-
-            val dateFormatter = SimpleDateFormat("dd.MM.yyyy", Locale.GERMAN)
             val row = View.inflate(this, R.layout.event_layout, null) as ConstraintLayout
             if (backgroundGreen) {
                 row.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryHighlight)
@@ -86,10 +93,19 @@ class EventActivity : AppCompatActivity(){
             val addressView = row.findViewById<TextView>(R.id.event_location)
             val websiteView = row.findViewById<TextView>(R.id.event_website)
             // configure subviews
-            dateView.text = "${dateFormatter.format(element.date)} Von: ${element.start} Bis: ${element.end}"
-            titleView.text = element.title
-            descView.text = HtmlCompat.fromHtml(element.desc, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
-            addressView.text = element.location
+            dateView.text = formatDate(element.date, element.start, element.end)
+            titleView.text = HtmlCompat.fromHtml(element.title, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
+            if (element.desc.isEmpty()) {
+                descView.visibility = View.GONE
+            } else {
+                descView.text = HtmlCompat.fromHtml(element.desc, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
+            }
+            if (element.location.isEmpty()) {
+                val addressLayout = row.findViewById<LinearLayout>(R.id.event_location_area)
+                addressLayout.visibility = View.GONE
+            } else {
+                addressView.text = element.location
+            }
             websiteView.text = URI(element.link).host.substringBefore("/")
             // Set Margin for dynamic row
             val rowParams = TableLayout.LayoutParams(
@@ -99,8 +115,6 @@ class EventActivity : AppCompatActivity(){
             row.layoutParams = rowParams
 
             row.setOnClickListener {
-//                val webpage = Uri.parse(element.link)
-//                val intent = Intent(Intent.ACTION_VIEW, webpage)
                 val intent = Intent(applicationContext, WebActivity::class.java)
                 intent.putExtra("url", element.link)
                 intent.putExtra("parent", "EventActivity")
