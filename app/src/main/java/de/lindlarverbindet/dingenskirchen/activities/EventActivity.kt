@@ -13,6 +13,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import de.lindlarverbindet.dingenskirchen.R
+import de.lindlarverbindet.dingenskirchen.helper.LindlarEventHelper
 import de.lindlarverbindet.dingenskirchen.helper.WordpressHelper
 import de.lindlarverbindet.dingenskirchen.models.WPEvent
 import kotlinx.coroutines.GlobalScope
@@ -53,8 +54,10 @@ class EventActivity : AppCompatActivity(){
     private fun getLatestAppointments() {
         GlobalScope.launch {
             recentEvents = wpHelper.getRecentEvents()
+            recentEvents += LindlarEventHelper.getRecentEvents()
             Log.d("APP", recentEvents.joinToString { "${it.title} | ${it.desc} | ${it.link}"} )
             runOnUiThread {
+                recentEvents.sortBy { it.date }
                 tableLayout.removeAllViews()
                 configureTableRows(recentEvents)
                 refreshView.isRefreshing = false

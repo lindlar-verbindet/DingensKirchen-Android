@@ -24,6 +24,7 @@ import de.lindlarverbindet.dingenskirchen.helper.TipHelper
 import de.lindlarverbindet.dingenskirchen.models.Tip
 import android.widget.ImageView
 import de.lindlarverbindet.dingenskirchen.fragments.TipDialogFragment
+import de.lindlarverbindet.dingenskirchen.helper.LindlarEventHelper
 import kotlin.collections.ArrayList
 
 
@@ -191,7 +192,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun getLatestAppointment() {
         GlobalScope.launch {
-            recentEvents = wpHelper.getRecentEvents() as ArrayList<WPEvent>
+            recentEvents = wpHelper.getRecentEvents()
+            recentEvents += LindlarEventHelper.getRecentEvents()
             Log.d("APP", recentEvents.joinToString { "${it.title} | ${it.desc} | ${it.link}"} )
             runOnUiThread {
                 recentEvents.sortBy { it.date }
