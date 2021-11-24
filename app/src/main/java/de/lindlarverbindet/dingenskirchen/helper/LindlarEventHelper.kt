@@ -1,7 +1,7 @@
 package de.lindlarverbindet.dingenskirchen.helper
 
 import android.util.Log
-import de.lindlarverbindet.dingenskirchen.models.WPEvent
+import de.lindlarverbindet.dingenskirchen.models.Event
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -14,13 +14,13 @@ class LindlarEventHelper {
     companion object {
         val apiHelper = APIHelper()
 
-        fun getRecentEvents(): ArrayList<WPEvent> {
+        fun getRecentEvents(): ArrayList<Event> {
             val currentTime = Date().time.toString().dropLast(3)
             val url = "https://lindlar.de/?eID=event_api&token=8_435!B!tV_9wuj-3P*e&mod=event&start=${currentTime}"
             Log.d("APIURL:", url)
 
             val response = apiHelper.sendGetRequest(url)
-            val result: ArrayList<WPEvent> = arrayListOf()
+            val result: ArrayList<Event> = arrayListOf()
             try {
                 val eventsObject = JSONObject(response)
                 val events = eventsObject.get("events") as JSONArray
@@ -44,7 +44,7 @@ class LindlarEventHelper {
                     }
                     val link = element.get("url") as String
 
-                    val event = WPEvent(title, desc, startDate, startTime, endTime, location, link)
+                    val event = Event(title, desc, startDate, startTime, endTime, location, link)
                     result.add(event)
                 }
             } catch (e: JSONException) {

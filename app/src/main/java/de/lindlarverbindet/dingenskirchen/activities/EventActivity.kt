@@ -15,7 +15,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.helper.LindlarEventHelper
 import de.lindlarverbindet.dingenskirchen.helper.WordpressHelper
-import de.lindlarverbindet.dingenskirchen.models.WPEvent
+import de.lindlarverbindet.dingenskirchen.models.Event
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.net.URI
@@ -30,11 +30,11 @@ class EventActivity : AppCompatActivity(){
     private lateinit var tableLayout: TableLayout
     private lateinit var refreshView: SwipeRefreshLayout
 
-    private lateinit var recentEvents: ArrayList<WPEvent>
+    private lateinit var recentEvents: ArrayList<Event>
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        recentEvents = intent.getSerializableExtra("EVENTS") as ArrayList<WPEvent>
+        recentEvents = intent.getSerializableExtra("EVENTS") as ArrayList<Event>
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event)
@@ -74,7 +74,7 @@ class EventActivity : AppCompatActivity(){
         return result
     }
 
-    private fun configureTableRows(data: List<WPEvent>) {
+    private fun configureTableRows(data: List<Event>) {
         if (recentEvents.isEmpty()) {
             // maybe Show info View -> no Events available
             return

@@ -1,6 +1,5 @@
 package de.lindlarverbindet.dingenskirchen.activities
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,7 +13,7 @@ import androidx.core.text.HtmlCompat
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.helper.RSSHelper
 import de.lindlarverbindet.dingenskirchen.helper.WordpressHelper
-import de.lindlarverbindet.dingenskirchen.models.WPEvent
+import de.lindlarverbindet.dingenskirchen.models.Event
 import de.lindlarverbindet.dingenskirchen.models.News
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -25,7 +24,6 @@ import de.lindlarverbindet.dingenskirchen.models.Tip
 import android.widget.ImageView
 import de.lindlarverbindet.dingenskirchen.fragments.TipDialogFragment
 import de.lindlarverbindet.dingenskirchen.helper.LindlarEventHelper
-import kotlin.collections.ArrayList
 
 
 class MainActivity : AppCompatActivity() {
@@ -40,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var imprintImageView: ImageView
 
     private var recentPosts =  arrayListOf<News>()
-    private var recentEvents = arrayListOf<WPEvent>()
+    private var recentEvents = arrayListOf<Event>()
 
     private val wpHelper = WordpressHelper()
     private var tips: List<Tip>? = null
@@ -222,7 +220,7 @@ class MainActivity : AppCompatActivity() {
         newsDescView.text   = cutoffIfNeeded(previewText, 100)
     }
 
-    private fun populateEventWidget(event: WPEvent?) {
+    private fun populateEventWidget(event: Event?) {
         val titleView: TextView = eventWidget.findViewById(R.id.events_event_title)
         val dateView: TextView = eventWidget.findViewById(R.id.events_event_date)
         val descView: TextView = eventWidget.findViewById(R.id.events_event_desc)

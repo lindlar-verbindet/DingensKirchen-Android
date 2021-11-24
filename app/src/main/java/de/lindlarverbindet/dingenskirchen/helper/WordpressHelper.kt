@@ -1,6 +1,6 @@
 package de.lindlarverbindet.dingenskirchen.helper
 
-import de.lindlarverbindet.dingenskirchen.models.WPEvent
+import de.lindlarverbindet.dingenskirchen.models.Event
 import de.lindlarverbindet.dingenskirchen.models.News
 import org.json.JSONArray
 import org.json.JSONException
@@ -42,14 +42,14 @@ class WordpressHelper {
         }
     }
 
-    fun getRecentEvents(): ArrayList<WPEvent> {
+    fun getRecentEvents(): ArrayList<Event> {
         val urlString = "https://lindlar-verbindet.de/wp-json/mecexternal/v1/calendar/2525"
 
         val dateParser = SimpleDateFormat("yyyy-MM-dd", Locale.GERMAN)
         val response = apiHelper.sendGetRequest(urlString)
         try {
             val json = JSONObject(response)
-            val result: ArrayList<WPEvent> = arrayListOf()
+            val result: ArrayList<Event> = arrayListOf()
 
             try {
                 val content = json.get("content_json") as JSONObject
@@ -86,7 +86,7 @@ class WordpressHelper {
                     val link = data.get("permalink") as String
 
                     if (date != null) {
-                        val appointment = WPEvent(title, content, date, startTime, endTime, location, link)
+                        val appointment = Event(title, content, date, startTime, endTime, location, link)
                         result.add(appointment)
                     }
                 }
