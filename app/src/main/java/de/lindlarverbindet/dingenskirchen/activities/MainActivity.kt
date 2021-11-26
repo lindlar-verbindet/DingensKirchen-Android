@@ -235,9 +235,9 @@ class MainActivity : AppCompatActivity() {
         val dateFormatter = SimpleDateFormat("dd.MM.yyyy", Locale.GERMAN)
         val descText = HtmlCompat.fromHtml(event.desc, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
 
-        titleView.text = event.title
+        titleView.text = HtmlCompat.fromHtml(event.title, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
         dateView.text = dateFormatter.format(event.date)
-        descView.text = cutoffIfNeeded(descText, 50).replace("\n", "")
+        descView.text = cutoffIfNeeded(descText, 61).replace("\n", "")
     }
 
     private fun cutoffIfNeeded(text: String, maxChars: Int): String {
