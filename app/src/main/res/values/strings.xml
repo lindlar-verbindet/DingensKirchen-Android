@@ -107,6 +107,7 @@
         <item>iOS - iPhone</item>
         <item>Anderes Thema</item>
     </string-array>
+
     <string-array name="form_help_topics_neighbour">
         <item>Einkaufen</item>
         <item>Erledigungsgänge</item>
@@ -118,7 +119,6 @@
         <item>... bei einer anderen Tätigkeit</item>
     </string-array>
 
-
     <string-array name="form_help_topics_pocket_money">
         <item>Einkaufen</item>
         <item>Erledigungsgänge</item>
@@ -128,5 +128,14 @@
         <item>Leichte Gartenarbeiten</item>
         <item>Hilfe mit dem Handy/Computer</item>
         <item>... bei einer anderen Tätigkeit</item>
+    </string-array>
+
+    <string-array name="form_dropdown_districts">
+        <item>Lindlar Ort</item>
+        <item>Frielingsdorf</item>
+        <item>Linde</item>
+        <item>Hohkeppel</item>
+        <item>Schmitzhöhe</item>
+        <item>Kapellensüng/Hartegasse</item>
     </string-array>
 </resources>

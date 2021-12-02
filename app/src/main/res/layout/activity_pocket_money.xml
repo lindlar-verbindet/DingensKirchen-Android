@@ -97,12 +97,23 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="text"
                 android:autofillHints=".AUTOFILL_HINT_POSTAL_ADDRESS"/>
+            <Spinner
+                android:id="@+id/pocket_money_district_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/pocket_money_address_field"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:entries="@array/form_dropdown_districts"
+                android:prompt="@string/help_topic_prompt_digital"/>
+
             <TextView
                 android:id="@+id/pocket_money_tel_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                app:layout_constraintTop_toBottomOf="@id/pocket_money_address_field"
+                app:layout_constraintTop_toBottomOf="@id/pocket_money_district_spinner"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/form_telephone"/>
@@ -135,31 +146,11 @@
                 android:autofillHints=".AUTOFILL_HINT_EMAIL_ADDRESS"
                 android:labelFor="@id/pocket_money_mail_label"/>
             <TextView
-                android:id="@+id/pocket_money_birthdate_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                app:layout_constraintTop_toBottomOf="@id/pocket_money_mail_field"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:text="@string/form_birth_date"/>
-            <EditText
-                android:id="@+id/pocket_money_birthdate_field"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/pocket_money_birthdate_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:inputType="date"
-                android:hint="01.01.2021"
-                android:autofillHints=".AUTOFILL_HINT_BIRTH_DATE_FULL"
-                android:labelFor="@id/pocket_money_mail_label"/>
-            <TextView
                 android:id="@+id/pocket_money_topic_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                app:layout_constraintTop_toBottomOf="@id/pocket_money_birthdate_field"
+                app:layout_constraintTop_toBottomOf="@id/pocket_money_mail_field"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/form_topic_prompt_neighbour"/>
@@ -227,52 +218,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/form_date"/>
-
-            <TextView
-                android:id="@+id/pocket_money_date_from_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:text="@string/form_date_from"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/pocket_money_date_label" />
-
-            <EditText
-                android:id="@+id/pocket_money_date_from_field"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/pocket_money_date_from_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:hint="01.01.2021"
-                android:inputType="date"
-                android:importantForAutofill="no"/>
-            <TextView
-                android:id="@+id/pocket_money_date_to_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                app:layout_constraintTop_toBottomOf="@id/pocket_money_date_from_field"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:text="@string/form_date_to"/>
-            <EditText
-                android:id="@+id/pocket_money_date_to_field"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/pocket_money_date_to_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:hint="02.01.2021"
-                android:inputType="date"
-                android:importantForAutofill="no"/>
             <CheckBox
                 android:id="@+id/pocket_money_agreement_checkbox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/pocket_money_date_to_field"
+                app:layout_constraintTop_toBottomOf="@id/pocket_money_date_label"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:onClick="onCheckboxClicked"

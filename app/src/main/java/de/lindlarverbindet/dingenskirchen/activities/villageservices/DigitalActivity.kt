@@ -15,11 +15,14 @@ import org.json.JSONException
 import org.json.JSONObject
 
 class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
+
+    private var lastSelectedDistrict: String = ""
     private var lastSelectedTopic: String = ""
 
     private lateinit var givenNameTextView: EditText
     private lateinit var nameTextView: EditText
     private lateinit var addressTextView: EditText
+    private lateinit var districtSpinner: Spinner
     private lateinit var phoneTextView: EditText
     private lateinit var mailTextView: EditText
     private lateinit var topicSelectView: Spinner
@@ -39,6 +42,7 @@ class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
         givenNameTextView = findViewById(R.id.digital_given_name_field)
         nameTextView = findViewById(R.id.digital_name_field)
         addressTextView  = findViewById(R.id.digital_address_field)
+        districtSpinner = findViewById(R.id.digital_district_spinner)
         phoneTextView = findViewById(R.id.digital_tel_field)
         mailTextView = findViewById(R.id.digital_mail_field)
         topicSelectView = findViewById(R.id.digital_topic_spinner)
@@ -57,6 +61,7 @@ class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
             sendForm()
         }
 
+        districtSpinner.onItemSelectedListener = this
         topicSelectView.onItemSelectedListener = this
     }
 
@@ -72,18 +77,22 @@ class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        Log.d("Selected", "currently selected $position from ${parent?.adapter?.count}")
-        lastSelectedTopic = parent?.getItemAtPosition(position).toString()
-        if (position == parent?.adapter?.count?.minus(1)) {
-            runOnUiThread {
-                moreInfoLabel.visibility = View.VISIBLE
-                moreInfoView.visibility = View.VISIBLE
+        if (parent == topicSelectView) {
+            Log.d("Selected", "currently selected $position from ${parent.adapter?.count}")
+            lastSelectedTopic = parent.getItemAtPosition(position).toString()
+            if (position == parent.adapter?.count?.minus(1)) {
+                runOnUiThread {
+                    moreInfoLabel.visibility = View.VISIBLE
+                    moreInfoView.visibility = View.VISIBLE
+                }
+            } else {
+                runOnUiThread {
+                    moreInfoLabel.visibility = View.GONE
+                    moreInfoView.visibility = View.GONE
+                }
             }
         } else {
-            runOnUiThread {
-                moreInfoLabel.visibility = View.GONE
-                moreInfoView.visibility = View.GONE
-            }
+            lastSelectedDistrict = parent?.getItemAtPosition(position).toString()
         }
     }
 
@@ -101,8 +110,7 @@ class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
             json.put("name", givenNameTextView.text ?: "")
             json.put("nachname", nameTextView.text ?: "")
             json.put("strasse", addressTextView.text ?: "")
-            json.put("plz", "51789") // TODO: Add field here
-            json.put("ort", "Lindlar") // TODO: Add field here
+            json.put("kdorf", lastSelectedDistrict)
             json.put("fon", phoneTextView.text ?: "")
             json.put("mail", mailTextView.text ?: "")
             json.put("aufgabe", lastSelectedTopic)

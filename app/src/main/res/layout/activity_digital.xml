@@ -105,12 +105,22 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="text"
                 android:autofillHints=".AUTOFILL_HINT_POSTAL_ADDRESS"/>
+            <Spinner
+                android:id="@+id/digital_district_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/digital_address_field"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:entries="@array/form_dropdown_districts"
+                android:prompt="@string/help_topic_prompt_digital"/>
             <TextView
                 android:id="@+id/digital_tel_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                app:layout_constraintTop_toBottomOf="@id/digital_address_field"
+                app:layout_constraintTop_toBottomOf="@id/digital_district_spinner"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/form_telephone"/>
