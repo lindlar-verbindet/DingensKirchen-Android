@@ -31,12 +31,15 @@
         <entry key="app/src/main/res/layout/bottom_sheet.xml" value="0.36770833333333336" />
         <entry key="app/src/main/res/layout/council_action.xml" value="0.36770833333333336" />
         <entry key="app/src/main/res/layout/council_trash.xml" value="0.36770833333333336" />
+        <entry key="app/src/main/res/layout/dot_default.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/dot_selected.xml" value="0.24427083333333333" />
         <entry key="app/src/main/res/layout/event_image_layout.xml" value="0.38177083333333334" />
         <entry key="app/src/main/res/layout/event_layout.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/layout/fragment_tip_dialog.xml" value="0.36770833333333336" />
         <entry key="app/src/main/res/layout/fragment_tutorial.xml" value="0.4546875" />
         <entry key="app/src/main/res/layout/news_image_layout.xml" value="0.103125" />
         <entry key="app/src/main/res/layout/news_layout.xml" value="0.33796296296296297" />
+        <entry key="app/src/main/res/layout/tab_selector.xml" value="0.24427083333333333" />
         <entry key="app/src/main/res/layout/tutorial_item.xml" value="0.46875" />
         <entry key="app/src/main/res/layout/village_double_action.xml" value="0.36770833333333336" />
         <entry key="app/src/main/res/layout/village_single_action.xml" value="0.36770833333333336" />
