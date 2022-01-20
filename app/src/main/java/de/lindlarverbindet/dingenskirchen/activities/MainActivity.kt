@@ -1,6 +1,7 @@
 package de.lindlarverbindet.dingenskirchen.activities
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -39,6 +40,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var imprintImageView: ImageView
     private lateinit var tutorialImageView: ImageView
 
+    private lateinit var prefs: SharedPreferences
+
     private var recentPosts =  arrayListOf<News>()
     private var recentEvents = arrayListOf<Event>()
 
@@ -72,6 +75,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
 
+        prefs = getSharedPreferences("Dingenskirchen", MODE_PRIVATE)
+
         getLatestNews()
         getLatestAppointment()
         getTips()
@@ -85,12 +90,7 @@ class MainActivity : AppCompatActivity() {
         surveyWidget = findViewById(R.id.main_survey_widget)
 
         tutorialImageView = findViewById(R.id.main_tutorial)
-        tutorialImageView.setOnClickListener {
-            val tutorialFragment = TutorialDialogFragment()
-            val bundle = Bundle()
-            tutorialFragment.show(this.supportFragmentManager, TutorialDialogFragment.TAG)
-        }
-
+        tutorialImageView.setOnClickListener { showTutorial() }
 
         imprintImageView = findViewById(R.id.main_imprint)
         imprintImageView.setOnClickListener {
@@ -165,7 +165,14 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+
+        if (prefs.getBoolean("firstStart", true)) {
+            prefs.edit().putBoolean("firstStart", false).commit()
+            showTutorial()
+        }
     }
+
+    private fun showTutorial() = TutorialDialogFragment().show(this.supportFragmentManager, TutorialDialogFragment.TAG)
 
     override fun onResume() {
         handler.post(animateTipWidget)
