@@ -96,6 +96,8 @@
     <string name="limo_navigation_title">Lindlar Mobil</string>
 
 
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string-array name="form_help_topics_digital">
         <item>Bedienung Smartphone</item>
         <item>Bedienung Computer</item>
@@ -129,7 +131,7 @@
         <item>Hilfe mit dem Handy/Computer</item>
         <item>... bei einer anderen Tätigkeit</item>
     </string-array>
-
+    <!-- TODO: Remove or change this placeholder text -->
     <string-array name="form_dropdown_districts">
         <item>Lindlar Ort</item>
         <item>Frielingsdorf</item>

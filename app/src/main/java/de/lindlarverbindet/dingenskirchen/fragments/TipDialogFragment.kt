@@ -1,6 +1,5 @@
 package de.lindlarverbindet.dingenskirchen.fragments
 
-import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -24,12 +23,6 @@ class TipDialogFragment: DialogFragment() {
     companion object {
         const val TAG = "TipDialogFragment"
     }
-
-//    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-//        title = savedInstanceState.get()
-//
-//        return super.onCreateDialog(savedInstanceState)
-//    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_tip_dialog, container)

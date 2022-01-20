@@ -23,6 +23,7 @@ import de.lindlarverbindet.dingenskirchen.helper.TipHelper
 import de.lindlarverbindet.dingenskirchen.models.Tip
 import android.widget.ImageView
 import de.lindlarverbindet.dingenskirchen.fragments.TipDialogFragment
+import de.lindlarverbindet.dingenskirchen.fragments.TutorialDialogFragment
 import de.lindlarverbindet.dingenskirchen.helper.LindlarEventHelper
 
 
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var villageWidget  : View
     private lateinit var surveyWidget   : View
     private lateinit var imprintImageView: ImageView
+    private lateinit var tutorialImageView: ImageView
 
     private var recentPosts =  arrayListOf<News>()
     private var recentEvents = arrayListOf<Event>()
@@ -82,8 +84,15 @@ class MainActivity : AppCompatActivity() {
         villageWidget = findViewById(R.id.main_village_widget)
         surveyWidget = findViewById(R.id.main_survey_widget)
 
-        imprintImageView = findViewById(R.id.main_imprint)
+        tutorialImageView = findViewById(R.id.main_tutorial)
+        tutorialImageView.setOnClickListener {
+            val tutorialFragment = TutorialDialogFragment()
+            val bundle = Bundle()
+            tutorialFragment.show(this.supportFragmentManager, TutorialDialogFragment.TAG)
+        }
 
+
+        imprintImageView = findViewById(R.id.main_imprint)
         imprintImageView.setOnClickListener {
             val intent = Intent(applicationContext, InfoActivity::class.java)
             startActivity(intent)
