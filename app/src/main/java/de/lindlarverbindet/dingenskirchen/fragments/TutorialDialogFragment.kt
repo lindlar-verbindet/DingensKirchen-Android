@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import androidx.fragment.app.DialogFragment
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
@@ -18,10 +19,10 @@ class TutorialDialogFragment : DialogFragment() {
 
     lateinit var tutorialPager: ViewPager2
     lateinit var tabView: TabLayout
-    lateinit var prevButton: Button
-    lateinit var nextButton: Button
+    lateinit var prevButton: ImageView
+    lateinit var nextButton: ImageView
 
-    lateinit var closeButton: Button
+    lateinit var closeButton: ImageView
 
     companion object {
         const val TAG = "TutorialDialogFragment"

@@ -6,16 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.TutorialDialogFragment">
 
-    <Button
-        android:id="@+id/tutorial_close_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        android:text="close"/>
-
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/tutorial_pager"
         android:layout_width="match_parent"
@@ -34,7 +24,18 @@
         app:tabMode="fixed"
         app:tabGravity="center"/>
 
-    <Button
+    <ImageView
+        android:id="@+id/tutorial_close_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_close"
+        app:tint="@color/primaryHighlight"/>
+
+    <ImageView
         android:id="@+id/tutorial_prev_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,9 +43,10 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="10dp"
-        android:text="Prev" />
+        android:src="@drawable/ic_arrow_back"
+        app:tint="@color/primaryHighlight" />
 
-    <Button
+    <ImageView
         android:id="@+id/tutorial_next_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,5 +54,6 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:text="Next" />
+        android:src="@drawable/ic_arrow_forward"
+        app:tint="@color/primaryHighlight"/>
 </RelativeLayout>
