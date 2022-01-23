@@ -9,7 +9,7 @@
         android:id="@+id/tutorial_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_tutorial1"
+        android:src="@drawable/img_tutorial_1"
         android:scaleType="centerCrop"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,12 +10,13 @@ import de.lindlarverbindet.dingenskirchen.R
 
 class TutorialViewAdapter(private val ctx: Context): RecyclerView.Adapter<TutorialViewAdapter.TutorialViewHolder>() {
 
-    private val images: List<Int> = listOf(R.drawable.ic_tutorial1,
-                                    R.drawable.ic_tutorial2,
-                                    R.drawable.ic_tutorial3,
-                                    R.drawable.ic_tutorial4,
-                                    R.drawable.ic_tutorial5,
-                                    R.drawable.ic_tutorial6)
+    private val images: List<Int> = listOf(R.drawable.img_tutorial_1,
+                                    R.drawable.img_tutorial_2,
+                                    R.drawable.img_tutorial_3,
+                                    R.drawable.img_tutorial_4,
+                                    R.drawable.img_tutorial_5,
+                                    R.drawable.img_tutorial_6,
+                                    R.drawable.img_tutorial_7)
 
     class TutorialViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val tutorialImage: ImageView = itemView.findViewById(R.id.tutorial_image) as ImageView
