@@ -93,6 +93,16 @@ class MainActivity : AppCompatActivity() {
         tutorialImageView.setOnClickListener { showTutorial() }
 
         imprintImageView = findViewById(R.id.main_imprint)
+
+        setupClickListener()
+
+        if (prefs.getBoolean("firstStart", true)) {
+            prefs.edit().putBoolean("firstStart", false).commit()
+            showTutorial()
+        }
+    }
+
+    private fun setupClickListener() {
         imprintImageView.setOnClickListener {
             val intent = Intent(applicationContext, InfoActivity::class.java)
             startActivity(intent)
@@ -115,7 +125,8 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(
                         this,
                         R.string.main_activity_no_tip,
-                        Toast.LENGTH_LONG).show()
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
             }
         }
@@ -144,7 +155,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         mobilWidget.setOnClickListener {
-            runOnUiThread{
+            runOnUiThread {
                 val intent = Intent(applicationContext, MapActivity::class.java)
                 startActivity(intent)
             }
@@ -164,11 +175,6 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("parent", "MainActivity")
                 startActivity(intent)
             }
-        }
-
-        if (prefs.getBoolean("firstStart", true)) {
-            prefs.edit().putBoolean("firstStart", false).commit()
-            showTutorial()
         }
     }
 
