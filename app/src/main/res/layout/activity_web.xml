@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="60dp"/>
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/web_bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"

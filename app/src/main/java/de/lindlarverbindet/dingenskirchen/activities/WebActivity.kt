@@ -4,12 +4,17 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
+import android.view.ViewGroup
 import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.marginBottom
+import com.google.android.material.snackbar.BaseTransientBottomBar
 import de.lindlarverbindet.dingenskirchen.R
 
 class WebActivity : AppCompatActivity() {
@@ -17,6 +22,7 @@ class WebActivity : AppCompatActivity() {
     private lateinit var urlString: String
     private lateinit var parentActivityString: String
 
+    private lateinit var webBottomBar: ConstraintLayout
     private lateinit var webView: WebView
     private lateinit var backButton: ImageButton
     private lateinit var forwardButton: ImageButton
@@ -49,6 +55,15 @@ class WebActivity : AppCompatActivity() {
                 webView.loadUrl(request?.url.toString())
                 return true
             }
+        }
+
+        if (parentActivityString == "VillageActivity") {
+            webBottomBar = findViewById(R.id.web_bottom_bar)
+            webBottomBar.visibility = View.GONE
+
+            val param = webView.layoutParams as ViewGroup.MarginLayoutParams
+            param.setMargins(0,0,0,0)
+            webView.layoutParams = param
         }
 
         webView.settings.javaScriptEnabled = true
