@@ -49,10 +49,10 @@
 
     <string name="form_alert_button">OK</string>
 
-    <string name="warning_no_events">Es gibt aktuell keine Termine</string>
+    <string name="warning_no_events">Termine werden geladen...</string>
 
     <string name="news_widget_headline">LINDLARER NEWS</string>
-    <string name="news_widget_placeholder">Derzeit gibt es hier keine Einträge.</string>
+    <string name="news_widget_placeholder">Nachrichten werden geladen...</string>
 
     <string name="village_widget_headline">ANGEBOTE</string>
     <string name="village_widget_desc">Ehrenamtliche Dienste mobil nutzen – Nachbarschaftshilfe, LindlarMobil, Taschengeldbörse und mehr.</string>
@@ -75,7 +75,7 @@
     <string name="info_opensource">Diese App ist quelloffen und kann frei weiterentwickelt werden</string>
     <string name="info_owner_headline">Herausgeber der App</string>
     <string name="info_owner">Lindlar verbindet e.V.</string>
-    <string name="info_concept_headline">Konzept + Entwicklung</string>
+    <string name="info_concept_headline">Entwicklung</string>
     <string name="info_concept">pixelskull.de</string>
 
     <string name="digital_desc">Mit unserem kostenlosen Angebot bieten wir allen Menschen aus Lindlar Unterstützung bei der Bedienung von Handy und Computer an, oder etwa bei Fragen rund um das Internet und zur digitalen Sicherheit. Dabei begleiten wir Sie so, dass Sie sich zukünftig selbst helfen können.</string>
