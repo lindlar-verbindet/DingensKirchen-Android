@@ -28,7 +28,7 @@
             android:layout_height="25dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:src="@drawable/ic_info_full"
+            android:src="@drawable/ic_info"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 

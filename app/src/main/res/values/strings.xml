@@ -49,7 +49,7 @@
 
     <string name="form_alert_button">OK</string>
 
-    <string name="warning_no_events">Termine werden geladen...</string>
+    <string name="warning_no_events">Termine konnten nicht geladen werden.</string>
 
     <string name="news_widget_headline">LINDLARER NEWS</string>
     <string name="news_widget_placeholder">Nachrichten werden geladen...</string>
@@ -64,7 +64,7 @@
     <string name="council_widget_desc">Das digitale Rathaus - Onlineservices und Informationen mobil einsehen und nutzen.</string>
 
     <string name="event_widget_headline">TERMINE</string>
-    <string name="events_widget_placeholder">Aktuell gibt es hier keinen Termin zu sehen.</string>
+    <string name="events_widget_placeholder">Termine werden geladen...</string>
 
     <string name="survey_widget_headline">MITMACHEN!</string>
     <string name="survey_widget_desc">Nehmen Sie an Umfragen rund um das Leben in Lindlar teil.</string>
