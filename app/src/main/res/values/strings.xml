@@ -5,7 +5,7 @@
     <string name="mapbox_bus_stop_layer" translatable="false">bus-map-data-250621-b0qi91</string>
     <string name="mapbox_bus_line_layer" translatable="false">routes-map-data-250621-5ep1to</string>
 
-    <string name="tool_api_url">https://vermittlungstool.dev.bergnet.de/input/app</string>
+    <string name="tool_api_url">https://vermittlung.lindlar-verbindet.de/input/app</string>
 
     <string name="main_activity_no_tip">Leider konnte der Tipp des Tages nicht geladen werden...</string>
 
