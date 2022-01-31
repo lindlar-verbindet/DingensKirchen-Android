@@ -32,7 +32,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/digital_image"/>
+                android:src="@drawable/img_digital"/>
             <TextView
                 android:id="@+id/digital_desc"
                 android:layout_width="match_parent"
