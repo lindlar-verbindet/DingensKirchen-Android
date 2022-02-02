@@ -46,6 +46,7 @@ class NeighbourActivity : AppCompatActivity(), AdapterView.OnItemSelectedListene
         topicSelectView = findViewById(R.id.neighbour_topic_spinner)
         moreInfoLabel = findViewById(R.id.neighbour_other_topic_label)
         moreInfoView = findViewById(R.id.neighbour_other_topic_field)
+        detailTextView = findViewById(R.id.neighbour_detail_topic_field)
         termsCheckBox = findViewById(R.id.neighbour_agreement_checkbox)
         sendButton = findViewById(R.id.neighbour_button)
 

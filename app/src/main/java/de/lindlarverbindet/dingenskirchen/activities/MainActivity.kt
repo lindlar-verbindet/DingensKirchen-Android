@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         setupClickListener()
 
         if (prefs.getBoolean("firstStart", true)) {
-            prefs.edit().putBoolean("firstStart", false).commit()
+            prefs.edit().putBoolean("firstStart", false).apply()
             showTutorial()
         }
     }
