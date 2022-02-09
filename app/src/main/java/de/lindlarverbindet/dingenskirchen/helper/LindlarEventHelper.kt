@@ -45,7 +45,11 @@ class LindlarEventHelper {
                     val link = element.get("url") as String
 
                     val event = Event(title, desc, startDate, startTime, endTime, location, link)
-                    result.add(event)
+
+                    if (!element.getBoolean("hidden") &&
+                        !element.getBoolean("deleted")) {
+                        result.add(event)
+                    }
                 }
             } catch (e: JSONException) {
                 e.printStackTrace()
