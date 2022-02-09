@@ -16,16 +16,16 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="bottom_sheet_action">Wähle eine Haltestelle auf der Karte für Informationen zu den Busfahrzeiten</string>
+    <string name="bottom_sheet_action">Tippen Sie auf der Karte auf eine Haltestelle für mehr Informationen. Jeder Buslinieneintrag öffnet den jeweiligen Mini-Fahrplan im PDF-Format. </string>
     <string name="bottom_sheet_title">ES FÄHRT KEIN BUS?</string>
-    <string name="bottom_sheet_desc_placeholder">Jetzt LindlarMobil buchen unter \n<a href="tel:+49 2266 440 72 04">02266 440 72 04</a> \nDer lindlarer Fahrservice mit Herz.</string>
+    <string name="bottom_sheet_desc_placeholder">Jetzt Lindlar mobil buchen unter \n<a href="tel:+49 2266 440 72 04">02266 440 72 04</a> \nDer Lindlarer Fahrservice mit Herz.</string>
 
     <string name="user_location_permission_explanation">Die MeinLindlar-App benötigt Ihre Standort Daten um die aktuelle Position auf der Karte anzuzeigen.</string>
     <string name="user_location_permission_not_granted">Standortdaten wurden nicht freigegeben</string>
     <string name="abfall_navi_logo_desc">Abfall Navi Logo</string>
     <string name="form_given_name">Ihr Vorname</string>
     <string name="form_name">Ihr Nachname</string>
-    <string name="form_telephone">Ihre Telefon oder Mobilnummer</string>
+    <string name="form_telephone">Ihre Telefon- oder Mobilnummer</string>
     <string name="form_mail">Ihre E-Mail-Adresse</string>
     <string name="form_agreement">Hiermit erkläre ich mich einverstanden, dass meine in das Formular eingegebenen Daten elektronisch gespeichert und zum Zweck der Kontaktaufnahme verarbeitet und genutzt werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit wiederrufen kann.</string>
     <string name="form_send">Absenden</string>
@@ -34,13 +34,9 @@
     <string name="form_detail_topic">Erzählen Sie uns ein bisschen mehr zum Thema. So können wir den richtigen Experten für Sie finden.</string>
     <string name="form_home_order">Ist ein Vorort-Termin erwünscht?</string>
     <string name="form_optional_stuff">Optionale Angaben zu Ihrer Anfrage</string>
-    <string name="form_date">In welchem Zeitraum sollte die Aufgabe erledigt werden?</string>
-    <string name="form_date_from">Von</string>
-    <string name="form_date_to">Bis</string>å
     <string name="help_topic_prompt_digital">Zu welchem Themengebiet haben Sie Fragen/wünschen Sie Unterstützung</string>
     <string name="form_topic_prompt_neighbour">Zu welcher Tätigkeit wünschen Sie zukünftig Unterstützung?</string>
-    <string name="form_birth_date">Ihr Geburtsdatum</string>
-
+    
     <string name="form_alert_success_title">Geschafft!</string>
     <string name="form_alert_success_text">Ihre Angaben wurden an Lindlar verbindet e.V. übermittelt.</string>
 
@@ -55,7 +51,7 @@
     <string name="news_widget_placeholder">Nachrichten werden geladen...</string>
 
     <string name="village_widget_headline">ANGEBOTE</string>
-    <string name="village_widget_desc">Ehrenamtliche Dienste mobil nutzen – Nachbarschaftshilfe, LindlarMobil, Taschengeldbörse und mehr.</string>
+    <string name="village_widget_desc">Ehrenamtliche Dienste mobil nutzen – Nachbarschaftshilfe, Lindlar mobil, Taschengeldbörse und mehr.</string>
 
     <string name="mobil_widget_headline">MOBIL</string>
     <string name="mobil_widget_desc">Mit dem ÖPNV und Bürgerbus unterwegs in Lindlar.</string>
@@ -93,7 +89,7 @@
     <string name="digital_navigation_title">Digitalbegleitung</string>
     <string name="pocket_money_navigation_title">Taschengeldbörse</string>
     <string name="neighbour_navigation_title">Nachbarschaftshilfe</string>
-    <string name="limo_navigation_title">Lindlar Mobil</string>
+    <string name="limo_navigation_title">Lindlar mobil</string>
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -124,7 +120,7 @@
     <string-array name="form_help_topics_pocket_money">
         <item>Einkaufen</item>
         <item>Erledigungsgänge</item>
-        <item>Haustierebetreuung</item>
+        <item>Haustierbetreuung</item>
         <item>Auf- oder Abbauen von Möbeln</item>
         <item>Rasenmähen, Schneeräumen oder Kehrarbeiten</item>
         <item>Leichte Gartenarbeiten</item>
