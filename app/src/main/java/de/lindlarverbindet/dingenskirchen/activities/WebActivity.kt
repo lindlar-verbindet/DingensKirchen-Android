@@ -2,6 +2,7 @@ package de.lindlarverbindet.dingenskirchen.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -52,8 +53,22 @@ class WebActivity : AppCompatActivity() {
 
             override fun shouldOverrideUrlLoading(view: WebView?,
                                                   request: WebResourceRequest?): Boolean {
-                webView.loadUrl(request?.url.toString())
-                return true
+                val url = request?.url.toString()
+                return if (url.contains("mailto:")) {
+                    webView.stopLoading()
+                    val mail = url.replace("mailto:", "")
+                    val intent = Intent(Intent.ACTION_SENDTO)
+                    intent.type = "text/plain"
+                    intent.data = Uri.parse(url)
+                    intent.putExtra(Intent.EXTRA_EMAIL, mail)
+
+                    startActivity(intent)
+
+                    false
+                } else {
+                    webView.loadUrl(request?.url.toString())
+                    true
+                }
             }
         }
 
@@ -71,7 +86,7 @@ class WebActivity : AppCompatActivity() {
         webView.settings.setSupportZoom(true)
 
         urlString = intent.getStringExtra("url") ?: ""
-        if (urlString != "") {
+        if (urlString != "" && !urlString.contains("mailto:")) {
             webView.loadUrl(urlString)
         }
 
