@@ -25,8 +25,8 @@ class WebActivity : AppCompatActivity() {
 
     private lateinit var webBottomBar: ConstraintLayout
     private lateinit var webView: WebView
-    private lateinit var backButton: ImageButton
-    private lateinit var forwardButton: ImageButton
+//    private lateinit var backButton: ImageButton
+//    private lateinit var forwardButton: ImageButton
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,8 +37,8 @@ class WebActivity : AppCompatActivity() {
         parentActivityString = intent.getStringExtra("parent") ?: ""
 
         webView = findViewById(R.id.web_view)
-        backButton = findViewById(R.id.web_back)
-        forwardButton = findViewById(R.id.web_forward)
+//        backButton = findViewById(R.id.web_back)
+//        forwardButton = findViewById(R.id.web_forward)
 
         webView.webChromeClient = object : WebChromeClient() {
             override fun onProgressChanged(view: WebView?, newProgress: Int) {
@@ -73,8 +73,8 @@ class WebActivity : AppCompatActivity() {
         }
 
         if (parentActivityString == "VillageActivity") {
-            webBottomBar = findViewById(R.id.web_bottom_bar)
-            webBottomBar.visibility = View.GONE
+//            webBottomBar = findViewById(R.id.web_bottom_bar)
+//            webBottomBar.visibility = View.GONE
 
             val param = webView.layoutParams as ViewGroup.MarginLayoutParams
             param.setMargins(0,0,0,0)
@@ -90,18 +90,18 @@ class WebActivity : AppCompatActivity() {
             webView.loadUrl(urlString)
         }
 
-        backButton.setOnClickListener {
-            goBack()
-        }
-
-        forwardButton.setOnClickListener {
-            goForward()
-        }
+//        backButton.setOnClickListener {
+//            goBack()
+//        }
+//
+//        forwardButton.setOnClickListener {
+//            goForward()
+//        }
     }
 
     private fun siteLoaded() {
-        backButton.isEnabled = webView.canGoBack()
-        forwardButton.isEnabled = webView.canGoForward()
+//        backButton.isEnabled = webView.canGoBack()
+//        forwardButton.isEnabled = webView.canGoForward()
         this.supportActionBar?.title = webView.title
     }
 
