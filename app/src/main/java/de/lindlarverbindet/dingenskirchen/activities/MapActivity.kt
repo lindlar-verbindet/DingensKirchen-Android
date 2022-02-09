@@ -28,6 +28,7 @@ import com.mapbox.mapboxsdk.location.modes.RenderMode
 import com.mapbox.mapboxsdk.maps.MapView
 import com.mapbox.mapboxsdk.maps.MapboxMap
 import com.mapbox.mapboxsdk.maps.Style
+import de.lindlarverbindet.dingenskirchen.Extensions.removeLinksUnderline
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.databinding.ActivityMapBinding
 
@@ -165,7 +166,6 @@ class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener, Permission
 
 
     override fun onMapClick(point: LatLng): Boolean {
-
         val stop = queryStopData(point).firstOrNull()
         val lines = queryLineData(point)
         if (stop != null) {
@@ -178,6 +178,7 @@ class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener, Permission
                 }
                 if (busLines != "") {
                     bottomSheetDescription.text = HtmlCompat.fromHtml(busLines, HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    bottomSheetDescription.removeLinksUnderline()
                 } else {
                     setDefaultDescription()
                 }
@@ -246,15 +247,15 @@ class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener, Permission
             Log.d("RELTAGS", jsonElement?.get(0)?.asJsonObject?.get("reltags")?.toString()
                     ?: "empty")
             if (busId != null) {
-                val linkTarget = getDeparturePlan(busId.asString)
-                resultList.add("${linkTarget}: $from -> $to")
+                val content = "${busId.asString}: $from -> $to"
+                resultList.add(getDeparturePlan(busId.asString, content))
             }
         }
         return resultList.distinct().toList()
     }
 
-    private fun getDeparturePlan(busId: String): String {
-        return "<a href=\"https://docs.google.com/viewer?url=https://www.vrs.de/his/minifahrplan/de:vrs:$busId\">$busId</a>"
+    private fun getDeparturePlan(busId: String, content: String): String {
+        return "<a href=\"https://docs.google.com/viewer?url=https://www.vrs.de/his/minifahrplan/de:vrs:$busId\">$content</a>"
     }
 
     /**

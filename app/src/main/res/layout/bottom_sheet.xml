@@ -43,9 +43,9 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="30dp"
             android:linksClickable="true"
-            android:textColorLink="@color/teal_700"
+            android:textColorLink="@color/black"
             android:text="@string/bottom_sheet_desc_placeholder"
-            android:textStyle="normal"
+            android:textStyle="bold"
             android:textSize="18sp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/black"/>
