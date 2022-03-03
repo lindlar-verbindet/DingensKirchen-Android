@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MeinLindlar</string>
+    <string name="app_name">Lindlar App</string>
     <string name="mapbox_access_token" translatable="false">pk.eyJ1IjoicGl4ZWxza3VsbCIsImEiOiJja3B4dGVjOG0wNjcxMnJvNmkxMjgwNW5uIn0.X4Y1kWyTsmm6Y2yE2a2TUQ</string>
     <string name="mapbox_custommap_uri" translatable="false">mapbox://styles/pixelskull/ckqc2n0m10gbv17mztnwa9eou</string>
     <string name="mapbox_bus_stop_layer" translatable="false">bus-map-data-250621-b0qi91</string>
@@ -20,7 +20,7 @@
     <string name="bottom_sheet_title">ES FÄHRT KEIN BUS?</string>
     <string name="bottom_sheet_desc_placeholder">Jetzt Lindlar mobil buchen unter \n<a href="tel:+49 2266 440 72 04">02266 440 72 04</a> \nDer Lindlarer Fahrservice mit Herz.</string>
 
-    <string name="user_location_permission_explanation">Die MeinLindlar-App benötigt Ihre Standort Daten um die aktuelle Position auf der Karte anzuzeigen.</string>
+    <string name="user_location_permission_explanation">Die Lindlar App benötigt Ihre Standort Daten um die aktuelle Position auf der Karte anzuzeigen.</string>
     <string name="user_location_permission_not_granted">Standortdaten wurden nicht freigegeben</string>
     <string name="abfall_navi_logo_desc">Abfall Navi Logo</string>
     <string name="form_given_name">Ihr Vorname</string>
