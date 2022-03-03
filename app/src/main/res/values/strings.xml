@@ -66,13 +66,23 @@
     <string name="survey_widget_desc">Nehmen Sie an Umfragen rund um das Leben in Lindlar teil.</string>
 
     <string name="info_imprint">IMPRESSUM</string>
-    <string name="info_datenpolicy">DATENSCHUTZ</string>
+    <string name="info_imprint_url">https://lindlar-verbindet.de/impressum/</string>
+    <string name="info_datapolicy">DATENSCHUTZ</string>
+    <string name="info_datapolicy_url">https://lindlar-verbindet.de/datenschutz/</string>
     <string name="info_feedback">FEEDBACK</string>
-    <string name="info_opensource">Diese App ist quelloffen und kann frei weiterentwickelt werden</string>
+    <string name="info_feedback_url">https://lindlar-verbindet.de/feedback-anregungen-ideen</string>
+
+    <string name="info_sponsor_headline">Gefördert durch</string>
+    <string name="info_sponsor">Stiftung Wohlfahrtspflege NRW</string>
+    <string name="info_sponsor_url">https://sw-nrw.de</string>
     <string name="info_owner_headline">Herausgeber der App</string>
     <string name="info_owner">Lindlar verbindet e.V.</string>
+    <string name="info_owner_url">https://lindlar-verbindet.de/impressum/</string>
     <string name="info_concept_headline">Entwicklung</string>
-    <string name="info_concept">pixelskull.de</string>
+    <string name="info_concept">PixelSkull</string>
+    <string name="info_concept_url">https://pixelskull.de</string>
+    <string name="info_opensource">Diese App ist quelloffen und kann frei weiterentwickelt werden</string>
+    <string name="info_opensource_url">https://github.com/lindlar-verbindet/DingensKirchen-Android</string>
 
     <string name="digital_desc">Mit unserem kostenlosen Angebot bieten wir allen Menschen aus Lindlar Unterstützung bei der Bedienung von Handy und Computer an, oder etwa bei Fragen rund um das Internet und zur digitalen Sicherheit. Dabei begleiten wir Sie so, dass Sie sich zukünftig selbst helfen können.</string>
     <string name="pocket_money_desc">Schüler*innen helfen gegen ein Taschengeld bei leichten Arbeiten rund um Haus und Garten.</string>

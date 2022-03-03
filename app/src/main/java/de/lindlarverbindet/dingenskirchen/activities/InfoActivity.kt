@@ -13,6 +13,7 @@ class InfoActivity : AppCompatActivity() {
     private lateinit var imprintTextView: TextView
     private lateinit var dataTextView: TextView
     private lateinit var feedbackTextView: TextView
+    private lateinit var sponsorTextView: TextView
     private lateinit var openTextView: TextView
     private lateinit var ownerTextView: TextView
     private lateinit var conceptTextView: TextView
@@ -26,37 +27,43 @@ class InfoActivity : AppCompatActivity() {
         imprintTextView = findViewById(R.id.imprint_imprint)
         dataTextView = findViewById(R.id.imprint_dataprotection)
         feedbackTextView = findViewById(R.id.imprint_feedback)
+        sponsorTextView = findViewById(R.id.imprint_sponsor)
         openTextView = findViewById(R.id.imprint_open)
         ownerTextView = findViewById(R.id.imprint_owner)
         conceptTextView = findViewById(R.id.imprint_concept)
 
         imprintTextView.setOnClickListener {
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.lindlar-verbindet.de/impressum/"))
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.info_imprint_url)))
             startActivity(browserIntent)
         }
 
         dataTextView.setOnClickListener {
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.lindlar-verbindet.de/datenschutz/"))
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.info_datapolicy_url)))
             startActivity(browserIntent)
         }
 
         feedbackTextView.setOnClickListener {
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.lindlar-verbindet.de/feedback-anregungen-ideen"))
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.info_feedback_url)))
+            startActivity(browserIntent)
+        }
+
+        sponsorTextView.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.info_sponsor_url)))
             startActivity(browserIntent)
         }
 
         openTextView.setOnClickListener {
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/lindlar-verbindet/DingensKirchen-Android"))
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.info_opensource_url)))
             startActivity(browserIntent)
         }
 
         ownerTextView.setOnClickListener {
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.lindlar-verbindet.de/"))
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.info_owner_url)))
             startActivity(browserIntent)
         }
 
         conceptTextView.setOnClickListener {
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://pixelskull.de/"))
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.info_concept_url)))
             startActivity(browserIntent)
         }
     }
