@@ -200,12 +200,13 @@ class MainActivity : AppCompatActivity() {
     private fun getLatestNews() {
         GlobalScope.launch {
             recentPosts = wpHelper.getRecentPosts()
-            recentPosts.addAll(RSSHelper().getRecentPosts())
-//            val currentDate = Date()
-            recentPosts.sortByDescending { it.date }
-//            recentPosts = recentPosts.filter { it.date > currentDate } as ArrayList<News>
-            runOnUiThread {
-                populateNewsWidget(recentPosts.firstOrNull())
+            val posts = RSSHelper().getRecentPosts()
+            if (!posts.isNullOrEmpty()) {
+                recentPosts.addAll(posts)
+                recentPosts.sortByDescending { it.date }
+                runOnUiThread {
+                    populateNewsWidget(recentPosts.firstOrNull())
+                }
             }
         }
     }
