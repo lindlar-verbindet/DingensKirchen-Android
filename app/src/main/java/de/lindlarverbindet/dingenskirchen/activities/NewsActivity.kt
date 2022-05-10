@@ -60,7 +60,11 @@ class NewsActivity : AppCompatActivity() {
     private fun getLatestNews() {
         GlobalScope.launch {
             val recentNews = wpHelper.getRecentPosts()
-            recentNews.addAll(RSSHelper().getRecentPosts())
+            val posts = RSSHelper().getRecentPosts()
+            if (!posts.isNullOrEmpty()) {
+                recentNews.addAll(posts)
+            }
+
 
             recentNews.sortByDescending { it.date }
             Log.d("APP", recentNews.joinToString { "${it.title} | ${it.content} | ${it.link}"} )

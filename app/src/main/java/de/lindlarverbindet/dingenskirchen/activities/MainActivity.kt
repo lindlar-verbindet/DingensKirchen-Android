@@ -203,10 +203,10 @@ class MainActivity : AppCompatActivity() {
             val posts = RSSHelper().getRecentPosts()
             if (!posts.isNullOrEmpty()) {
                 recentPosts.addAll(posts)
-                recentPosts.sortByDescending { it.date }
-                runOnUiThread {
-                    populateNewsWidget(recentPosts.firstOrNull())
-                }
+            }
+            recentPosts.sortByDescending { it.date }
+            runOnUiThread {
+                populateNewsWidget(recentPosts.firstOrNull())
             }
         }
     }
