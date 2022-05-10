@@ -7,6 +7,7 @@ import java.io.FileNotFoundException
 import java.io.InputStream
 import java.net.HttpURLConnection
 import java.net.URL
+import java.net.UnknownHostException
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -22,8 +23,8 @@ class RSSHelper {
 //        val response = apiHelper.sendGetRequest(urlString)
         val http = url.openConnection() as HttpURLConnection
         http.doInput = true
-        http.connect()
         try {
+            http.connect()
             val input: InputStream = http.inputStream
 
             val factory = XmlPullParserFactory.newInstance()
@@ -66,6 +67,8 @@ class RSSHelper {
             }
             return result.toList()
         } catch (e: FileNotFoundException) {
+            return null
+        } catch (e: UnknownHostException) {
             return null
         }
     }
