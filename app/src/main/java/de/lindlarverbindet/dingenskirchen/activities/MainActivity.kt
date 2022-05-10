@@ -110,15 +110,15 @@ class MainActivity : AppCompatActivity() {
 
         tipWidget.setOnClickListener {
             runOnUiThread {
-                if (tips?.count() != 0) {
+                if (!tips.isNullOrEmpty()) {
                     val currentDay = getNumberOfDay()
-                    val index = currentDay % tips!!.count()
-                    val todaysTip = tips!![index]
+                    val index = currentDay % (tips?.count() ?: 0)
+                    val todayTip = tips!![index]
 
                     val tipFragment = TipDialogFragment()
                     val bundle = Bundle()
-                    bundle.putString("TITLE", todaysTip.title)
-                    bundle.putString("CONTENT", todaysTip.content)
+                    bundle.putString("TITLE", todayTip.title)
+                    bundle.putString("CONTENT", todayTip.content)
                     tipFragment.arguments = bundle
                     tipFragment.show(this.supportFragmentManager, TipDialogFragment.TAG)
                 } else {
