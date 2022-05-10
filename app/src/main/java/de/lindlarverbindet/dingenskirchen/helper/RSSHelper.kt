@@ -10,6 +10,7 @@ import java.net.URL
 import java.net.UnknownHostException
 import java.text.SimpleDateFormat
 import java.util.*
+import javax.net.ssl.SSLException
 
 class RSSHelper {
 
@@ -69,6 +70,8 @@ class RSSHelper {
         } catch (e: FileNotFoundException) {
             return null
         } catch (e: UnknownHostException) {
+            return null
+        } catch (e: SSLException) {
             return null
         }
     }
