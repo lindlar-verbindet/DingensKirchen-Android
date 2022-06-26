@@ -65,6 +65,8 @@
     <string name="survey_widget_headline">MITMACHEN!</string>
     <string name="survey_widget_desc">Nehmen Sie an Umfragen rund um das Leben in Lindlar teil.</string>
 
+    <string name="info_website">PROJEKTWEBSEITE</string>
+    <string name="info_website_url">https://lindlar-digital.de</string>
     <string name="info_imprint">IMPRESSUM</string>
     <string name="info_imprint_url">https://lindlar-verbindet.de/impressum/</string>
     <string name="info_datapolicy">DATENSCHUTZ</string>

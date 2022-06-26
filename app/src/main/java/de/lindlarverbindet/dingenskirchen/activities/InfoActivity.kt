@@ -10,6 +10,7 @@ import android.net.Uri
 
 class InfoActivity : AppCompatActivity() {
 
+    private lateinit var websiteTextView: TextView
     private lateinit var imprintTextView: TextView
     private lateinit var dataTextView: TextView
     private lateinit var feedbackTextView: TextView
@@ -24,6 +25,7 @@ class InfoActivity : AppCompatActivity() {
 
         this.supportActionBar?.title = getString(R.string.info_navigation_title)
 
+        websiteTextView = findViewById(R.id.imprint_website)
         imprintTextView = findViewById(R.id.imprint_imprint)
         dataTextView = findViewById(R.id.imprint_dataprotection)
         feedbackTextView = findViewById(R.id.imprint_feedback)
@@ -31,6 +33,11 @@ class InfoActivity : AppCompatActivity() {
         openTextView = findViewById(R.id.imprint_open)
         ownerTextView = findViewById(R.id.imprint_owner)
         conceptTextView = findViewById(R.id.imprint_concept)
+
+        websiteTextView.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.info_website_url)))
+            startActivity(browserIntent)
+        }
 
         imprintTextView.setOnClickListener {
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.info_imprint_url)))
