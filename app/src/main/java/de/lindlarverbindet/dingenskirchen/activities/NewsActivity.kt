@@ -1,8 +1,6 @@
 package de.lindlarverbindet.dingenskirchen.activities
 
-import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,15 +16,15 @@ import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.helper.RSSHelper
 import de.lindlarverbindet.dingenskirchen.helper.WordpressHelper
 import de.lindlarverbindet.dingenskirchen.models.News
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import java.net.URI
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 import android.graphics.BitmapFactory
 
 import android.graphics.Bitmap
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.Dispatchers
 import java.net.URL
 
 
@@ -58,7 +56,7 @@ class NewsActivity : AppCompatActivity() {
     }
 
     private fun getLatestNews() {
-        GlobalScope.launch {
+        lifecycleScope.launch(Dispatchers.IO) {
             val recentNews = wpHelper.getRecentPosts()
             val posts = RSSHelper().getRecentPosts()
             if (!posts.isNullOrEmpty()) {
@@ -97,7 +95,7 @@ class NewsActivity : AppCompatActivity() {
             val descView = row.findViewById<TextView>(R.id.news_desc)
             // configure subviews
             if (element.imageURL != null) {
-                GlobalScope.launch {
+                lifecycleScope.launch(Dispatchers.IO) {
                     val url = URL(element.imageURL)
                     val bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream())
 

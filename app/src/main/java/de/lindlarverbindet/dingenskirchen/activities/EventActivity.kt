@@ -11,12 +11,13 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.helper.LindlarEventHelper
 import de.lindlarverbindet.dingenskirchen.helper.WordpressHelper
 import de.lindlarverbindet.dingenskirchen.models.Event
-import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.net.URI
 import java.text.SimpleDateFormat
@@ -52,7 +53,7 @@ class EventActivity : AppCompatActivity(){
     }
 
     private fun getLatestAppointments() {
-        GlobalScope.launch {
+        lifecycleScope.launch(Dispatchers.IO) {
             recentEvents = wpHelper.getRecentEvents()
             recentEvents += LindlarEventHelper.getRecentEvents()
             Log.d("APP", recentEvents.joinToString { "${it.title} | ${it.desc} | ${it.link}"} )

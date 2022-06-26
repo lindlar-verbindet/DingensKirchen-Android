@@ -16,16 +16,17 @@ import de.lindlarverbindet.dingenskirchen.helper.RSSHelper
 import de.lindlarverbindet.dingenskirchen.helper.WordpressHelper
 import de.lindlarverbindet.dingenskirchen.models.Event
 import de.lindlarverbindet.dingenskirchen.models.News
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
 import de.lindlarverbindet.dingenskirchen.helper.TipHelper
 import de.lindlarverbindet.dingenskirchen.models.Tip
 import android.widget.ImageView
+import androidx.lifecycle.lifecycleScope
 import de.lindlarverbindet.dingenskirchen.fragments.TipDialogFragment
 import de.lindlarverbindet.dingenskirchen.fragments.TutorialDialogFragment
 import de.lindlarverbindet.dingenskirchen.helper.LindlarEventHelper
+import kotlinx.coroutines.Dispatchers
 
 
 class MainActivity : AppCompatActivity() {
@@ -191,14 +192,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getTips() {
-        GlobalScope.launch {
+        lifecycleScope.launch(Dispatchers.IO) {
             tips = TipHelper().getTips()
             Log.d("TIPS:", tips.toString())
         }
     }
 
     private fun getLatestNews() {
-        GlobalScope.launch {
+        lifecycleScope.launch(Dispatchers.IO) {
             recentPosts = wpHelper.getRecentPosts()
             val posts = RSSHelper().getRecentPosts()
             if (!posts.isNullOrEmpty()) {
@@ -212,7 +213,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getLatestAppointment() {
-        GlobalScope.launch {
+        lifecycleScope.launch(Dispatchers.IO) {
             recentEvents = wpHelper.getRecentEvents()
             recentEvents += LindlarEventHelper.getRecentEvents()
             Log.d("APP", recentEvents.joinToString { "${it.title} | ${it.desc} | ${it.link}"} )
