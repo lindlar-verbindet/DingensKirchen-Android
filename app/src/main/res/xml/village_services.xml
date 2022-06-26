@@ -4,5 +4,5 @@
     <service type="1" title="Digitalbegleitung" desc="Persönliche Unterstützung bei der Nutzung von Handy, Tablet und PC." tel="+492266 4407204" telbtn="Anrufen" action="" actionbtn="Öffnen" icon_name=""/>
     <service type="1" title="Taschengeldbörse" desc="Schüler*innen helfen gegen ein Taschengeld bei leichten Arbeiten rund um Haus und Garten." tel="+492266 4407204" telbtn="Anrufen" action="" actionbtn="Öffnen" icon_name=""/>
     <service type="1" title="Nachbarschaftshilfe" desc="Ehrenamtler*innen unterstützen bei Garten- oder Hausarbeiten, helfen beim Ausfüllen von Formularen oder Erledigungsgängen." tel="+492266 4407204" telbtn="Anrufen" action="" actionbtn="Öffnen" icon_name=""/>
-    <service type="2" title="Angebote 50+" desc="Aktiv am Lindlarer Leben teilhaben und gemeinsam was erleben." tel="" telbtn="" action="https://www.lindlar-verbindet.de/angebote-50-app" actionbtn="Öffnen" icon_name=""/>
+    <service type="2" title="Freizeit" desc="Aktiv am Lindlarer Leben teilhaben und gemeinsam was erleben." tel="" telbtn="" action="https://www.lindlar-verbindet.de/angebote-50-app" actionbtn="Öffnen" icon_name=""/>
 </village-services>
