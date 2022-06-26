@@ -57,37 +57,39 @@ class WordpressHelper {
                     val date = dateParser.parse(key)
                     val appointmentArray = content.get(key) as JSONArray
 
-                    val entry = appointmentArray[0] as JSONObject // just pull the first dont know why this is an array
-                    val data = entry.get("data") as JSONObject
+                    for (i in 0 until appointmentArray.length()) {
+                        val entry = appointmentArray[i] as JSONObject // just pull the first dont know why this is an array
+                        val data = entry.get("data") as JSONObject
 
-                    val title = data.get("title") as String
-                    val content = when (data.has("content")) {
-                        true -> data.get("content") as String
-                        false -> ""
-                    }
-                    val startTime = (data.get("time") as JSONObject).get("start_raw") as String
-                    val endTime = when ((data.get("time") as JSONObject).has("end_raw")) {
-                        true -> (data.get("time") as JSONObject).get("end_raw") as String
-                        false -> ""
-                    }
-                    var location = ""
-                    if (data.has("locations")) {
-                        val locations = (data.get("locations") as JSONObject)
+                        val title = data.get("title") as String
+                        val entryContent = when (data.has("content")) {
+                            true -> data.get("content") as String
+                            false -> ""
+                        }
+                        val startTime = (data.get("time") as JSONObject).get("start_raw") as String
+                        val endTime = when ((data.get("time") as JSONObject).has("end_raw")) {
+                            true -> (data.get("time") as JSONObject).get("end_raw") as String
+                            false -> ""
+                        }
+                        var location = ""
+                        if (data.has("locations")) {
+                            val locations = (data.get("locations") as JSONObject)
 
-                        for (key in locations.keys()) {
-                            location += (locations.get(key) as JSONObject).get("name") as String
-                            val address =
-                                (locations.get(key) as JSONObject).get("address") as String
-                            if (address.isNotEmpty()) {
-                                location = address
+                            for (key in locations.keys()) {
+                                location += (locations.get(key) as JSONObject).get("name") as String
+                                val address =
+                                    (locations.get(key) as JSONObject).get("address") as String
+                                if (address.isNotEmpty()) {
+                                    location = address
+                                }
                             }
                         }
-                    }
-                    val link = data.get("permalink") as String
+                        val link = data.get("permalink") as String
 
-                    if (date != null) {
-                        val appointment = Event(title, content, date, startTime, endTime, location, link)
-                        result.add(appointment)
+                        if (date != null) {
+                            val appointment = Event(title, entryContent, date, startTime, endTime, location, link)
+                            result.add(appointment)
+                        }
                     }
                 }
                 return result
