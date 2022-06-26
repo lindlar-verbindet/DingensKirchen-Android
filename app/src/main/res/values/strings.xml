@@ -27,7 +27,7 @@
     <string name="form_name">Ihr Nachname</string>
     <string name="form_telephone">Ihre Telefon- oder Mobilnummer</string>
     <string name="form_mail">Ihre E-Mail-Adresse</string>
-    <string name="form_agreement">Hiermit erkläre ich mich einverstanden, dass meine in das Formular eingegebenen Daten elektronisch gespeichert und zum Zweck der Kontaktaufnahme verarbeitet und genutzt werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit wiederrufen kann.</string>
+    <string name="form_agreement">Hiermit erkläre ich mich einverstanden, dass meine in das Formular eingegebenen Daten elektronisch gespeichert und zum Zweck der Kontaktaufnahme verarbeitet und genutzt werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann.</string>
     <string name="form_send">Absenden</string>
     <string name="form_address">Ihre Anschrift</string>
     <string name="form_topic_other">Nicht dabei? Wobei können wir helfen?</string>
@@ -100,7 +100,6 @@
     <string name="pocket_money_navigation_title">Taschengeldbörse</string>
     <string name="neighbour_navigation_title">Nachbarschaftshilfe</string>
     <string name="limo_navigation_title">Lindlar mobil</string>
-
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
