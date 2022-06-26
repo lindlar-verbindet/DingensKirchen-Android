@@ -1,11 +1,10 @@
 package de.lindlarverbindet.dingenskirchen.models
 
-class VillageService(type: Int, title: String, desc: String, tel: String, telBtn: String, action: String, actionBtn: String) {
-    val type: Int = type
-    val title: String = title
-    val desc: String = desc
-    val tel: String = tel
-    val telBtn: String = telBtn
-    val action: String = action
-    val actionBtn: String = actionBtn
-}
+data class VillageService(val type: Int,
+                          val title: String,
+                          val desc: String,
+                          val tel: String,
+                          val telBtn: String,
+                          val action: String,
+                          val actionBtn: String,
+                          val iconID: Int)

@@ -1,14 +1,16 @@
 package de.lindlarverbindet.dingenskirchen.activities
 
 import android.content.Intent
+import android.content.res.Resources
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TableLayout
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import de.lindlarverbindet.dingenskirchen.R
@@ -16,9 +18,9 @@ import de.lindlarverbindet.dingenskirchen.activities.villageservices.DigitalActi
 import de.lindlarverbindet.dingenskirchen.activities.villageservices.LimoActivity
 import de.lindlarverbindet.dingenskirchen.activities.villageservices.NeighbourActivity
 import de.lindlarverbindet.dingenskirchen.activities.villageservices.PocketMoneyActivity
-import de.lindlarverbindet.dingenskirchen.models.CouncilService
 import de.lindlarverbindet.dingenskirchen.models.VillageService
 import org.xmlpull.v1.XmlPullParser
+
 
 class VillageActivity : AppCompatActivity() {
 
@@ -36,6 +38,11 @@ class VillageActivity : AppCompatActivity() {
         configureTableRows(services)
     }
 
+    private fun getRessourceId(name: String): Int {
+        val res: Resources = resources
+        return res.getIdentifier(name, "drawable", packageName)
+    }
+
     private fun loadVillageServices(): List<VillageService> {
         val items = ArrayList<VillageService>()
         val xpp: XmlPullParser = resources.getXml(R.xml.village_services)
@@ -47,6 +54,7 @@ class VillageActivity : AppCompatActivity() {
         var serviceTelBtn    = ""
         var serviceAction    = ""
         var serviceActionBtn = ""
+        var iconName         = ""
         // parsing services
         while (xpp.eventType != XmlPullParser.END_DOCUMENT) {
             when (xpp.eventType) {
@@ -59,11 +67,20 @@ class VillageActivity : AppCompatActivity() {
                         serviceTelBtn  = xpp.getAttributeValue(null, "telbtn")
                         serviceAction = xpp.getAttributeValue(null, "action")
                         serviceActionBtn = xpp.getAttributeValue(null, "actionbtn")
+                        iconName = xpp.getAttributeValue(null, "icon_name")
                     }
                 }
                 XmlPullParser.END_TAG -> {
                     if (xpp.name == "service") {
-                        items.add(VillageService(serviceType.toInt(), serviceTitle, serviceDesc, serviceTel, serviceTelBtn, serviceAction, serviceActionBtn))
+                        val service = VillageService(serviceType.toInt(),
+                                                     serviceTitle,
+                                                     serviceDesc,
+                                                     serviceTel,
+                                                     serviceTelBtn,
+                                                     serviceAction,
+                                                     serviceActionBtn,
+                                                     getRessourceId(iconName))
+                        items.add(service)
                     }
                 }
             }
@@ -101,6 +118,7 @@ class VillageActivity : AppCompatActivity() {
         val titleView = row.findViewById<TextView>(R.id.village_single_action_title)
         val descView = row.findViewById<TextView>(R.id.village_single_action_desc)
         val button = row.findViewById<Button>(R.id.village_single_action_button)
+        val imageView = row.findViewById<ImageView>(R.id.village_single_action_image_view)
         // configure subviews
         titleView.text = element.title
         descView.text = element.desc
@@ -111,6 +129,11 @@ class VillageActivity : AppCompatActivity() {
             intent.putExtra("parent", "VillageActivity")
             startActivity(intent)
         }
+        Log.d("ICON", element.iconID.toString())
+//        imageView.setImageResource(element.iconID)
+        if (element.iconID != 0) {
+            imageView.setImageDrawable(resources.getDrawable(element.iconID, this.theme))
+        }
         return row
     }
 
@@ -120,6 +143,7 @@ class VillageActivity : AppCompatActivity() {
         val descView = row.findViewById<TextView>(R.id.village_double_action_desc)
         val button1 = row.findViewById<Button>(R.id.village_double_first_action)
         val button2 = row.findViewById<Button>(R.id.village_double_second_action)
+        val imageView = row.findViewById<ImageView>(R.id.village_double_action_image_view)
         // configure subviews
         titleView.text = element.title
         descView.text = element.desc
@@ -138,6 +162,9 @@ class VillageActivity : AppCompatActivity() {
                 else                    -> Intent(applicationContext, PocketMoneyActivity::class.java)
             }
             startActivity(intent)
+        }
+        if (element.iconID != 0) {
+            imageView.setImageDrawable(resources.getDrawable(element.iconID, this.theme))
         }
         return row
     }
