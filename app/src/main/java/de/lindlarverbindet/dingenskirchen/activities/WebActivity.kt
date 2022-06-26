@@ -22,11 +22,7 @@ class WebActivity : AppCompatActivity() {
 
     private lateinit var urlString: String
     private lateinit var parentActivityString: String
-
-    private lateinit var webBottomBar: ConstraintLayout
     private lateinit var webView: WebView
-//    private lateinit var backButton: ImageButton
-//    private lateinit var forwardButton: ImageButton
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,8 +33,6 @@ class WebActivity : AppCompatActivity() {
         parentActivityString = intent.getStringExtra("parent") ?: ""
 
         webView = findViewById(R.id.web_view)
-//        backButton = findViewById(R.id.web_back)
-//        forwardButton = findViewById(R.id.web_forward)
 
         webView.webChromeClient = object : WebChromeClient() {
             override fun onProgressChanged(view: WebView?, newProgress: Int) {
@@ -73,9 +67,6 @@ class WebActivity : AppCompatActivity() {
         }
 
         if (parentActivityString == "VillageActivity") {
-//            webBottomBar = findViewById(R.id.web_bottom_bar)
-//            webBottomBar.visibility = View.GONE
-
             val param = webView.layoutParams as ViewGroup.MarginLayoutParams
             param.setMargins(0,0,0,0)
             webView.layoutParams = param
@@ -89,32 +80,18 @@ class WebActivity : AppCompatActivity() {
         if (urlString != "" && !urlString.contains("mailto:")) {
             webView.loadUrl(urlString)
         }
+    }
 
-//        backButton.setOnClickListener {
-//            goBack()
-//        }
-//
-//        forwardButton.setOnClickListener {
-//            goForward()
-//        }
+    override fun onBackPressed() {
+        if (webView.canGoBack()) {
+            webView.goBack()
+            return
+        }
+        super.onBackPressed()
     }
 
     private fun siteLoaded() {
-//        backButton.isEnabled = webView.canGoBack()
-//        forwardButton.isEnabled = webView.canGoForward()
         this.supportActionBar?.title = webView.title
-    }
-
-    private fun goBack() {
-        if (webView.canGoBack()) {
-            webView.goBack()
-        }
-    }
-
-    private fun goForward() {
-        if (webView.canGoForward()) {
-            webView.goForward()
-        }
     }
 
     private fun getParentActivityIntentImplement(): Intent {
