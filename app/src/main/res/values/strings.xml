@@ -32,7 +32,7 @@
     <string name="form_address">Ihre Anschrift</string>
     <string name="form_topic_other">Nicht dabei? Wobei können wir helfen?</string>
     <string name="form_detail_topic">Erzählen Sie uns ein bisschen mehr zum Thema. So können wir den richtigen Experten für Sie finden.</string>
-    <string name="form_home_order">Ist ein Vorort-Termin erwünscht?</string>
+    <string name="form_home_order">Ich möchte einen Vororttermin.</string>
     <string name="form_optional_stuff">Optionale Angaben zu Ihrer Anfrage</string>
     <string name="help_topic_prompt_digital">Zu welchem Themengebiet haben Sie Fragen/wünschen Sie Unterstützung</string>
     <string name="form_topic_prompt_neighbour">Zu welcher Tätigkeit wünschen Sie zukünftig Unterstützung?</string>
