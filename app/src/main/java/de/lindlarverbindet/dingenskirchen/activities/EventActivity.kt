@@ -68,6 +68,9 @@ class EventActivity : AppCompatActivity(){
 
     private fun formatDate(date: Date, start: String, end: String): String {
         val dateFormatter = SimpleDateFormat("dd.MM.yyyy", Locale.GERMAN)
+        if (start == "" || start == "00:00") {
+            return dateFormatter.format(date)
+        }
         val result = when (end != "") {
             true -> "${dateFormatter.format(date)} Von: $start Bis: $end"
             false -> "${dateFormatter.format(date)} Ab: $start"
