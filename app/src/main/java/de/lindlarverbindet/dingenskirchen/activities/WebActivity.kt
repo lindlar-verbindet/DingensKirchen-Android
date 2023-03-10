@@ -4,18 +4,13 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.view.MenuItem
-import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.ImageButton
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.marginBottom
-import com.google.android.material.snackbar.BaseTransientBottomBar
 import de.lindlarverbindet.dingenskirchen.R
 
 class WebActivity : AppCompatActivity() {
@@ -32,6 +27,15 @@ class WebActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         parentActivityString = intent.getStringExtra("parent") ?: ""
 
+        setupWebView()
+        setupBackPressedDispatcher()
+    }
+
+    /**
+     * Setup Functions
+     */
+
+    private fun setupWebView() {
         webView = findViewById(R.id.web_view)
 
         webView.webChromeClient = object : WebChromeClient() {
@@ -82,12 +86,16 @@ class WebActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        if (webView.canGoBack()) {
-            webView.goBack()
-            return
-        }
-        super.onBackPressed()
+    private fun setupBackPressedDispatcher() {
+        val onBackPressedDispatcher = this.onBackPressedDispatcher
+        onBackPressedDispatcher.addCallback(this, object: OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (webView.canGoBack()) {
+                    webView.goBack()
+                    return
+                }
+            }
+        })
     }
 
     private fun siteLoaded() {
