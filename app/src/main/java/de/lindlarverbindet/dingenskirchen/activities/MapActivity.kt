@@ -55,7 +55,7 @@ class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener, Permission
         binding = ActivityMapBinding.inflate(layoutInflater)
         setContentView(binding.root)
         bottomSheetBehavior = BottomSheetBehavior.from(binding.mapContextBottomSheet.mapBottomSheet)
-        bottomSheetBehavior.state = BottomSheetBehavior.STATE_DRAGGING
+        bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
 
         bottomSheetTitle = binding.mapContextBottomSheet.bottomSheetTitle
         bottomSheetDescription = binding.mapContextBottomSheet.bottomSheetDescription
