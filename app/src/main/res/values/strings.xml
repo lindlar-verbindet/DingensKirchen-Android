@@ -26,11 +26,11 @@
 
     <string name="hint">Pflichtfeld!</string>
     <string name="form_given_name">Ihr Vorname</string>
-    <string name="form_name">Ihr Nachname*</string>
+    <string name="form_name">Ihr Nachname (Pflicht)</string>
     <string name="form_date">Datum</string>
     <string name="form_time">Uhrzeit</string>
     <string name="form_dest">Ziel</string>
-    <string name="form_telephone">Ihre Telefon- oder Mobilnummer*</string>
+    <string name="form_telephone">Ihre Telefon- oder Mobilnummer (Pflicht)</string>
     <string name="form_mail">Ihre E-Mail-Adresse</string>
     <string name="form_agreement">Hiermit erkläre ich mich einverstanden, dass meine in das Formular eingegebenen Daten elektronisch gespeichert und zum Zweck der Kontaktaufnahme verarbeitet und genutzt werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann.</string>
     <string name="form_send">Absenden</string>
