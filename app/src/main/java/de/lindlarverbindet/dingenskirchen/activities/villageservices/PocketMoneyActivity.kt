@@ -7,14 +7,18 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.lifecycleScope
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.helper.APIHelper
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import org.json.JSONException
 import org.json.JSONObject
 
 class PocketMoneyActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
+
+    private val hintColor = "#d72b22"
 
     private var lastSelectedDistrict: String = ""
     private var lastSelectedTopic: String = ""
@@ -121,7 +125,7 @@ class PocketMoneyActivity : AppCompatActivity(), AdapterView.OnItemSelectedListe
             e.printStackTrace()
         }
         // send it
-        GlobalScope.launch {
+        lifecycleScope.launch(Dispatchers.IO) {
             APIHelper().sendPostRequest(getString(R.string.tool_api_url), json) {success, _ ->
                 runOnUiThread {
                     val title = if (success) R.string.form_alert_success_title

@@ -13,6 +13,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.helper.APIHelper
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import org.json.JSONException
@@ -84,7 +85,7 @@ class LimoActivity : AppCompatActivity() {
             e.printStackTrace()
         }
         // send it
-        lifecycleScope.launch {
+        lifecycleScope.launch(Dispatchers.IO) {
             APIHelper().sendPostRequest(getString(R.string.tool_api_url), json) {success, _ ->
                 runOnUiThread {
                     val title = if (success) R.string.form_alert_success_title

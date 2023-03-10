@@ -7,14 +7,18 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.lifecycleScope
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.helper.APIHelper
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import org.json.JSONException
 import org.json.JSONObject
 
 class NeighbourActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
+
+    private val hintColor = "#d72b22"
 
     private var lastSelectedTopic: String = ""
     private var lastSelectedDistrict: String = ""
@@ -122,7 +126,7 @@ class NeighbourActivity : AppCompatActivity(), AdapterView.OnItemSelectedListene
             e.printStackTrace()
         }
         // send it
-        GlobalScope.launch {
+        lifecycleScope.launch(Dispatchers.IO) {
             APIHelper().sendPostRequest(getString(R.string.tool_api_url), json) { success, _ ->
                 runOnUiThread {
                     val title = if (success) R.string.form_alert_success_title
@@ -146,7 +150,7 @@ class NeighbourActivity : AppCompatActivity(), AdapterView.OnItemSelectedListene
 
     private fun setHint(text: EditText) {
         text.hint = getString(R.string.hint)
-        text.setHintTextColor(Color.RED)
+        text.setHintTextColor(Color.parseColor(hintColor))
     }
 
     private fun checkFields():Boolean {

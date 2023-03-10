@@ -20,7 +20,7 @@ import org.json.JSONObject
 
 class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
-    private var missingColorString = "#d72b22"
+    private val hintColor = "#d72b22"
 
     private var lastSelectedDistrict: String = ""
     private var lastSelectedTopic: String = ""
@@ -136,7 +136,7 @@ class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
             e.printStackTrace()
         }
         // send it
-        lifecycleScope.launch {
+        lifecycleScope.launch(Dispatchers.IO) {
             APIHelper().sendPostRequest(getString(R.string.tool_api_url), json) { success, _ ->
                 runOnUiThread {
                     val title = if (success) R.string.form_alert_success_title
@@ -160,7 +160,7 @@ class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
 
     private fun setHint(text: EditText) {
         text.hint = getString(R.string.hint)
-        text.setHintTextColor(Color.RED)
+        text.setHintTextColor(Color.parseColor(hintColor))
     }
 
     private fun checkFields():Boolean {
