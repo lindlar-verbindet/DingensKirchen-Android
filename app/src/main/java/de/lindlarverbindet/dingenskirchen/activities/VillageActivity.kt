@@ -124,9 +124,10 @@ class VillageActivity : AppCompatActivity() {
         descView.text = element.desc
         button.text = element.actionBtn
         button.setOnClickListener {
-            val intent = Intent(applicationContext, WebActivity::class.java)
-            intent.putExtra("url", element.action)
-            intent.putExtra("parent", "VillageActivity")
+//            val intent = Intent(applicationContext, WebActivity::class.java)
+//            intent.putExtra("url", element.action)
+//            intent.putExtra("parent", "VillageActivity")
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(element.action))
             startActivity(intent)
         }
         Log.d("ICON", element.iconID.toString())
