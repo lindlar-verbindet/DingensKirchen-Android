@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         mapbox:mapbox_cameraTargetLat="51.02040799711802"
         mapbox:mapbox_cameraTargetLng="7.376290273572455"
-        mapbox:mapbox_cameraZoom="12"
+        mapbox:mapbox_cameraZoom="11"
         mapbox:mapbox_foregroundTintColor="@color/teal_200"
         mapbox:mapbox_backgroundTintColor="@color/white"
         mapbox:mapbox_bearingTintColor="@color/teal_200"

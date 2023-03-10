@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Lindlar App</string>
     <string name="mapbox_access_token" translatable="false">pk.eyJ1IjoicGl4ZWxza3VsbCIsImEiOiJja3B4dGVjOG0wNjcxMnJvNmkxMjgwNW5uIn0.X4Y1kWyTsmm6Y2yE2a2TUQ</string>
-    <string name="mapbox_custommap_uri" translatable="false">mapbox://styles/pixelskull/ckqc2n0m10gbv17mztnwa9eou</string>
-    <string name="mapbox_bus_stop_layer" translatable="false">bus-map-data-250621-b0qi91</string>
-    <string name="mapbox_bus_line_layer" translatable="false">routes-map-data-250621-5ep1to</string>
+    <string name="mapbox_custommap_uri" translatable="false">mapbox://styles/pixelskull/clf2k6tn9000g01lxbguj8j2t</string>
+    <string name="mapbox_bus_stop_layer" translatable="false">bus-stop-map-data-10032023-9ojnxm</string>
+    <string name="mapbox_bus_line_layer" translatable="false">routes-map-data-10032023-0ko8a7</string>
 
     <string name="tool_api_url">https://vermittlung.lindlar-verbindet.de/input/app</string>
 

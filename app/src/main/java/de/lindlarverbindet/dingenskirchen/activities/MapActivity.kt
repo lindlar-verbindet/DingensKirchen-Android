@@ -31,6 +31,7 @@ import com.mapbox.mapboxsdk.maps.Style
 import de.lindlarverbindet.dingenskirchen.Extensions.removeLinksUnderline
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.databinding.ActivityMapBinding
+import org.json.JSONObject
 
 
 class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener, PermissionsListener {
@@ -224,7 +225,7 @@ class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener, Permission
      */
     private fun queryLineData(point: LatLng): List<Feature> {
         val screenPoint: PointF = mapboxMap.projection.toScreenLocation(point)
-        val relationArea = RectF(screenPoint.x + 50, screenPoint.y + 50, screenPoint.x - 50, screenPoint.y - 50)
+        val relationArea = RectF(screenPoint.x + 100, screenPoint.y + 100, screenPoint.x - 100, screenPoint.y - 100)
         return mapboxMap.queryRenderedFeatures(relationArea, getString(R.string.mapbox_bus_line_layer))
     }
 
@@ -241,13 +242,26 @@ class MapActivity: AppCompatActivity(), MapboxMap.OnMapClickListener, Permission
             val properties = line.properties()
             val jsonElementString = properties?.get("@relations")?.asString
             val jsonElement = Gson().fromJson(jsonElementString, JsonArray::class.java)
-            val busId = jsonElement?.get(0)?.asJsonObject?.get("reltags")?.asJsonObject?.get("ref")
-            val from = jsonElement?.get(0)?.asJsonObject?.get("reltags")?.asJsonObject?.get("from")
-            val to = jsonElement?.get(0)?.asJsonObject?.get("reltags")?.asJsonObject?.get("to")
+            val busId = if (jsonElement?.get(0)?.asJsonObject?.get("reltags")?.asJsonObject?.get("ref") == null){
+                properties?.get("ref")
+            } else {
+                jsonElement.get(0)?.asJsonObject?.get("reltags")?.asJsonObject?.get("ref")
+            }
+            val from = if (jsonElement?.get(0)?.asJsonObject?.get("reltags")?.asJsonObject?.get("from") == null) {
+                properties?.get("from")
+            } else {
+                jsonElement.get(0)?.asJsonObject?.get("reltags")?.asJsonObject?.get("from")
+            }
+            val to = if (jsonElement?.get(0)?.asJsonObject?.get("reltags")?.asJsonObject?.get("to") == null) {
+                properties?.get("to")
+            } else {
+                jsonElement.get(0)?.asJsonObject?.get("reltags")?.asJsonObject?.get("to")
+            }
             Log.d("RELTAGS", jsonElement?.get(0)?.asJsonObject?.get("reltags")?.toString()
                     ?: "empty")
-            if (busId != null) {
-                val content = "${busId.asString}: $from -> $to"
+
+            if (busId != null && from != null && to != null) {
+                val content = "${busId.asString}: ${from.asString} -> ${to.asString}"
                 resultList.add(getDeparturePlan(busId.asString, content))
             }
         }
