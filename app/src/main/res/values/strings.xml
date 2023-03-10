@@ -104,6 +104,7 @@
     <string name="limo_navigation_title">Lindlar mobil</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint">Pflichtfeld!</string>
 
     <string-array name="form_help_topics_digital">
         <item>Bedienung Smartphone</item>
@@ -133,7 +134,6 @@
         <item>Erledigungsgänge</item>
         <item>Haustierbetreuung</item>
         <item>Auf- oder Abbauen von Möbeln</item>
-        <item>Rasenmähen, Schneeräumen oder Kehrarbeiten</item>
         <item>Leichte Gartenarbeiten</item>
         <item>Hilfe mit dem Handy/Computer</item>
         <item>... bei einer anderen Tätigkeit</item>

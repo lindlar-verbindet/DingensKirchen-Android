@@ -1,20 +1,26 @@
 package de.lindlarverbindet.dingenskirchen.activities.villageservices
 
 import android.app.AlertDialog
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.core.content.ContextCompat
+import androidx.core.widget.doOnTextChanged
+import androidx.lifecycle.lifecycleScope
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.helper.APIHelper
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import org.json.JSONException
 import org.json.JSONObject
 
 class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
+
+    private var missingColorString = "#d72b22"
 
     private var lastSelectedDistrict: String = ""
     private var lastSelectedTopic: String = ""
@@ -52,6 +58,12 @@ class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
         homeCheckBox = findViewById(R.id.digital_home_order)
         termsCheckBox = findViewById(R.id.digital_agreement_checkbox)
         sendButton = findViewById(R.id.digital_button)
+
+        nameTextView.doOnTextChanged { text, _, _, _ ->
+            if (!text.isNullOrBlank()) {
+//                nameTextView.background.setTint(Color.BLACK)
+            }
+        }
 
         moreInfoLabel.visibility = View.GONE
         moreInfoView.visibility = View.GONE
@@ -104,6 +116,9 @@ class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
     }
 
     private fun sendForm() {
+        if (!checkFields()) {
+            return
+        }
         val json = JSONObject()
         try {
             json.put("form", "digital")
@@ -121,13 +136,13 @@ class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
             e.printStackTrace()
         }
         // send it
-        GlobalScope.launch {
+        lifecycleScope.launch {
             APIHelper().sendPostRequest(getString(R.string.tool_api_url), json) { success, _ ->
                 runOnUiThread {
                     val title = if (success) R.string.form_alert_success_title
-                    else R.string.form_alert_failure_title
-                    val text = if (success) R.string.form_alert_success_text
-                    else R.string.form_alert_failure_text
+                                else R.string.form_alert_failure_title
+                    val text =  if (success) R.string.form_alert_success_text
+                                else R.string.form_alert_failure_text
 
                     val alertDialogBuilder = AlertDialog.Builder(this@DigitalActivity)
                     alertDialogBuilder.setTitle(title)
@@ -141,5 +156,23 @@ class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
                 }
             }
         }
+    }
+
+    private fun setHint(text: EditText) {
+        text.hint = getString(R.string.hint)
+        text.setHintTextColor(Color.RED)
+    }
+
+    private fun checkFields():Boolean {
+        var result = true
+        if (nameTextView.text.isNullOrBlank()) {
+            setHint(nameTextView)
+            result = false
+        }
+        if (phoneTextView.text.isNullOrBlank()) {
+            setHint(phoneTextView)
+            result = false
+        }
+        return result
     }
 }

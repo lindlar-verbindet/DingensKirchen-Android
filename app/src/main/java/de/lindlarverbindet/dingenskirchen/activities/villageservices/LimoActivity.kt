@@ -1,5 +1,6 @@
 package de.lindlarverbindet.dingenskirchen.activities.villageservices
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -56,6 +57,9 @@ class LimoActivity : AppCompatActivity() {
     }
 
     private fun sendForm() {
+        if (!checkFields()) {
+            return
+        }
         val json = JSONObject()
         try {
             json.put("form", "limo")
@@ -88,5 +92,23 @@ class LimoActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun setHint(text: EditText) {
+        text.hint = getString(R.string.hint)
+        text.setHintTextColor(Color.RED)
+    }
+
+    private fun checkFields():Boolean {
+        var result = true
+        if (nameTextView.text.isNullOrBlank()) {
+            setHint(nameTextView)
+            result = false
+        }
+        if (phoneTextView.text.isNullOrBlank()) {
+            setHint(phoneTextView)
+            result = false
+        }
+        return result
     }
 }
