@@ -106,9 +106,20 @@ class NewsActivity : AppCompatActivity() {
                     }
                 }
             }
-            dateView.text = dateFormatter.format(element.date)
+            val sourceText = if (element.link.contains("lindlar-verbindet")) {
+                "von lindlar-verbindet.de"
+            } else {
+                "von lindlar.de"
+            }
+            val dateText = dateFormatter.format(element.date) + " $sourceText"
+            dateView.text = dateText
             titleView.text = element.title
-            descView.text = HtmlCompat.fromHtml(element.content, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
+
+            val startFigure = element.content.indexOf("<figure", 0, true)
+            val endFigure = element.content.indexOf("</figure>", 0, true)
+            val content = element.content.removeRange(startFigure, endFigure)
+            val descString = HtmlCompat.fromHtml(content, HtmlCompat.FROM_HTML_MODE_LEGACY).subSequence(0, 180).toString() + "..."
+            descView.text = descString
             // Set Margin for dynamic row
             val rowParams = TableLayout.LayoutParams(
                 TableLayout.LayoutParams.MATCH_PARENT,

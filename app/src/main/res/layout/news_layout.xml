@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/ic_bench"
+        android:src="@drawable/ic_amusement_park"
         android:scaleType="centerCrop"
         android:visibility="gone"/>
 
@@ -31,19 +31,21 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
-            android:id="@+id/news_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Beispieltermin"
-            android:textSize="22sp"
-            android:fontFamily="sans-serif-light"
-            android:textColor="@color/black"/>
-        <TextView
             android:id="@+id/news_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="01.01.2021 15:00"
+            android:paddingTop="10dp"
+            android:text="01.01.2021 15:00" />
+
+        <TextView
+            android:id="@+id/news_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Beispiel News"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-light"
             android:textColor="@color/black"/>
+
         <TextView
             android:id="@+id/news_desc"
             android:layout_width="match_parent"
@@ -52,6 +54,14 @@
             android:textSize="16sp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text=">> weiterlesen"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-light" />
     </LinearLayout>
 
     <View
