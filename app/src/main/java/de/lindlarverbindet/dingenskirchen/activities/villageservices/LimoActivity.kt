@@ -10,6 +10,7 @@ import android.widget.CheckBox
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.lifecycleScope
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.helper.APIHelper
 import kotlinx.coroutines.GlobalScope
@@ -19,8 +20,13 @@ import org.json.JSONObject
 
 class LimoActivity : AppCompatActivity() {
 
+    private val hintColor = "#d72b22"
+
     private lateinit var givenNameTextView: EditText
     private lateinit var nameTextView: EditText
+    private lateinit var dateTextView: EditText
+    private lateinit var timeTextView: EditText
+    private lateinit var destinationTextView: EditText
     private lateinit var phoneTextView: EditText
     private lateinit var mailTextView: EditText
     private lateinit var termsCheckBox: CheckBox
@@ -34,6 +40,9 @@ class LimoActivity : AppCompatActivity() {
 
         givenNameTextView = findViewById(R.id.limo_given_name_field)
         nameTextView = findViewById(R.id.limo_name_field)
+        dateTextView = findViewById(R.id.limo_date_field)
+        timeTextView = findViewById(R.id.limo_time_field)
+        destinationTextView = findViewById(R.id.limo_dest_field)
         phoneTextView = findViewById(R.id.limo_tel_field)
         mailTextView = findViewById(R.id.limo_mail_field)
         termsCheckBox = findViewById(R.id.limo_agreement_checkbox)
@@ -65,6 +74,9 @@ class LimoActivity : AppCompatActivity() {
             json.put("form", "limo")
             json.put("name", givenNameTextView.text ?: "")
             json.put("nachname", nameTextView.text ?: "")
+            json.put("datum", dateTextView.text ?: "")
+            json.put("uhr", timeTextView.text ?: "")
+            json.put("ziel", destinationTextView.text ?: "")
             json.put("fon", phoneTextView.text ?: "")
             json.put("mail", mailTextView.text ?: "")
             json.put("datenschutz", termsCheckBox.isChecked)
@@ -72,13 +84,13 @@ class LimoActivity : AppCompatActivity() {
             e.printStackTrace()
         }
         // send it
-        GlobalScope.launch {
+        lifecycleScope.launch {
             APIHelper().sendPostRequest(getString(R.string.tool_api_url), json) {success, _ ->
                 runOnUiThread {
                     val title = if (success) R.string.form_alert_success_title
-                    else R.string.form_alert_failure_title
-                    val text = if (success) R.string.form_alert_success_text
-                    else R.string.form_alert_failure_text
+                                else R.string.form_alert_failure_title
+                    val text =  if (success) R.string.form_alert_success_text
+                                else R.string.form_alert_failure_text
 
                     val alertDialogBuilder = AlertDialog.Builder(this@LimoActivity)
                     alertDialogBuilder.setTitle(title)
@@ -96,7 +108,7 @@ class LimoActivity : AppCompatActivity() {
 
     private fun setHint(text: EditText) {
         text.hint = getString(R.string.hint)
-        text.setHintTextColor(Color.RED)
+        text.setHintTextColor(Color.parseColor(hintColor))
     }
 
     private fun checkFields():Boolean {
