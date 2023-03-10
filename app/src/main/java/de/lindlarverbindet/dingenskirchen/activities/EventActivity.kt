@@ -72,8 +72,8 @@ class EventActivity : AppCompatActivity(){
             return dateFormatter.format(date)
         }
         val result = when (end != "") {
-            true -> "${dateFormatter.format(date)} Von: $start Bis: $end"
-            false -> "${dateFormatter.format(date)} Ab: $start"
+            true -> "${dateFormatter.format(date)} von: $start bis: $end"
+            false -> "${dateFormatter.format(date)} ab: $start"
         }
         return result
     }
