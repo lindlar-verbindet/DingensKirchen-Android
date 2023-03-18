@@ -118,7 +118,12 @@ class NewsActivity : AppCompatActivity() {
             val startFigure = element.content.indexOf("<figure", 0, true)
             val endFigure = element.content.indexOf("</figure>", 0, true)
             val content = element.content.removeRange(startFigure, endFigure)
-            val descString = HtmlCompat.fromHtml(content, HtmlCompat.FROM_HTML_MODE_LEGACY).subSequence(0, 180).toString() + "..."
+            val text = HtmlCompat.fromHtml(content, HtmlCompat.FROM_HTML_MODE_LEGACY)
+            val descString = if (text.length > 180) {
+                text.subSequence(0, 180).toString() + "..."
+            } else {
+                text
+            }
             descView.text = descString
             // Set Margin for dynamic row
             val rowParams = TableLayout.LayoutParams(
