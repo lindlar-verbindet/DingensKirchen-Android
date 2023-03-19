@@ -26,8 +26,8 @@ class LimoActivity : AppCompatActivity() {
     private lateinit var givenNameTextView: EditText
     private lateinit var nameTextView: EditText
     private lateinit var dateTextView: EditText
-    private lateinit var timeTextView: EditText
-    private lateinit var destinationTextView: EditText
+//    private lateinit var timeTextView: EditText
+//    private lateinit var destinationTextView: EditText
     private lateinit var phoneTextView: EditText
     private lateinit var mailTextView: EditText
     private lateinit var termsCheckBox: CheckBox
@@ -42,8 +42,8 @@ class LimoActivity : AppCompatActivity() {
         givenNameTextView = findViewById(R.id.limo_given_name_field)
         nameTextView = findViewById(R.id.limo_name_field)
         dateTextView = findViewById(R.id.limo_date_field)
-        timeTextView = findViewById(R.id.limo_time_field)
-        destinationTextView = findViewById(R.id.limo_dest_field)
+//        timeTextView = findViewById(R.id.limo_time_field)
+//        destinationTextView = findViewById(R.id.limo_dest_field)
         phoneTextView = findViewById(R.id.limo_tel_field)
         mailTextView = findViewById(R.id.limo_mail_field)
         termsCheckBox = findViewById(R.id.limo_agreement_checkbox)
@@ -76,8 +76,8 @@ class LimoActivity : AppCompatActivity() {
             json.put("name", givenNameTextView.text ?: "")
             json.put("nachname", nameTextView.text ?: "")
             json.put("datum", dateTextView.text ?: "")
-            json.put("uhr", timeTextView.text ?: "")
-            json.put("ziel", destinationTextView.text ?: "")
+//            json.put("uhr", timeTextView.text ?: "")
+//            json.put("ziel", destinationTextView.text ?: "")
             json.put("fon", phoneTextView.text ?: "")
             json.put("mail", mailTextView.text ?: "")
             json.put("datenschutz", termsCheckBox.isChecked)
