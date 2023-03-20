@@ -104,16 +104,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="date" />
+            <!-- Section disabled no longer wanted -->
             <TextView
                 android:id="@+id/limo_time_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
+                android:visibility="gone"
                 app:layout_constraintTop_toBottomOf="@id/limo_date_field"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/form_time"/>
-            <!-- Section disabled no longer wanted -->
             <EditText
                 android:id="@+id/limo_time_field"
                 android:layout_width="match_parent"
@@ -133,15 +134,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/form_dest"/>
-            <!-- Section disabled no longer wanted -->
+
             <EditText
                 android:id="@+id/limo_dest_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 app:layout_constraintTop_toBottomOf="@id/limo_dest_label"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:inputType="text" />
+            <!-- Section disabled no longer wanted -->
             <TextView
                 android:id="@+id/limo_tel_label"
                 android:layout_width="match_parent"

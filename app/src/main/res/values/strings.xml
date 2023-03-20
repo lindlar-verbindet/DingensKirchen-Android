@@ -27,7 +27,7 @@
     <string name="hint">Pflichtfeld!</string>
     <string name="form_given_name">Ihr Vorname</string>
     <string name="form_name">Ihr Nachname (Pflicht)</string>
-    <string name="form_date">Datum</string>
+    <string name="form_date">Datum der Fahrt</string>
     <string name="form_time">Uhrzeit</string>
     <string name="form_dest">Ziel</string>
     <string name="form_telephone">Ihre Telefon- oder Mobilnummer (Pflicht)</string>
