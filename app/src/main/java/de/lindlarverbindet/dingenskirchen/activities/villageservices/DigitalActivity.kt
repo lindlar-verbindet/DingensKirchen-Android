@@ -131,6 +131,7 @@ class DigitalActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
             json.put("aufgabe", lastSelectedTopic)
             json.put("aufgabe_beschreibung", moreInfoView.text ?: "")
             json.put("freitext", detailInfoView.text ?: "")
+            json.put("vorort", homeCheckBox.isChecked)
             json.put("datenschutz", termsCheckBox.isChecked)
         } catch (e: JSONException) {
             e.printStackTrace()
