@@ -1,5 +1,6 @@
 package de.lindlarverbindet.dingenskirchen.activities
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.Resources
 import android.net.Uri
@@ -13,6 +14,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import de.lindlarverbindet.dingenskirchen.R
 import de.lindlarverbindet.dingenskirchen.activities.villageservices.DigitalActivity
 import de.lindlarverbindet.dingenskirchen.activities.villageservices.NeighbourActivity
@@ -37,7 +39,8 @@ class VillageActivity : AppCompatActivity() {
         configureTableRows(services)
     }
 
-    private fun getRessourceId(name: String): Int {
+    @SuppressLint("DiscouragedApi")
+    private fun getResourceId(name: String): Int {
         val res: Resources = resources
         return res.getIdentifier(name, "drawable", packageName)
     }
@@ -78,7 +81,7 @@ class VillageActivity : AppCompatActivity() {
                                                      serviceTelBtn,
                                                      serviceAction,
                                                      serviceActionBtn,
-                                                     getRessourceId(iconName))
+                                                     getResourceId(iconName))
                         items.add(service)
                     }
                 }
@@ -137,7 +140,7 @@ class VillageActivity : AppCompatActivity() {
         Log.d("ICON", element.iconID.toString())
 //        imageView.setImageResource(element.iconID)
         if (element.iconID != 0) {
-            imageView.setImageDrawable(resources.getDrawable(element.iconID, this.theme))
+            imageView.setImageDrawable(ResourcesCompat.getDrawable(resources, element.iconID, this.theme))
         }
         return row
     }
@@ -168,7 +171,7 @@ class VillageActivity : AppCompatActivity() {
             startActivity(intent)
         }
         if (element.iconID != 0) {
-            imageView.setImageDrawable(resources.getDrawable(element.iconID, this.theme))
+            imageView.setImageDrawable(ResourcesCompat.getDrawable(resources, element.iconID, this.theme))
         }
         return row
     }
