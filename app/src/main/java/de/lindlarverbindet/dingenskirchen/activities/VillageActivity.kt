@@ -122,12 +122,17 @@ class VillageActivity : AppCompatActivity() {
         // configure subviews
         titleView.text = element.title
         descView.text = element.desc
-        button.text = element.actionBtn
+        button.text = if (element.actionBtn != "") {
+            element.actionBtn
+        } else {
+            element.telBtn
+        }
         button.setOnClickListener {
-//            val intent = Intent(applicationContext, WebActivity::class.java)
-//            intent.putExtra("url", element.action)
-//            intent.putExtra("parent", "VillageActivity")
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(element.action))
+            val intent = if (element.action != "") {
+                Intent(Intent.ACTION_VIEW, Uri.parse(element.action))
+            } else {
+                Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + element.tel))
+            }
             startActivity(intent)
         }
         Log.d("ICON", element.iconID.toString())
