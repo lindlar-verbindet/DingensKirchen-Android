@@ -16,7 +16,7 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="bottom_sheet_action">Tippen Sie auf der Karte auf eine Haltestelle für mehr Informationen. Jeder Buslinieneintrag öffnet den jeweiligen Mini-Fahrplan im PDF-Format. </string>
+    <string name="bottom_sheet_action">Tippen Sie auf der Karte auf eine Haltestelle für mehr Informationen. Jeder Buslinieneintrag öffnet den jeweiligen Mini-Fahrplan im PDF-Format.\nDatenquelle: OpenStreetMap</string>
     <string name="bottom_sheet_title">ES FÄHRT KEIN BUS?</string>
     <string name="bottom_sheet_desc_placeholder">Jetzt Lindlar mobil buchen unter \n<a href="tel:+49 2266 440 72 04">02266 440 72 04</a> \nDer Lindlarer Fahrservice mit Herz.</string>
 
