@@ -237,7 +237,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         val dateFormatter = SimpleDateFormat("dd.MM hh:mm", Locale.GERMAN)
-        val previewText: String = HtmlCompat.fromHtml(post.content, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
+        val startFigure = post.content.indexOf("<figure", 0, true)
+        val endFigure = post.content.indexOf("</figure>", 0, true)
+        val content = post.content.removeRange(startFigure, endFigure)
+        val previewText: String = HtmlCompat.fromHtml(content, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
 
         titleView.text      = post.title
         newsDateView.text   = dateFormatter.format(post.date)

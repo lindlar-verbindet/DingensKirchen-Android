@@ -10,7 +10,7 @@ android {
         applicationId "de.lindlarverbindet.dingenskirchen"
         minSdkVersion 25
         targetSdkVersion 33
-        versionCode 1002
+        versionCode 1003
         versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
