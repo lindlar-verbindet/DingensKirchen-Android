@@ -93,7 +93,7 @@
 
     <string name="digital_desc">Mit unserem kostenlosen Angebot bieten wir allen Menschen aus Lindlar Unterstützung bei der Bedienung von Handy und Computer an. Wir helfen bei Fragen rund um das Internet und die digitale Sicherheit. Dabei begleiten wir Sie so, dass Sie sich zukünftig selbst helfen können.</string>
     <string name="pocket_money_desc">Schüler*innen helfen gegen ein Taschengeld bei leichten Arbeiten rund um Haus und Garten.</string>
-    <string name="neighbour_desc">Lindlarer Bürger*innen helfen sich untereinander. Wir vermitteln gelegentliche Hilfen, um Menschen im Alltag zu unterstützen:\n\n•  Einkaufshilfe\n•  Auf- oder Abbau von Möbeln\n•  Austausch von Glühbirnen oder Batterien\n•  Ausfüllen von Formularen\n•  Rasenmähen oder Schneeräumen\n•  Gartenarbeit\n•  uvm.</string>
+    <string name="neighbour_desc">Lindlarer Bürger*innen helfen sich untereinander. Wir vermitteln gelegentliche Hilfen, um Menschen im Alltag zu unterstützen:\n\n•  Einkaufshilfe\n•  Erledigungsgänge\n•  Haustierbetreuung\n•  Auf- oder Abbau von Kleinmöbeln\n•  Ausfüllen von Formularen\n•  Kleinigkeiten im Haushalt\n•  u. v. m.</string>
     <string name="limo_desc">Lindlar mobil – Begegnung erfahren! \nAuf ehrenamtlicher Basis fahren wir Sie Mo. bis Fr. 9-16 Uhr von der Haustür direkt zum Ort der Begegnung oder zum Einkaufen. Hilfen beim Ein- und Aussteigen, beim Gehen oder auch beim Einkauf sind selbstverständlich. Über eine Spende würden wir uns freuen. \nLimo fährt innerhalb der Gemeinde Lindlar umweltschonend mit einem E-Auto. \nBitte geben Sie hier an, wann Sie
     mobile Unterstützung benötigen: </string>
 
@@ -123,12 +123,12 @@
     </string-array>
 
     <string-array name="form_help_topics_neighbour">
-        <item>Einkaufen</item>
+        <item>Einkaufshilfe</item>
         <item>Erledigungsgänge</item>
-        <item>Haustiere</item>
-        <item>Auf- oder Abbauen von Möbeln</item>
+        <item>Haustierbetreuung</item>
+        <item>Auf- oder Abbau von Kleinmöbeln</item>
         <item>Ausfüllen von Formularen</item>
-        <item>Rasenmähen, Schneeräumen oder Kehrarbeiten</item>
+        <item>Kleinigkeiten im Haushalt</item>
         <item>Leichte Gartenarbeiten</item>
         <item>... bei einer anderen Tätigkeit</item>
     </string-array>
