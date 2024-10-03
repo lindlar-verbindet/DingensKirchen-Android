@@ -68,7 +68,7 @@ class WordpressHelper {
                         }
                         val startTime = (data.get("time") as JSONObject).get("start") as String
                         val endTime = when ((data.get("time") as JSONObject).has("end")) {
-                            true -> (data.get("time") as JSONObject).get("end_raw") as String
+                            true -> (data.get("time") as JSONObject).get("end") as String
                             false -> ""
                         }
                         var location = ""
