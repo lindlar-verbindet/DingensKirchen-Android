@@ -149,8 +149,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         councilWidget.setOnClickListener {
+//            runOnUiThread {
+//                val intent = Intent(applicationContext, CouncilActivity::class.java)
+//                startActivity(intent)
+//            }
             runOnUiThread {
-                val intent = Intent(applicationContext, CouncilActivity::class.java)
+                val intent = Intent(applicationContext, WebActivity::class.java)
+                intent.putExtra("url", "https://www.lindlar-verbindet.de/rathaus/")
+                intent.putExtra("parent", "MainActivity")
                 startActivity(intent)
             }
         }
