@@ -66,8 +66,8 @@ class WordpressHelper {
                             true -> data.get("content") as String
                             false -> ""
                         }
-                        val startTime = (data.get("time") as JSONObject).get("start_raw") as String
-                        val endTime = when ((data.get("time") as JSONObject).has("end_raw")) {
+                        val startTime = (data.get("time") as JSONObject).get("start") as String
+                        val endTime = when ((data.get("time") as JSONObject).has("end")) {
                             true -> (data.get("time") as JSONObject).get("end_raw") as String
                             false -> ""
                         }
