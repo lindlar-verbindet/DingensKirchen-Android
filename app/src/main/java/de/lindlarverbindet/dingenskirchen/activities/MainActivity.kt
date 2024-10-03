@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var councilWidget  : View
     private lateinit var mobilWidget    : View
     private lateinit var villageWidget  : View
-    private lateinit var surveyWidget   : View
+    private lateinit var actionsWidget   : View
     private lateinit var imprintImageView: ImageView
     private lateinit var tutorialImageView: ImageView
 
@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
         councilWidget = findViewById(R.id.main_council_widget)
         mobilWidget = findViewById(R.id.main_mobil_widget)
         villageWidget = findViewById(R.id.main_village_widget)
-        surveyWidget = findViewById(R.id.main_survey_widget)
+        actionsWidget = findViewById(R.id.main_actions_widget)
 
         tutorialImageView = findViewById(R.id.main_tutorial)
         tutorialImageView.setOnClickListener { showTutorial() }
@@ -169,10 +169,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        surveyWidget.setOnClickListener {
+        actionsWidget.setOnClickListener {
             runOnUiThread {
                 val intent = Intent(applicationContext, WebActivity::class.java)
-                intent.putExtra("url", "https://www.lindlar-verbindet.de/umfrage")
+                intent.putExtra("url", "https://www.lindlar-verbindet.de/ausflug-aktion/")
                 intent.putExtra("parent", "MainActivity")
                 startActivity(intent)
             }
