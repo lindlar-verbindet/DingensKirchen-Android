@@ -105,7 +105,13 @@ class EventActivity : AppCompatActivity(){
             if (element.desc.isEmpty()) {
                 descView.visibility = View.GONE
             } else {
-                descView.text = HtmlCompat.fromHtml(element.desc, HtmlCompat.FROM_HTML_MODE_LEGACY).toString().trimEnd()
+                val htmlString = HtmlCompat.fromHtml(element.desc, HtmlCompat.FROM_HTML_MODE_LEGACY).toString().trimEnd()
+                val descString = if (htmlString.length > 180) {
+                    htmlString.subSequence(0, 180).toString() + "..."
+                } else {
+                    htmlString
+                }
+                descView.text = descString
             }
             if (element.location.isEmpty()) {
                 val addressLayout = row.findViewById<LinearLayout>(R.id.event_location_area)
